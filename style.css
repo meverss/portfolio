@@ -1,4 +1,4 @@
-@import url(/./css/animate.css);
+@import url(/css/animate.css);
 
 /* @charset "UTF-8"; */
 
@@ -7,17 +7,17 @@
 
 @font-face {
   font-family: 'Gabriele';
-  src : url("../fonts/gabriele.ttf") format('truetype');
+  src : url("./fonts/gabriele.ttf") format('truetype');
 }
 
 @font-face {
   font-family: 'Harting';
-  src : url("../fonts/harting.ttf") format('truetype');
+  src : url("./fonts/harting.ttf") format('truetype');
 }
 
 @font-face {
   font-family: 'Symbols';
-  src : url("../fonts/symbols.ttf") format('truetype');
+  src : url("./fonts/symbols.ttf") format('truetype');
 }
 
 * {
