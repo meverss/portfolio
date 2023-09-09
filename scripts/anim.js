@@ -5,7 +5,7 @@ function triggerAnimation(entries){
   entries.forEach(entry =>{
     if(entry.isIntersecting){
         entry.target.classList.add('animate__animated', 'animate__bounceIn');
-        // obBoxes.unobserve(entry.target);
+        obBoxes.unobserve(entry.target);
     }else{
         entry.target.classList.remove('animate__animated', 'animate__bounceIn');
     }
