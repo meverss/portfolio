@@ -93,8 +93,20 @@ a:hover {
   color: #fff;
   width: auto;
   height: 40px;
-  text-shadow: 5px 5px 10px black;
+  /* text-shadow: 5px 5px 10px black; */
 }
+
+/* .menu_item, .social_item{
+  width:auto;
+  height: 40px;
+  background-color:#bbb;
+  color: transparent;
+  text-shadow: 1px 1px 3px rgba(255,255,255,0.5);
+  -webkit-background-clip: text;
+     -moz-background-clip: text;
+          background-clip: text;
+
+} */
 
 .menu_item:hover, .social_item:hover {
   transition: .3s;
@@ -103,7 +115,6 @@ a:hover {
 }
 
 .m_menu {
-  opacity: 1;
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -163,13 +174,23 @@ a:hover {
 .m_menu_close_btn .menu_item, .m_menu_open_btn .menu_item {
   font-size: 3.2rem;
   font-weight: bold;
-  padding-top: 14px;
+  padding-top: 10px;
   padding-right: 15px;
 }
 
 .m_menu_open_btn p, .m_menu_close_btn p {
-  color: chocolate;
+  color: #7a6c67;
 }
+
+/* .testing {
+  font: bold 2rem Gabriele;
+  background-color:#444;
+  color: transparent;
+  text-shadow: 2px 2px 3px rgba(255,255,255,0.5);
+  -webkit-background-clip: text;
+     -moz-background-clip: text;
+          background-clip: text;
+} */
 
 .m_menu_open_btn p:hover, .m_menu_close_btn p:hover {
   cursor: pointer;
@@ -259,7 +280,6 @@ a:hover {
   font-size: 1.6rem;
   text-align: center;
   margin-bottom: 20px;
-  text-shadow: 2px 2px 3px black;
 }
 
 .video {
@@ -325,6 +345,11 @@ top: 500px;
   }
 }
 
+@media screen and (min-width: 871px) {
+  .m_menu_open_btn {
+    display: none;
+  }
+}
 @media screen and (max-width: 1024px) {
   .m-container {
     max-width: 960px;
