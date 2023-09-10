@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="Marvin, Eversley, portfolio, IT, web, design, UI, computer, science, inux, developer, freelancer">
-    <meta name="description" content="This is Marvin's professional portfolio">
+    <meta name="description" content="Welcome! This is Marvin's portfolio">
     <meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
     <title>My Portfolio</title>
     <!-- <link rel="canonical" href="https://meverss.github.io/portfolio"> -->
@@ -37,10 +37,10 @@
             <p class="social_item"><a href="https://linkedin.com/in/marvin-eversley-b061243a" target="_BLANK">  </a></p>
         </div>
         <div class="m_menu_open_btn" id="m_menu_open_btn">
-            <p class="menu_item" onclick="showmenu()"> ☰</p>
+            <p class="menu_item" onclick="showmenu()"> 󰍜</p>
         </div>
         <div class="m_menu_close_btn" id="m_menu_close_btn">
-            <p class="menu_item" onclick="hidemenu()"> X</p>
+            <p class="menu_item" onclick="hidemenu()">  </p>
         </div>
     </div>
     <div class="m_menu" id="m_menu">
@@ -106,14 +106,12 @@
     function showmenu(){
         m_menu_open_btn.style = 'display: none; width:10%; right: 0;';
         m_menu_close_btn.style = 'display: block; width:10%; right: 0;';
-        // m_menu.style['opacity'] = '1';
         m_menu.style['transform'] = 'translate(0%)';
     }
 
     function hidemenu(){
         m_menu_close_btn.style = 'display: none; width:10%; right: 0;';
         m_menu_open_btn.style = 'display: block; width:10%; right: 0;';
-        // m_menu.style['opacity'] = '0';
         m_menu.style['transform'] = 'translate(100%)';
     }
     // function hidemenu(){

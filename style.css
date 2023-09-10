@@ -120,7 +120,7 @@ a:hover {
   height: 100vh;
   justify-content: right;
   font-size: inherit;
-  transition: .7s;
+  transition: .5s;
   transform: translate(100%);
   right: 0;
 }
@@ -158,6 +158,13 @@ a:hover {
   width: 96%;
   text-align: right;
   justify-content: right;
+}
+
+.m_menu_close_btn .menu_item, .m_menu_open_btn .menu_item {
+  font-size: 3.2rem;
+  font-weight: bold;
+  padding-top: 14px;
+  padding-right: 15px;
 }
 
 .m_menu_open_btn p, .m_menu_close_btn p {
