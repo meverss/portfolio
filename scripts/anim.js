@@ -4,10 +4,10 @@ const video = document.querySelector('#pool_screening')
 function triggerAnimation(entries){
   entries.forEach(entry =>{
     if(entry.isIntersecting){
-        entry.target.classList.add('animate__animated', 'animate__bounceIn');
+        entry.target.classList.add('animate__animated', 'animate__fadeInUp');
         obBoxes.unobserve(entry.target);
     }else{
-        entry.target.classList.remove('animate__animated', 'animate__bounceIn');
+        entry.target.classList.remove('animate__animated', 'animate__fadeInUp');
     }
   })  
 }

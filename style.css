@@ -104,7 +104,7 @@ a:hover {
 
 .m_menu {
   opacity: 1;
-  display: none;
+  display: flex;
   flex-direction: column;
   gap: 15px;
   padding-top: 40px;;
@@ -120,6 +120,9 @@ a:hover {
   height: 100vh;
   justify-content: right;
   font-size: inherit;
+  transition: .7s;
+  transform: translate(100%);
+  right: 0;
 }
 
 .m_menu p {

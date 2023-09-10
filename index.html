@@ -36,14 +36,14 @@
             <p class="social_item">  </p>
             <p class="social_item"><a href="https://linkedin.com/in/marvin-eversley-b061243a" target="_BLANK">  </a></p>
         </div>
-        <div class="m_menu_open_btn">
-            <p class="menu_item">☰</p>
+        <div class="m_menu_open_btn" id="m_menu_open_btn">
+            <p class="menu_item" onclick="showmenu()"> ☰</p>
         </div>
-        <div class="m_menu_close_btn">
-            <p class="menu_item">X</p>
+        <div class="m_menu_close_btn" id="m_menu_close_btn">
+            <p class="menu_item" onclick="hidemenu()"> X</p>
         </div>
     </div>
-    <div class="m_menu">
+    <div class="m_menu" id="m_menu">
         <p class="menu_item">HOME</p>
         <p class="menu_item">About me</p>
         <p class="menu_item">Career</p>
@@ -54,7 +54,7 @@
 <!-- LOGO -->
     <div class="logo_box">
     <div class="portfolio">
-        <img class="logo" src="./media/images/portfolio.png" alt="My Portfolio">
+        <img class="logo" src="./media/images/portfolio.png" alt="Marvin's Portfolio">
     </div>
     </div>
     <div class="title">
@@ -100,5 +100,30 @@
     <p id="footer">Copyright ©2023 KiniunTech.</p>
 </div>
 <script src="./scripts/anim.js"></script>
+
+<!-- SCRIPTS -->
+<script>
+    function showmenu(){
+        m_menu_open_btn.style = 'display: none; width:10%; right: 0;';
+        m_menu_close_btn.style = 'display: block; width:10%; right: 0;';
+        // m_menu.style['opacity'] = '1';
+        m_menu.style['transform'] = 'translate(0%)';
+    }
+
+    function hidemenu(){
+        m_menu_close_btn.style = 'display: none; width:10%; right: 0;';
+        m_menu_open_btn.style = 'display: block; width:10%; right: 0;';
+        // m_menu.style['opacity'] = '0';
+        m_menu.style['transform'] = 'translate(100%)';
+    }
+    // function hidemenu(){
+    //     if(m_menu_open_btn.style='display: none'){
+    //         console.log('Yes');
+    //     } else {
+    //         console.log('No');
+    //     }
+    // }
+
+</script>
 </body>
 </html>
