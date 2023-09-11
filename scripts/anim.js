@@ -4,7 +4,7 @@ const notes = document.querySelectorAll('.box');
 function triggerAnimation(entries){
   entries.forEach(entry =>{
     if(entry.isIntersecting){
-        entry.target.classList.add('animate__animated', 'animate__bounceIn');
+        entry.target.classList.add('show', 'animate__animated', 'animate__bounceIn');
         obBoxes.unobserve(entry.target);
     }else{
         entry.target.classList.remove('animate__animated', 'animate__bounceIn');
@@ -25,8 +25,8 @@ function playVideo(entries){
 
 const options={
     root: null,
-    rootMargin: '-110px',
-    // threshold: .7
+    // rootMargin: '-80px',
+    threshold: .6
 }
 
 const obBoxes = new IntersectionObserver(triggerAnimation, options);

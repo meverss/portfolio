@@ -71,12 +71,17 @@ a:hover {
 .title {
   color: chocolate;
   font-size: 4rem; 
+  font-weight: bold;
 }
 
 .sections {
   display: flex;
   flex-wrap: wrap;
   width:100vw;
+}
+
+.box {
+  opacity: 0;
 }
 
 /* ------- */
@@ -210,8 +215,8 @@ a:hover {
 
 .logo_box {
   display: flex;
-  position: sticky;
-  top: 100px;
+  /* position: sticky; */
+  margin-top: 30px;
   z-index: 99;
   width: 100vw;
   justify-content: center;
@@ -298,9 +303,9 @@ background-color: red;
   width: 200px;
   border: 1px solid #bbb;
   border-radius: 50%;
+  box-shadow: 4px 4px 10px 2px #bbb;
   margin: -45px;
   margin-top: -100px;
-  /* margin-right: -50px; */
   margin-left: -60px;
   z-index: 50;
 }
@@ -319,7 +324,7 @@ background-color: red;
 }
 
 .container div, .welcome div {
-  animation-delay: .5s;
+  animation-delay: .2s;
 }
 
 .cuadro {
@@ -362,10 +367,11 @@ background-color: red;
 }
 
 .show {
-  animation: show 2s ease .1s;
+  /* animation: show 2s ease .1s;
   animation-fill-mode: forwards;
   -webkit-animation: show 1s ease .1s;
-  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards; */
+  opacity: 1;
 }
 
 .show_menu {
