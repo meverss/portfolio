@@ -66,6 +66,8 @@ a:hover {
   transform: scale(1.2);
 }
 
+/* TOP BAR */
+
 .top_bar {
   display: flex;
   z-index: 101;
@@ -189,6 +191,8 @@ a:hover {
   transition: .3s;
 }
 
+/* LOGO */
+
 .logo_box {
   display: flex;
   position: sticky;
@@ -214,6 +218,41 @@ a:hover {
 
 }
 
+.title {
+  color: chocolate;
+  font-size: 4rem; 
+}
+
+/* WELCOME */
+
+.welcome {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 80px;
+  justify-content: center;
+  /* background-color: red; */
+  width: 100vw;
+  margin:auto;
+  margin-top: 55px;
+}
+
+.welcome_box {
+  width: 800px;
+  border: 1px solid #bbb;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 15px;
+}
+
+.welcome_box p {
+  padding-left: 2px;
+  padding-right: 2px;
+  text-align: center;
+}
+
+
+
+/* ------------------ */
 .container {
   display: flex;
   flex-wrap: wrap;
@@ -224,19 +263,8 @@ a:hover {
   margin-bottom: 187px;
 }
 
-.container div {
+.container div, .welcome div {
   animation-delay: .5s;
-}
-
-.title {
-  display: block;
-  width: 100vw;
-  margin-top: 70px;
-  padding-bottom: 20px;
-  color: chocolate;
-  text-align: center;
-  font-size: 2rem;
-  
 }
 
 .cuadro {
@@ -311,7 +339,10 @@ top: 500px;
 @media screen and (max-width: 576px) {
   .container {
     max-width: 540px;
-    gap: 90px;
+    /* gap: 90px; */
+  }
+  .welcome_box p {
+    font-size: 1.9rem;
   }
 }
 

@@ -1,13 +1,13 @@
-const notes = document.querySelectorAll('.cuadro');
+const notes = document.querySelectorAll('.box');
 const video = document.querySelector('#pool_screening')
 
 function triggerAnimation(entries){
   entries.forEach(entry =>{
     if(entry.isIntersecting){
-        entry.target.classList.add('animate__animated', 'animate__fadeInUp');
+        entry.target.classList.add('animate__animated', 'animate__bounceIn');
         obBoxes.unobserve(entry.target);
     }else{
-        entry.target.classList.remove('animate__animated', 'animate__fadeInUp');
+        entry.target.classList.remove('animate__animated', 'animate__bounceIn');
     }
   })  
 }
@@ -24,9 +24,9 @@ function playVideo(entries){
 }
 
 const options={
-    //root: null,
-    // rootMargin: '-50px',
-    threshold: .7
+    root: null,
+    rootMargin: '-110px',
+    // threshold: .7
 }
 
 const obBoxes = new IntersectionObserver(triggerAnimation, options);
