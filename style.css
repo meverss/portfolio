@@ -85,6 +85,7 @@ a:hover {
 .menu {
   display:flex;
   width: 70%;
+  padding-right: 5%;
   justify-content: right;
   gap: 40px;
 }
@@ -180,22 +181,12 @@ a:hover {
 
 .m_menu_open_btn p, .m_menu_close_btn p {
   color: #7a6c67;
-}
 
-/* .testing {
-  font: bold 2rem Gabriele;
-  background-color:#444;
-  color: transparent;
-  text-shadow: 2px 2px 3px rgba(255,255,255,0.5);
-  -webkit-background-clip: text;
-     -moz-background-clip: text;
-          background-clip: text;
-} */
+}
 
 .m_menu_open_btn p:hover, .m_menu_close_btn p:hover {
   cursor: pointer;
   transition: .3s;
-  /* transform: scale(1.2); */
 }
 
 .logo_box {
@@ -230,10 +221,10 @@ a:hover {
   width: 100vw;
   margin: auto;
   justify-content: center;
-  margin-bottom: 100px;
+  margin-bottom: 187px;
 }
 
-.container div:nth-child(2) {
+.container div {
   animation-delay: .5s;
 }
 
@@ -312,24 +303,25 @@ top: 500px;
 /* RESPONSIVE */
 
 @media screen and (max-width: 352px) {
-  .m-container {
+  .container {
     max-width: 320px;
   }
 }
 
 @media screen and (max-width: 576px) {
-  .m-container {
+  .container {
     max-width: 540px;
+    gap: 90px;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .m-container {
+  .container {
     max-width: 720px;
   }
 }
 
-@media screen and (max-width: 870px) {
+@media screen and (max-width: 945px) {
   .menu {
     display: none;
   }
@@ -345,13 +337,8 @@ top: 500px;
   }
 }
 
-@media screen and (min-width: 871px) {
-  .m_menu_open_btn {
-    display: none;
-  }
-}
 @media screen and (max-width: 1024px) {
-  .m-container {
+  .container {
     max-width: 960px;
   }
 }
