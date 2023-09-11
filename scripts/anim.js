@@ -37,3 +37,4 @@ notes.forEach(note =>{
 })
 
 // obVideo.observe(video);
+
