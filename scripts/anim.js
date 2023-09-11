@@ -1,5 +1,5 @@
 const notes = document.querySelectorAll('.box');
-const video = document.querySelector('#pool_screening')
+// const video = document.querySelector('#pool_screening')
 
 function triggerAnimation(entries){
   entries.forEach(entry =>{
@@ -30,12 +30,10 @@ const options={
 }
 
 const obBoxes = new IntersectionObserver(triggerAnimation, options);
-const obVideo = new IntersectionObserver(playVideo, options);
+// const obVideo = new IntersectionObserver(playVideo, options);
 
 notes.forEach(note =>{
     obBoxes.observe(note);
 })
 
-obVideo.observe(video);
-
-window.get
+// obVideo.observe(video);
