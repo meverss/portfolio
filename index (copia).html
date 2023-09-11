@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Marvin, Eversley, portfolio, IT, web, design, UI, computer, science, inux, developer, freelancer">
+    <meta name="description" content="Welcome! This is Marvin's portfolio">
+    <meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
+    <title>My Portfolio</title>
+    <!-- <link rel="canonical" href="https://meverss.github.io/portfolio"> -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./media/images/logo.png">
+</head>
+<body>
+
+<!-- OJO -->
+<!-- <script>
+            user.innerHTML = document.readyState + '...';
+</script> -->
+
+<!-- TOP BAR -->
+    <div class="top_bar">
+        <div class="menu">
+            <p class="menu_item">HOME</p>
+            <p class="menu_item"><a href="#s_about">About me</a></p>
+            <p class="menu_item"><a href="#career">Career</a></p>    
+            <p class="menu_item"><a href="#s_projects"></a>My projects</p>
+            <p class="menu_item">Contact</p>
+        </div>
+        <div class="social">
+
+<!--             󰹯                  -->
+            <p class="social_item"><a href="https://www.facebook.com/meverss85" target="_blank">  </a></p>
+            <p class="social_item"><a href="https://twitter.com/meverss" target="_blank">  </a></p>
+            <p class="social_item"><a href="https://www.instagram.com/meverss85/" target="_blank">  </a></p>
+            <p class="social_item"><a href="https://t.me/meverss" target="_blank">  </a></p>
+            <p class="social_item"><a href="https://linkedin.com/in/marvin-eversley-b061243a" target="_BLANK">  </a></p>
+        </div>
+        <div class="m_menu_open_btn" id="m_menu_open_btn">
+            <p class="menu_item" onclick="showmenu()"> 󰍜</p>
+        </div>
+        <div class="m_menu_close_btn" id="m_menu_close_btn">
+            <p class="menu_item" onclick="hidemenu()">  </p>
+        </div>
+    </div>
+    <div class="m_menu" id="m_menu">
+        <p class="menu_item"></a>HOME</p>
+        <p class="menu_item"><a href="#s_about">About me</a></p>
+        <p class="menu_item"><a href="#s_career">Career</a></p>
+        <p class="menu_item">My projects</p>
+        <p class="menu_item">Contact</p>
+    </div>
+
+<!-- LOGO -->
+    <div class="logo_box">
+    <div class="portfolio">
+        <img class="logo" src="./media/images/portfolio.png" alt="Marvin's Portfolio">
+    </div>
+    </div>
+
+<!-- WELCOME -->
+<section id="welcome">
+    <div class="title">
+        <!-- <h1 class="animate__animated animate__fadeIn">Welcome!</h1> -->
+    </div>
+    <div class="welcome">
+        <div class="welcome_box box">
+        <p class="text">
+            <span class="title animate__animated animate__fadeIn">Welcome!</span><br><br>
+
+            Thanks in advance for visiting my Portfolio!<br><br>
+            
+            Here you will find a brief background about me, as well as my professional information, work experience and some of the projects I’ve been working on.<br><br>
+            
+            Don’t hesitate to contact me, either to request my services, to express your opinion about any of my projects or just to debate topics related to <span id="s_about"></span>this amazing world of <b>Computer Science</b> and <b>Information Technologies.</b><br><br>
+            
+            Once again, you are welcome here!
+        </p>
+        </div>
+    </div>
+</section>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+<section id="about_me">
+    <div class="about_box box">
+        <div class="about_box_image">
+            <img id="mypict" src="./media/images/me.jpg" alt="Marvin Eversley Silva">
+        </div>
+        <div class="about_box_text">
+            <p class="text">
+                <span class="title animate__animated animate__fadeIn" >About me</span><br><br>
+    
+                Hey there! I’m Marvin, and I’m 38 years old.<br><br>
+
+                “...Once upon a time back in the ‘90s, a little boy had before him a Commodore 64…! So impressing… So out-of-this-world to him…! Then he knew it: that love at first sight were going to last forever… :)”<br><br>
+                
+                I’m passionate about all related to Computer Science, especially all concerning <b>Software Libre</b> (which am a big enthusiastic of) and fullstack web development.<br><br>
+                <span id="s_career"></span>
+                I think it’s fantastic how something that started as a hobby became one of my biggest passions (and what brings bread to my table..!)
+            </p>
+        </div>
+    </div>
+</section>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+
+<!-- CAREER -->
+<section id="career">
+    <div class="career_box box">
+        <div class="career_box_image">
+            <img id="computer" src="./media/images/web_design_2.png" alt="computer science">
+        </div>
+        <div class="career_box_text">
+            <p class="text">
+                <span class="title animate__animated animate__fadeIn">Career</span><br><br>
+    
+                I’m a Computer Science engineer with +15 years experience.<br><br>
+
+                During my career I’ve been more into Networks Administration, but among other things, I could also provide you my services on:
+                
+                <span id="skills">
+                <ul>
+                <li> Linux Servers installation and management.</li>
+                <li> Linux Systems Management.</li>
+                <li> Programming on PHP, Javascript, Python and Ruby.</li>
+                <li> Data Bases creation and management (MySQL, MariaDB)</li>
+                <li> Fullstack Web Delelopment.</li>
+                </ul>
+                </span>
+            </p>
+        </div>
+    </div>
+</section>
+
+<!--  CONTAINER -->
+<div class="container" id="container">
+
+</div>
+    <!-- FOOTER -->
+<div class="footer">
+    <p id="footer">Copyright ©2023 KiniunTech.</p>
+</div>
+
+<!-- SCRIPTS -->
+<script src="./scripts/anim.js"></script>
+
+<script>
+    function showmenu(){
+        m_menu_open_btn.style = 'display: none; width:10%; right: 0;';
+        m_menu_close_btn.style = 'display: block; width:10%; right: 0;';
+        m_menu.style['transform'] = 'translate(0%)';
+    }
+
+    function hidemenu(){
+        m_menu_close_btn.style = 'display: none; width:10%; right: 0;';
+        m_menu_open_btn.style = 'display: block; width:10%; right: 0;';
+        m_menu.style['transform'] = 'translate(100%)';
+    }
+</script>
+</body>
+</html>
