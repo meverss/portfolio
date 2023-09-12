@@ -28,8 +28,6 @@
             <p class="menu_item" id="contact">Contact</p>
         </div>
         <div class="social">
-
-<!--             󰹯                  -->
             <p class="social_item"><a href="https://www.facebook.com/meverss85" target="_blank">  </a></p>
             <p class="social_item"><a href="https://twitter.com/meverss" target="_blank">  </a></p>
             <p class="social_item"><a href="https://www.instagram.com/meverss85/" target="_blank">  </a></p>
@@ -60,9 +58,6 @@
 
 <!-- WELCOME -->
 <section id="welcome">
-    <div class="title">
-        <!-- <h1 class="animate__animated animate__fadeIn">Welcome!</h1> -->
-    </div>
     <div class="welcome">
         <div class="welcome_box box">
         <p class="text">
@@ -93,9 +88,9 @@
 
                 “...Once upon a time back in the ‘90s, a little boy had before him a Commodore 64…! So impressing… So out-of-this-world to him…! Then he knew it: that love at first sight were going to last forever… :)”<br><br>
                 
-                I’m passionate about all related to Computer Science, especially all concerning <b>Software Libre</b> (which am a big enthusiastic of) and fullstack web development.<br><br>
+                I’m passionate about all related to Computer Science, especially all concerning <b>Software Libre</b> (which am a big enthusiastic of) and websites design.<br><br>
                 <span id="s_career"></span>
-                I think it’s fantastic how something that started as a hobby became one of my biggest passions (and what brings bread to my table..!)
+                I think it’s fantastic how something that started as a hobby became one of my biggest passions (and also what brings bread to my table as well..!)
             </p>
         </div>
     </div>
@@ -147,12 +142,14 @@
         m_menu_open_btn.style = 'display: none; width:10%; right: 0;';
         m_menu_close_btn.style = 'display: block; width:10%; right: 0;';
         m_menu.style['transform'] = 'translate(0%)';
+        document.body.style['overflow'] = 'hidden';
     }
 
     function hidemenu(){
         m_menu_close_btn.style = 'display: none; width:10%; right: 0;';
         m_menu_open_btn.style = 'display: block; width:10%; right: 0;';
         m_menu.style['transform'] = 'translate(100%)';
+        document.body.style['overflow'] = 'auto';
     }
     
     const m_menu_items = document.querySelectorAll('.m_menu_item');
@@ -164,3 +161,5 @@
 </script>
 </body>
 </html>
+
+<!--             󰹯                  -->
