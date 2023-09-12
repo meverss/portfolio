@@ -78,6 +78,11 @@ a:hover {
   transform: scale(1.2);
 }
 
+hr {
+  display: flex;
+  align-self: center;
+  width: 90%;
+}
 /* GENERAL */
 
 .title {
@@ -463,15 +468,17 @@ a:hover {
   border-radius: 15px;
   text-align: center;
   background-color: #ddd;
-  transition: .2s;
+  transition: .3s;
 }
 
 .project:hover {
   cursor: pointer;
-  transform: scale(1.03);
   box-shadow: 1px 1px 5px .1px #444;
 }
 
+.project:hover > .thumbnail {
+  transform: scale(1.07);
+}
 .info {
   font-weight: bold;
   width: fit-content;
@@ -479,7 +486,18 @@ a:hover {
 
 .thumbnail {
   width: 90%;
-  margin-top: -75px;
+  margin: auto;
+  margin-top: 20px;
+  transition: .3s;
+}
+
+.project_desc {
+  margin: auto;
+}
+
+.view_more {
+  margin: auto;
+  margin-bottom: 15px;
 }
 
 /* ------------------ */

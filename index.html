@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="./media/images/logo.png">
 </head>
-<body onload="carga()">
+<body >
 <div class="cookies_container" id="cookies">
     <div class="cookies_dialog">
         <p class="text box">
@@ -21,6 +21,7 @@
     </div>
 </div>
 <nav id="home"></nav>
+
 <!-- OJO -->
 <!-- <script>
             user.innerHTML = document.readyState + '...';
@@ -143,35 +144,47 @@
     <section class="projects">
         <div class="project box" id="project1">
             <img class="thumbnail" src="./media/images/project_1.png" alt="Proyect 1">
-            <br><br><br>
-            <ul>
+            <hr>
+            <ul class="project_desc">
                 <li><spam class="info">Name: </spam>Proyect 1</li>
                 <li><spam class="info">Description: </spam>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque, nobis!</li>
             </ul>
+            <p>
+            <span class="button view_more" id="view_more">View more</span>    
+            </p>
         </div>      
         <div class="project box" id="project2">
             <img class="thumbnail" src="./media/images/project_1.png" alt="Proyect 2">
-            <br><br><br>
-            <ul>
+            <hr>
+            <ul class="project_desc">
                 <li><spam class="info">Name: </spam>Proyect 2</li>
                 <li><spam class="info">Description: </spam>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque, nobis!</li>
             </ul>
+            <p>
+            <span class="button view_more" id="view_more">View more</span>    
+            </p>
         </div>      
         <div class="project box" id="project3">
             <img class="thumbnail" src="./media/images/project_1.png" alt="Proyect 3">
-            <br><br><br>
-            <ul>
+            <hr>
+            <ul class="project_desc">
                 <li><spam class="info">Name: </spam>Proyect 3</li>
                 <li><spam class="info">Description: </spam>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque, nobis!</li>
             </ul>
+            <p>
+            <span class="button view_more" id="view_more">View more</span>    
+            </p>
         </div>      
         <div class="project box" id="project4">
             <img class="thumbnail" src="./media/images/project_1.png" alt="Proyect 4">
-            <br><br><br>
-            <ul>
+            <hr>
+            <ul class="project_desc">
                 <li><spam class="info">Name: </spam>Proyect 4</li>
                 <li><spam class="info">Description: </spam>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque, nobis!</li>
             </ul>
+            <p>
+            <span class="button view_more" id="view_more">View more</span>    
+            </p>
         </div>      
 
     </section>
@@ -206,18 +219,26 @@
         menu.addEventListener('click', hidemenu);
     })
     
-    cookies_ok.addEventListener('click', function(){
-        cookies.style['display'] = 'none';
-        document.body.style['overflow'] = 'auto';
-    });
+    // cookies_ok.addEventListener('click', function(){
+    //     cookies.style['display'] = 'none';
+    //     document.body.style['overflow'] = 'auto';
+    // });
 
     // document.body.addEventListener('load', function(){
     //     console.log('Se cargó la página...');
     // });
-        function carga(){
-            console.log('Se cargó la página');
-        }
+
+    // setTimeout((cookies_ok.style['display'] = 'flex'), 3000);
     
+    //     function carga(){
+    //         console.log('Se cargó la página');
+    //     }
+    
+    history.replaceState(null,null,'index.html');var histlength=history.length;history.go(-histlength);
+    function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));setTimeout(function(){window.msgs2.innerHTML="Installing Offline Cache: " + Percent + "%";},500)}
+function DisplayCacheProgress(){setTimeout(function(){console.log("Cache Installed Successfully ✔");},1500);setTimeout(function(){console.log("Now Close And Re-Open Your Browser ...");},3500);}window.applicationCache.addEventListener("progress",DLProgress,false);window.applicationCache.oncached=function(e){DisplayCacheProgress();};window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
+
+
 </script>
 </body>
 </html>
