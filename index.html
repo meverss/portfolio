@@ -12,6 +12,14 @@
     <link rel="icon" href="./media/images/logo.png">
 </head>
 <body>
+<div class="cookies_container" id="cookies">
+    <div class="cookies_dialog">
+        <p class="text box">
+            This website uses cookies for a better user experience.<br>
+        </p>
+        <span class="button" id="cookies_ok">OK</span>
+    </div>
+</div>
 <nav id="home"></nav>
 <!-- OJO -->
 <!-- <script>
@@ -157,6 +165,11 @@
     m_menu_items.forEach(menu => {
         menu.addEventListener('click', hidemenu);
     })
+    
+    cookies_ok.addEventListener('click', function(){
+        cookies.style['display'] = 'none';
+        document.body.style['overflow'] = 'auto';
+    });
 
 </script>
 </body>
