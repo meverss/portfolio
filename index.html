@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="./media/images/logo.png">
 </head>
-<body>
+<body onload="carga()">
 <div class="cookies_container" id="cookies">
     <div class="cookies_dialog">
         <p class="text box">
@@ -135,9 +135,10 @@
 
 <!--  CONTAINER -->
 <div class="container" id="container">
-
+    <video src="https://visuales.uclv.cu/Infantiles/Cubanos/Calabacitas/La%20Calabacita%2009.mp4" autoplay="true"></video>
 </div>
-    <!-- FOOTER -->
+
+<!-- FOOTER -->
 <div class="footer">
     <p id="footer">Copyright ©2023 KiniunTech.</p>
 </div>
@@ -171,6 +172,13 @@
         document.body.style['overflow'] = 'auto';
     });
 
+    // document.body.addEventListener('load', function(){
+    //     console.log('Se cargó la página...');
+    // });
+        function carga(){
+            console.log('Se cargó la página');
+        }
+    
 </script>
 </body>
 </html>
