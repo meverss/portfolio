@@ -43,7 +43,7 @@ html {
 
 body {
   background-color:#f0f0f0;
-  overflow: hidden;
+  overflow: auto;
 }
 
 p, li {
@@ -84,7 +84,7 @@ a:hover {
   color: chocolate;
   font-size: 4rem; 
   font-weight: bold;
-  text-align: right;
+  text-align: center;
 }
 
 .sections {
@@ -97,27 +97,13 @@ a:hover {
   opacity: 0;
 }
 
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-  width: 100vw;
-  margin: auto;
-  justify-content: center;
-  margin-bottom: 187px;
-}
-
-.container div, .welcome div {
-  animation-delay: .2s;
-}
-
 
 /* ------- */
 
 /* COOKIES */
 
 .cookies_container {
-  display: flex;
+  display: none;
   position: fixed;
   width: 100%;
   height: 100%;
@@ -429,7 +415,7 @@ a:hover {
 }
 
 #computer {
-  width: 100%;
+  max-width: 100%;
   max-height: 500px;
   margin: auto;
   min-width: 250px;
@@ -438,21 +424,66 @@ a:hover {
   z-index: 50;
 }
 
+/* PROJECTS */
+
+.container {
+  display: block;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: auto;
+  height: auto;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 150px;
+  border: 1px solid #bbb;
+  border-radius: 15px;
+  padding: 20px;
+  margin-left: 10px;
+  margin-right: 20px;
+}
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 80px;
+  height: auto;
+  bottom: 187px;
+}
+
+.project {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 370px;
+  height: 500px;
+  margin: auto;
+  justify-content: center;
+  border: 1px solid #bbb;  
+  border-radius: 15px;
+  text-align: center;
+  background-color: #ddd;
+  transition: .2s;
+}
+
+.project:hover {
+  cursor: pointer;
+  transform: scale(1.03);
+  box-shadow: 1px 1px 5px .1px #444;
+}
+
+.info {
+  font-weight: bold;
+  width: fit-content;
+}
+
+.thumbnail {
+  width: 90%;
+  margin-top: -75px;
+}
 
 /* ------------------ */
 
-
-.cuadro {
-  background-color: #d4d4d4;
-  border: 2px solid #d4d4d4;
-  border-radius: 5px;
-  font-size: 2rem;
-  width: 310px;
-  height: 350px;
-  padding-top: 15px;
-  text-align: center;
-  opacity: 0;
-}
 
 .footer {
   display: flex;
