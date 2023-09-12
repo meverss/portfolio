@@ -163,6 +163,7 @@ a:hover {
 
 .button:hover {
   background-color: chocolate;
+  border: 1px solid #333;
   cursor: pointer;
   transform: scale(1.1);
 }
