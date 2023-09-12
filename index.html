@@ -12,7 +12,7 @@
     <link rel="icon" href="./media/images/logo.png">
 </head>
 <body>
-
+<nav id="home"></nav>
 <!-- OJO -->
 <!-- <script>
             user.innerHTML = document.readyState + '...';
@@ -21,11 +21,11 @@
 <!-- TOP BAR -->
     <div class="top_bar">
         <div class="menu">
-            <p class="menu_item">HOME</p>
-            <p class="menu_item"><a href="#s_about">About me</a></p>
-            <p class="menu_item"><a href="#career">Career</a></p>    
-            <p class="menu_item"><a href="#s_projects"></a>My projects</p>
-            <p class="menu_item">Contact</p>
+            <p class="menu_item" id="home"><a href="#home">HOME</a></p>
+            <p class="menu_item" id="about"><a href="#s_about">About me</a></p>
+            <p class="menu_item" id="career"><a href="#s_career">Career</a></p>    
+            <p class="menu_item" id="projects"><a href="#s_projects"></a>My projects</p>
+            <p class="menu_item" id="contact">Contact</p>
         </div>
         <div class="social">
 
@@ -44,11 +44,11 @@
         </div>
     </div>
     <div class="m_menu" id="m_menu">
-        <p class="menu_item"></a>HOME</p>
-        <p class="menu_item"><a href="#s_about">About me</a></p>
-        <p class="menu_item"><a href="#s_career">Career</a></p>
-        <p class="menu_item">My projects</p>
-        <p class="menu_item">Contact</p>
+        <p class="menu_item m_menu_item" id="m_home"><a href="#home">HOME</a></p>
+            <p class="menu_item m_menu_item" id="about"><a href="#s_about">About me</a></p>
+            <p class="menu_item m_menu_item" id="m_career"><a href="#s_career">Career</a></p>    
+            <p class="menu_item m_menu_item" id="m_projects"><a href="#s_projects"></a>My projects</p>
+            <p class="menu_item m_menu_item" id="m_contact">Contact</p>
     </div>
 
 <!-- LOGO -->
@@ -121,8 +121,8 @@
                 <li> Linux Servers installation and management.</li>
                 <li> Linux Systems Management.</li>
                 <li> Programming on PHP, Javascript, Python and Ruby.</li>
-                <li> Data Bases creation and management (MySQL, MariaDB)</li>
-                <li> Fullstack Web Delelopment.</li>
+                <li> Databases creation and management (MySQL, MariaDB)</li>
+                <li> Website UI/UX development.</li>
                 </ul>
                 </span>
             </p>
@@ -154,6 +154,13 @@
         m_menu_open_btn.style = 'display: block; width:10%; right: 0;';
         m_menu.style['transform'] = 'translate(100%)';
     }
+    
+    const m_menu_items = document.querySelectorAll('.m_menu_item');
+
+    m_menu_items.forEach(menu => {
+        menu.addEventListener('click', hidemenu);
+    })
+
 </script>
 </body>
 </html>

@@ -1,0 +1,12 @@
+{
+    "español": {
+        "welcome":"Bienvenido!",
+        "home":"INICIO",
+        "career":"Carrera"
+    },
+    "frances": {
+        "welcome":"Benvenue!",
+        "home":"Le Inicie",
+        "career":"Le carreré"
+    }
+}
