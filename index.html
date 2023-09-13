@@ -261,6 +261,11 @@
             var position = element.offsetTop
             window.scrollTo(0, position - 200);
         }
+        function scroll_to_section_m(section){
+            var element = document.getElementById(section);
+            var position = element.offsetTop
+            window.scrollTo(0, position - 100);
+        }
 
         var menu = document.querySelectorAll('.menu_item');
         var alt_menu = document.querySelectorAll('.m_menu_item');
@@ -279,8 +284,7 @@
         alt_menu.forEach(obj1 => {
             // console.log(obj1.id);
             obj1.addEventListener('click', function(){
-                        scroll_to_section('s_'+obj1.id);
-                        console.log('s_'+obj1.id);
+                        scroll_to_section_m('s_'+obj1.id);
                     });
         })
 
