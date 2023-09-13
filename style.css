@@ -45,6 +45,7 @@ body {
   background-color:#f0f0f0;
   overflow: auto;
   transition: .3s;
+  scroll-behavior: smooth;
 }
 
 p, li {
@@ -102,6 +103,7 @@ hr {
 .box {
   opacity: 0;
   animation-delay: .2s;
+  
 }
 
 
@@ -332,6 +334,7 @@ hr {
 .welcome_box {
   width: 800px;
   border: 1px solid #bbb;
+  background-color: #eee;
   border-radius: 20px;
   padding: 10px;
   margin: 12px;
@@ -361,6 +364,7 @@ hr {
   width: 60%;
   min-width: 380px;
   border: 1px solid #bbb;
+  background-color: #eee;
   border-radius: 20px;
   margin-left: -50px;
 
@@ -409,6 +413,7 @@ hr {
   width: 50%;
   min-width: 380px;
   border: 1px solid #bbb;
+  background-color: #eee;
   border-radius: 15px;
   margin-left: -40px;
   order: -1;
@@ -450,6 +455,7 @@ hr {
   align-items: center;
   margin-bottom: 150px;
   border: 1px solid #bbb;
+  background-color: #eee;
   border-radius: 15px;
   padding: 20px;
   margin-left: 10px;
