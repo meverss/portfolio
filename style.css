@@ -192,23 +192,15 @@ hr {
   gap: 40px;
 }
 
+.menu .menu_item {
+  font-size: 2.5rem;
+}
+
 .menu_item, m_menu_item, .social_item {
   color: #fff;
   width: auto;
   height: 40px;
 }
-
-/* .menu_item, .social_item{
-  width:auto;
-  height: 40px;
-  background-color:#bbb;
-  color: transparent;
-  text-shadow: 1px 1px 3px rgba(255,255,255,0.5);
-  -webkit-background-clip: text;
-     -moz-background-clip: text;
-          background-clip: text;
-
-} */
 
 .menu_item:hover, .social_item:hover {
   transition: .3s;
@@ -402,8 +394,10 @@ hr {
   gap: 20px;
   width: 90%;
   justify-content: center;
+  align-items: center;
+  text-align: center;
   margin: auto;
-  margin-left: 40px;
+  /* margin-left: 40px; */
 }
 
 .career_box_text {
@@ -427,19 +421,22 @@ hr {
 
 .career_box_image {
   display: flex;
-  /* height: 100%; */
   width: 30%;
+  align-items: center;
+  justify-content: center;
 }
 
 #computer {
+  position: sticky;
+  right: 190px;
   max-width: 100%;
   max-height: 500px;
   margin: auto;
   min-width: 250px;
-  margin: auto;
-  margin-top: 60px;
-  margin-left: -90px;
+  /* margin-top: 50px; */
+  /* margin-left: -90px; */
   z-index: 50;
+  align-self: center;
 }
 
 /* PROJECTS */
@@ -592,19 +589,6 @@ hr {
 }
 
 @media screen and (max-width: 945px) {
-  .menu {
-    display: none;
-  }
-  .social {
-    display: flex;
-    width: 100vw;
-    justify-content: center;
-  }
-  #m_menu_open_btn {
-    display: block;
-    width:10%;
-    right: 0;;
-  }
   .career_box_text {
     order: 1;
     margin-left: 10px;
@@ -625,6 +609,23 @@ hr {
   /* .container {
     max-width: 960px;
   } */
+}
+
+@media screen and (max-width: 1140px) {
+  .menu {
+    display: none;
+  }
+  .social {
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+  }
+  #m_menu_open_btn {
+    display: block;
+    width:10%;
+    right: 0;;
+  }
+  
 }
 
 @media screen and (max-width: 1200px) {

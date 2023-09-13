@@ -88,8 +88,9 @@
 <br><br><br><br><br><br><br><br><br><br><br><br>
 
 <!-- ABOUT ME -->
-<section id="s_m_about"></section>
+
 <section id="s_about">
+    <section id="s_m_about"></section>
     <div class="about_box box">
         <div class="about_box_image">
             <img id="mypict" src="./media/images/me.jpg" alt="Marvin Eversley Silva">
@@ -291,6 +292,12 @@
                         scroll_to_section_m('s_'+obj1.id);
                     });
         })
+
+        //COPYRIGHT
+        const fecha = new Date();
+        const copyright = 'Copyright ©'+ fecha.getFullYear()+' KiniunTech.';
+        footer.innerHTML = copyright;
+        
 
 </script>
 
