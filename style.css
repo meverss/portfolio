@@ -44,6 +44,7 @@ html {
 body {
   background-color:#f0f0f0;
   overflow: auto;
+  transition: .3s;
 }
 
 p, li {
@@ -100,6 +101,7 @@ hr {
 
 .box {
   opacity: 0;
+  animation-delay: .6s;
 }
 
 
@@ -262,30 +264,31 @@ hr {
   color: chocolate;
 }
 
-.m_menu_open_btn, .m_menu_close_btn {
+.m_menu_btn {
   display: none;
   font-family: Symbols;
   position: absolute;
   width: 96%;
   text-align: right;
   justify-content: right;
+  /* transition: .3s; */
+  animation-duration: .3s;
 }
 
-.m_menu_close_btn .menu_item, .m_menu_open_btn .menu_item {
+.m_menu_btn .menu_item {
   font-size: 3.2rem;
   font-weight: bold;
   padding-top: 10px;
   padding-right: 15px;
 }
 
-.m_menu_open_btn p, .m_menu_close_btn p {
+.m_menu_btn p {
   color: #7a6c67;
   text-shadow: .7px .7px 2px #000, -.7px -.7px 2px #000;
 }
 
-.m_menu_open_btn p:hover, .m_menu_close_btn p:hover {
+.m_menu_btn p:hover {
   cursor: pointer;
-  transition: .3s;
 }
 
 /* LOGO */
@@ -311,7 +314,7 @@ hr {
 .logo {
   width: 90%;
   height: 95%;
-
+  margin: auto;
 }
 
 /* WELCOME */
@@ -345,6 +348,7 @@ hr {
 .about_box {
   display: flex;
   flex-wrap: wrap;
+  margin: auto;
   width: 100%;
   justify-content: center;
   ;
@@ -368,6 +372,8 @@ hr {
 }
 
 .about_box_image {
+  position: sticky;
+  left: 80px;
   display: flex;
   height: 100%;
 }
@@ -392,6 +398,7 @@ hr {
   gap: 20px;
   width: 90%;
   justify-content: center;
+  margin: auto;
   margin-left: 40px;
 }
 
@@ -424,6 +431,7 @@ hr {
   max-height: 500px;
   margin: auto;
   min-width: 250px;
+  margin: auto;
   margin-top: 60px;
   margin-left: -90px;
   z-index: 50;
@@ -449,6 +457,7 @@ hr {
 }
 
 .projects {
+  opacity: 0;
   display: flex;
   flex-wrap: wrap;
   gap: 80px;
@@ -543,28 +552,18 @@ hr {
   transition: .3s;
 }
 
-#pool_screening {
-  transition: 1s ease .5s;
-  width: 100%;
-  border-radius: 10px;
-}
-
-#user {
-top: 500px;
-}
-
 /* RESPONSIVE */
 
 @media screen and (max-width: 352px) {
-  .container {
+  /* .container {
     max-width: 320px;
-  }
+  } */
 }
 
 @media screen and (max-width: 576px) {
-  .container {
+  /* .container {
     max-width: 540px;
-  }
+  } */
   .welcome_box p {
     font-size: 1.9rem;
   }
@@ -574,9 +573,9 @@ top: 500px;
 }
 
 @media screen and (max-width: 768px) {
-  .container {
+  /* .container {
     max-width: 720px;
-  }
+  } */
   .about_box_text {
     margin-left: 0;
   }
@@ -595,7 +594,7 @@ top: 500px;
     width: 100vw;
     justify-content: center;
   }
-  .m_menu_open_btn {
+  #m_menu_open_btn {
     display: block;
     width:10%;
     right: 0;;
@@ -617,9 +616,9 @@ top: 500px;
 }
 
 @media screen and (max-width: 1024px) {
-  .container {
+  /* .container {
     max-width: 960px;
-  }
+  } */
 }
 
 @media screen and (max-width: 1200px) {
