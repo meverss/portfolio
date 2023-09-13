@@ -43,7 +43,7 @@
             <p class="social_item"><a href="https://linkedin.com/in/marvin-eversley-b061243a" target="_BLANK">  </a></p>
         </div>
         <div class="m_menu_btn animate__animated animate__zoomIn" id="m_menu_open_btn">
-            <p class="menu_item" onclick="showmenu()"> 󰍜</p>
+            <p class="menu_item" onclick="showmenu()"> 󰍜 </p>
         </div>
         <div class="m_menu_btn animate__animated animate__zoomIn" id="m_menu_close_btn">
             <p class="menu_item" onclick="hidemenu()">  </p>
@@ -99,7 +99,7 @@
             <p class="text">
                 <span class="title animate__animated animate__fadeIn" >About me</span><br><br>
     
-                Hey there! I’m Marvin, and I’m 38 years old.<br><br>
+                Hey there! I’m Marvin, and I’m <span id="my_age"></span> years old.<br><br>
 
                 “...Once upon a time back in the ‘90s, a little boy had before him a Commodore 64…! So impressing…! So out-of-this-world to him…! Then he knew it: that love at first sight were going to last forever… :)”<br><br>
                 
@@ -297,7 +297,7 @@
         const fecha = new Date();
         const copyright = 'Copyright ©'+ fecha.getFullYear()+' KiniunTech.';
         footer.innerHTML = copyright;
-        
+        my_age.innerHTML = fecha.getFullYear() - 1985;
 
 </script>
 
