@@ -28,7 +28,7 @@
 
 <!-- TOP BAR -->
     <div class="top_bar">
-        <div class="menu">
+        <div class="menu" id="top_menu">
             <p class="menu_item" id="home">HOME</p>
             <p class="menu_item" id="about">About me</p>
             <p class="menu_item" id="career">Career</p>    
@@ -43,7 +43,7 @@
             <p class="social_item"><a href="https://linkedin.com/in/marvin-eversley-b061243a" target="_BLANK">  </a></p>
         </div>
         <div class="m_menu_btn animate__animated animate__zoomIn" id="m_menu_open_btn">
-            <p class="m_menu_item" onclick="showmenu()"> 󰍜 </p>
+            <p class="menu_item" onclick="showmenu()"> 󰍜 </p>
         </div>
         <div class="m_menu_btn animate__animated animate__zoomIn" id="m_menu_close_btn">
             <p class="menu_item" onclick="hidemenu()">  </p>
@@ -247,6 +247,16 @@
         });
     })
   
+    console.log(top_menu.style.display);
+
+    window.onresize = function(){
+        // let m = getComputedStyle(top_menu).display;
+        m = top_menu.style.display;
+        if(m = 'flex'){
+            // m_menu_btn.style['display'] = 'none';
+            console.log('asdasda');
+        }
+    }
 
     // COOKIES WARNING
     // cookies_ok.addEventListener('click', function(){
@@ -295,10 +305,13 @@
         })
 
         alt_menu.forEach(obj1 => {
-            // console.log(obj1.id);
-            obj1.addEventListener('click', function(){
+            console.log(obj1);
+            if(obj1 != 's_m_menu_open_btn'){
+                obj1.addEventListener('click', function(){
                         scroll_to_section_m('s_'+obj1.id);
                     });
+            }
+            
         })
 
         //COPYRIGHT

@@ -267,7 +267,7 @@ hr {
 }
 
 .m_menu_btn {
-  display: none;
+  display: block;
   position: fixed;
   font-family: Symbols;
   width: 10%;
@@ -556,10 +556,6 @@ hr {
 }
 
 .show {
-  /* animation: show 2s ease .1s;
-  animation-fill-mode: forwards;
-  -webkit-animation: show 1s ease .1s;
-  -webkit-animation-fill-mode: forwards; */
   opacity: 1;
 }
 
@@ -611,9 +607,7 @@ hr {
 }
 
 @media screen and (max-width: 1024px) {
-  /* .container {
-    max-width: 960px;
-  } */
+  
 }
 
 @media screen and (max-width: 1140px) {
