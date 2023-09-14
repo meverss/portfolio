@@ -267,7 +267,7 @@ hr {
 }
 
 .m_menu_btn {
-  display: block;
+  display: none;
   position: fixed;
   font-family: Symbols;
   width: 10%;
