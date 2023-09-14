@@ -183,7 +183,7 @@ hr {
 
 .menu {
   display:flex;
-  width: 70%;
+  width: 67%;
   justify-content: right;
   gap: 40px;
   align-items: center;
@@ -588,6 +588,8 @@ hr {
   }
 
 }
+
+#computer:
 
 @media screen and (max-width: 945px) {
   .career_box_text {
