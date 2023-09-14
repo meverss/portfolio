@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M47VJ30Q8F"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-M47VJ30Q8F');
-    </script>
+<!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TCXQ99WF');</script>
+<!-- End Google Tag Manager -->
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,6 +20,9 @@
     <link rel="icon" href="./media/images/logo.png">
 </head>
 <body >
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TCXQ99WF" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 <div class="cookies_container" id="cookies">
     <div class="cookies_dialog">
         <p class="text box">
@@ -258,17 +258,6 @@
         });
     })
   
-    console.log(top_menu.style.display);
-
-    window.onresize = function(){
-        // let m = getComputedStyle(top_menu).display;
-        m = top_menu.style.display;
-        if(m = 'flex'){
-            // m_menu_btn.style['display'] = 'none';
-            console.log('asdasda');
-        }
-    }
-
     // COOKIES WARNING
     // cookies_ok.addEventListener('click', function(){
     //     cookies.style['display'] = 'none';
@@ -316,7 +305,6 @@
         })
 
         alt_menu.forEach(obj1 => {
-            console.log(obj1);
             if(obj1 != 's_m_menu_open_btn'){
                 obj1.addEventListener('click', function(){
                         scroll_to_section_m('s_'+obj1.id);
