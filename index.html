@@ -43,7 +43,7 @@
             <p class="social_item"><a href="https://linkedin.com/in/marvin-eversley-b061243a" target="_BLANK">  </a></p>
         </div>
         <div class="m_menu_btn animate__animated animate__zoomIn" id="m_menu_open_btn">
-            <p class="menu_item" onclick="showmenu()"> 󰍜 </p>
+            <p class="m_menu_item" onclick="showmenu()"> 󰍜 </p>
         </div>
         <div class="m_menu_btn animate__animated animate__zoomIn" id="m_menu_close_btn">
             <p class="menu_item" onclick="hidemenu()">  </p>
@@ -119,7 +119,7 @@
 <section id="s_career">
     <div class="career_box box">
         <div class="career_box_image">
-            <img id="computer" src="./media/images/web_design_2.png" alt="computer science">
+            <img id="computer" src="./media/images/computer_science.png" alt="computer science">
         </div>
         <div class="career_box_text">
             <p class="text">
@@ -144,6 +144,7 @@
 <br><br><br><br><br><br><br><br><br><br><br><br>
 
 <!--  PROJECTS -->
+
 <section id="s_m_projects"></section>
 <section id="s_projects"></section>
 <div class="container box" id="container">
@@ -219,24 +220,31 @@
 <script>
 
     // SHOW/HIDE ALTERANTIVE MENU
+    
+    m_menu_open_btn.addEventListener('click', showmenu);
+    m_menu_close_btn.addEventListener('click', hidemenu);
+
     function showmenu(){
-        m_menu_open_btn.style = 'display: none; width:10%; right: 0;';
-        m_menu_close_btn.style = 'display: block; width:10%; right: 0;';
+        m_menu_open_btn.style = 'display: none; right: 0;';
+        m_menu_close_btn.style = 'display: flex; right: 0;';
         m_menu.style['transform'] = 'translate(0%)';
-        document.body.style['overflow'] = 'hidden';
+        // document.body.style['overflow'] = 'hidden';
     }
 
     function hidemenu(){
-        m_menu_close_btn.style = 'display: none; width:10%; right: 0;';
-        m_menu_open_btn.style = 'display: block; width:10%; right: 0;';
+        m_menu_close_btn.style = 'display: none; right: 0;';
+        m_menu_open_btn.style = 'display: flex; right: 0;';
         m_menu.style['transform'] = 'translate(100%)';
-        document.body.style['overflow'] = 'auto';
+        // document.body.style['overflow'] = 'auto';
     }
    
     const m_menu_items = document.querySelectorAll('.m_menu_item');
 
     m_menu_items.forEach(menu => {
-        menu.addEventListener('click', hidemenu);
+        menu.addEventListener('click', function(){
+            m_menu.style['transform'] = 'translate(100%)';
+            hidemenu();
+        });
     })
   
 
@@ -263,12 +271,12 @@
         // SACROLL TO SECTIONS
         function scroll_to_section(section){
             var element = document.getElementById(section);
-            var position = element.offsetTop
+            var position = element.offsetTop;
             window.scrollTo(0, position - 200);
         }
         function scroll_to_section_m(section){
             var element = document.getElementById(section);
-            var position = element.offsetTop
+            var position = element.offsetTop;
             window.scrollTo(0, position - 100);
         }
 
