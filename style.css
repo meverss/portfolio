@@ -45,6 +45,7 @@ body {
   background-color:#f0f0f0;
   overflow: auto;
   transition: .3s;
+  overflow: hidden;
 }
 
 p, li {
@@ -85,6 +86,10 @@ hr {
   width: 90%;
 }
 /* GENERAL */
+
+.page_content {
+  opacity: 0;
+}
 
 .title {
   color: chocolate;
@@ -486,7 +491,7 @@ hr {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  width: 370px;
+  width: 320px;
   height: 500px;
   margin: auto;
   justify-content: center;
@@ -495,6 +500,7 @@ hr {
   text-align: center;
   background-color: #ddd;
   transition: .3s;
+  animation-delay: 0s;
 }
 
 .project:hover {

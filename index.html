@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="./media/images/logo.png">
 </head>
-<body >
+<body onload="show_page()">
 <div class="cookies_container" id="cookies">
     <div class="cookies_dialog">
         <p class="text box">
@@ -29,7 +29,7 @@
         <span class="button" id="cookies_ok">OK</span>
     </div>
 </div>
-
+<div class="page_content" id="page_content">
 <!-- OJO -->
 <!-- <script>
             user.innerHTML = document.readyState + '...';
@@ -223,10 +223,19 @@
     <p id="footer">Copyright ©2023 KiniunTech.</p>
 </div>
 
+<!-- END OF PAGE BOX -->
+</div> 
+
+
 <!-- SCRIPTS -->
 <script src="./scripts/anim.js"></script>
 
 <script>
+    // SHOW WEBSITE AFTER LOADED
+    function show_page(){
+        page_content.style.opacity = '1';
+        body.style.overflow = 'auto';
+    }
 
     // SHOW/HIDE ALTERANTIVE MENU
     
