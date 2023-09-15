@@ -95,7 +95,7 @@ hr {
   color: chocolate;
   font-size: 4rem;
   font-weight: bold;
-  text-align: center;
+  text-align: center !important;
 }
 
 .sections {
@@ -106,7 +106,6 @@ hr {
 
 .box {
   opacity: 0;
-  /* animation-delay: .2s; */
   border-radius: 8px;
 }
 
@@ -416,7 +415,7 @@ hr {
 .services_box {
   display: flex;
   flex-wrap: wrap;
-  gap: 60px;
+  gap: 20px;
   width: 90%;
   justify-content: center;
   align-items: center;
@@ -440,7 +439,7 @@ hr {
 .services_box_text p {
   width: 100%;
   padding: 40px;
-  text-align: center;
+  text-align: left;
 }
 
 .services_box_image {
@@ -453,7 +452,7 @@ hr {
 #it {
   position: sticky;
   right: 190px;
-  max-width: 100%;
+  max-width: 75%;
   max-height: 500px;
   margin: auto;
   min-width: 250px;
@@ -472,7 +471,6 @@ hr {
   margin: auto;
   justify-content: center;
   align-items: center;
-  margin-bottom: 150px;
   border: 1px solid #bbb;
   padding: 20px;
   margin-left: 10px;
@@ -545,6 +543,29 @@ hr {
 .view_more {
   margin: auto;
   margin-bottom: 15px;
+}
+
+/* CONTACT ME */
+
+.contact_box {
+  display: flex;
+  justify-content:center;
+  width: 96%;
+  margin: auto;
+  margin-bottom: 100px;
+  border: 1px solid #bbb;
+  
+}
+
+.contact_me {
+  display: flex;
+  width: 100%;
+  margin: auto;
+  height: 500px;
+  background-image: url(./media/images/contact_me.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 /* ------------------ */
