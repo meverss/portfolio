@@ -107,7 +107,7 @@ hr {
 .box {
   opacity: 0;
   animation-delay: .2s;
-  border-radius: 10px;
+  border-radius: 8px;
 }
 
 
@@ -382,7 +382,7 @@ hr {
   min-width: 380px;
   border: 1px solid #bbb;
   background-color: #eee;
-  /* border-radius: 20px; */
+  border-radius: 8px;
   margin-left: -50px;
 
 }
@@ -433,7 +433,7 @@ hr {
   min-width: 380px;
   border: 1px solid #bbb;
   background-color: #eee;
-  /* border-radius: 15px; */
+  border-radius: 8px;
   margin-left: -40px;
   order: -1;
 }
