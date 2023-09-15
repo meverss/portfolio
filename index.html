@@ -20,7 +20,10 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="./media/images/logo.png">
 </head>
-<body onload="show_page()">
+<body onload="setTimeout(show_page, 1000)">
+
+<!-- COOKIES -->
+
 <div class="cookies_container" id="cookies">
     <div class="cookies_dialog">
         <p class="text box">
@@ -29,11 +32,15 @@
         <span class="button" id="cookies_ok">OK</span>
     </div>
 </div>
+
+<!-- LOADER -->
+
+<div class="loader_container" id="page_loader">
+    <p class="text">Loading...</p>
+    <div class="loader"></div>
+</div>
+
 <div class="page_content" id="page_content">
-<!-- OJO -->
-<!-- <script>
-            user.innerHTML = document.readyState + '...';
-</script> -->
 
 <!-- TOP BAR -->
     <div class="top_bar">
@@ -104,7 +111,7 @@
         <div class="about_box_image">
             <img id="mypict" src="./media/images/me.jpg" alt="Marvin Eversley Silva">
         </div>
-        <div class="about_box_text">
+        <div class="about_box_text box">
             <p class="text">
                 <span class="title animate__animated animate__fadeIn" >About me</span><br><br>
     
@@ -130,7 +137,7 @@
         <div class="career_box_image">
             <img id="computer" src="./media/images/career.png" alt="computer science">
         </div>
-        <div class="career_box_text">
+        <div class="career_box_text box">
             <p class="text">
                 <span class="title animate__animated animate__fadeIn">Career</span><br><br>
     
@@ -223,9 +230,9 @@
     <p id="footer">Copyright ©2023 KiniunTech.</p>
 </div>
 
-<!-- END OF PAGE BOX -->
 </div> 
 
+<!-- END OF PAGE BOX -->
 
 <!-- SCRIPTS -->
 <script src="./scripts/anim.js"></script>
@@ -234,6 +241,7 @@
     // SHOW WEBSITE AFTER LOADED
     function show_page(){
         page_content.style.opacity = '1';
+        page_loader.style.display = 'none';
         document.body.style.overflow = 'auto';
     }
 
@@ -246,14 +254,12 @@
         m_menu_open_btn.style = 'display: none; right: 0;';
         m_menu_close_btn.style = 'display: flex; right: 0;';
         m_menu.style['transform'] = 'translate(0%)';
-        // document.body.style['overflow'] = 'hidden';
     }
 
     function hidemenu(){
         m_menu_close_btn.style = 'display: none; right: 0;';
         m_menu_open_btn.style = 'display: flex; right: 0;';
         m_menu.style['transform'] = 'translate(100%)';
-        // document.body.style['overflow'] = 'auto';
     }
    
     const m_menu_items = document.querySelectorAll('.m_menu_item');
@@ -266,6 +272,9 @@
     })
   
     // COOKIES WARNING
+
+    // setTimeout(function(){cookies.style.display = 'flex'}, 5000);
+
     // cookies_ok.addEventListener('click', function(){
     //     cookies.style['display'] = 'none';
     //     document.body.style['overflow'] = 'auto';
@@ -281,50 +290,48 @@
     //         console.log('Se cargó la página');
     //     }
     
-//     history.replaceState(null,null,'index.html');var histlength=history.length;history.go(-histlength);
-//     function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));setTimeout(function(){window.msgs2.innerHTML="Installing Offline Cache: " + Percent + "%";},500)}
-// function DisplayCacheProgress(){setTimeout(function(){console.log("Cache Installed Successfully ✔");},1500);setTimeout(function(){console.log("Now Close And Re-Open Your Browser ...");},3500);}window.applicationCache.addEventListener("progress",DLProgress,false);window.applicationCache.oncached=function(e){DisplayCacheProgress();};window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
 
-        // SACROLL TO SECTIONS
-        function scroll_to_section(section){
-            var element = document.getElementById(section);
-            var position = element.offsetTop;
-            window.scrollTo(0, position - 200);
+    // SACROLL TO SECTIONS
+
+    function scroll_to_section(section){
+        var element = document.getElementById(section);
+        var position = element.offsetTop;
+        window.scrollTo(0, position - 200);
         }
-        function scroll_to_section_m(section){
-            var element = document.getElementById(section);
-            var position = element.offsetTop;
-            window.scrollTo(0, position - 100);
+    function scroll_to_section_m(section){
+        var element = document.getElementById(section);
+        var position = element.offsetTop;
+        window.scrollTo(0, position - 100);
+    }
+
+    var menu = document.querySelectorAll('.menu_item');
+    var alt_menu = document.querySelectorAll('.m_menu_item');
+
+    menu.forEach(obj => {
+        if(obj.classList[1] != 'm_menu_item'){
+            if(obj.id != ''){
+                const sec = obj.id;
+                obj.addEventListener('click', function(){
+                    scroll_to_section('s_'+sec);
+                });
+            }
         }
+    })
 
-        var menu = document.querySelectorAll('.menu_item');
-        var alt_menu = document.querySelectorAll('.m_menu_item');
+    alt_menu.forEach(obj1 => {
+        if(obj1 != 's_m_menu_open_btn'){
+            obj1.addEventListener('click', function(){
+                    scroll_to_section_m('s_'+obj1.id);
+                });
+        }
+        
+    })
 
-        menu.forEach(obj => {
-            if(obj.classList[1] != 'm_menu_item'){
-                if(obj.id != ''){
-                    const sec = obj.id;
-                    obj.addEventListener('click', function(){
-                        scroll_to_section('s_'+sec);
-                    });
-                }
-            }
-        })
-
-        alt_menu.forEach(obj1 => {
-            if(obj1 != 's_m_menu_open_btn'){
-                obj1.addEventListener('click', function(){
-                        scroll_to_section_m('s_'+obj1.id);
-                    });
-            }
-            
-        })
-
-        //COPYRIGHT
-        const fecha = new Date();
-        const copyright = 'Copyright ©'+ fecha.getFullYear()+' KiniunTech.';
-        footer.innerHTML = copyright;
-        my_age.innerHTML = fecha.getFullYear() - 1985;
+    //COPYRIGHT
+    const fecha = new Date();
+    const copyright = 'Copyright ©'+ fecha.getFullYear()+' KiniunTech.';
+    footer.innerHTML = copyright;
+    my_age.innerHTML = fecha.getFullYear() - 1985;
 
 </script>
 
