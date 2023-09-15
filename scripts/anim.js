@@ -1,13 +1,11 @@
 const notes = document.querySelectorAll('.box');
-// const video = document.querySelector('#pool_screening')
 
 function triggerAnimation(entries){
   entries.forEach(entry =>{
     if(entry.isIntersecting){
         entry.target.classList.add('show', 'animate__animated', 'animate__zoomIn');
         obBoxes.unobserve(entry.target);
-    }else{
-        entry.target.classList.remove('animate__animated', 'animate__zoomIn');
+        setTimeout(function(){entry.target.classList.remove('animate__animated', 'animate__zoomIn');}, 1500);
     }
   })  
 }
@@ -30,11 +28,8 @@ const options={
 }
 
 const obBoxes = new IntersectionObserver(triggerAnimation, options);
-// const obVideo = new IntersectionObserver(playVideo, options);
 
 notes.forEach(note =>{
     obBoxes.observe(note);
 })
-
-// obVideo.observe(video);
 
