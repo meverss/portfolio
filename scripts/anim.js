@@ -23,7 +23,7 @@ function playVideo(entries){
 
 const options={
     root: null,
-    rootMargin: '-190px',
+    rootMargin: '-180px',
     //threshold: .2
 }
 
