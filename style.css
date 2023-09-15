@@ -411,9 +411,9 @@ hr {
 }
 
 
-/* CAREER */
+/* SERVICES */
 
-.career_box {
+.services_box {
   display: flex;
   flex-wrap: wrap;
   gap: 60px;
@@ -424,7 +424,7 @@ hr {
   margin: auto;
 }
 
-.career_box_text {
+.services_box_text {
   z-index:-10;
   display: flex;
   flex-wrap: wrap;
@@ -437,13 +437,13 @@ hr {
   order: -1;
 }
 
-.career_box_text p {
+.services_box_text p {
   width: 100%;
   padding: 40px;
   text-align: center;
 }
 
-.career_box_image {
+.services_box_image {
   display: flex;
   width: 30%;
   align-items: center;
@@ -611,16 +611,16 @@ hr {
 }
 
 @media screen and (max-width: 945px) {
-  .career_box_text {
+  .services_box_text {
     order: 1;
     margin-left: 10px;
   }
-  .career_box {
+  .services_box {
     margin-top: -120px;
     margin-right: auto;
     margin-left: auto;
   }
-.career_box {
+.services_box {
   gap: 35px;
 }
 
