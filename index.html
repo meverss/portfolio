@@ -17,8 +17,8 @@
                 "url" : "https://localhost",
                 "websiteOwner" : "My Portfolio"
             },
-            "cookiePolicyLink": "http://meverss.github.io//cookies.index",
-            "hideModalIn": ["http://meverss.github.io//cookies.index"],
+            "cookiePolicyLink": "http://192.168.61.14:5500/pages/cookies.html",
+            "hideModalIn": ["http://192.168.61.14:5500/pages/cookies.html"],
             "styles": {
                 "primaryButton": {
                     "bgColor" : "#A1FFA1",
@@ -59,23 +59,12 @@
     <meta property="twitter:title" content="My Portfolio" />
     <meta name="robots" content="follow, index">
     <meta name="author" content="Marvin Eversley Silva - Website Designer and Linux Server Administrator">
-    <link rel="canonical" href="https://meverss.github.io/portfolio/">
+    <!-- <link rel="canonical" href="https://meverss.github.io/portfolio/"> -->
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="./media/images/logo.png">
 </head>
 
 <body onload="setTimeout(show_page, 1000)">
-
-<!-- COOKIES -->
-
-<div class="cookies_container" id="cookies">
-    <div class="cookies_dialog">
-        <p class="text box">
-            This website uses cookies for statistics purpose only.<br>
-        </p>
-        <span class="button" id="cookies_ok">OK</span>
-    </div>
-</div>
 
 <!-- LOADER -->
 
@@ -363,7 +352,9 @@
     footer.innerHTML = copyright;
     my_age.innerHTML = fecha.getFullYear() - 1985;
 
-    // header("Set-Cookie: key4=value; path=/; domain=meverss.github.io; HttpOnly; Secure; SameSite=None");
+    function show_cookies_policy(){
+        alert('hgasjhga');
+    }
 
 </script>
 

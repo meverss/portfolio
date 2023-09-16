@@ -109,10 +109,18 @@ hr {
   border-radius: 8px;
 }
 
-
-/* ------- */
-
 /* COOKIES */
+
+.cookies_policy:hover {
+  color: chocolate;
+  cursor: pointer;
+}
+
+.cookies_policy_close {
+  font-family: Symbols;
+  font-size: 1.8rem;
+  color: #555;
+}
 
 .cookies_container, .loader_container {
   display: flex;
