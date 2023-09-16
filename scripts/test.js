@@ -1,1 +1,0 @@
-(i="<p>".concat(n.getTexts().modal.info.p2.a,"marvin eversley"))
