@@ -603,6 +603,13 @@ input, textarea {
   border-radius: 10px;
   text-align: justify;
   background-color: #eee;
+  outline-color: #999;
+  /* box-shadow: 1px 1px 3px 0.1px #999; */
+  transition: .3s;
+}
+
+input:focus, textarea:focus {
+  transform: scale(1.02);
 }
 
 input, textarea {
