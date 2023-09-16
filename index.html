@@ -254,15 +254,21 @@
             <p class="title">Contact</p>
         </div>
         <div class="contact_message" id="contact_message">
-            <form class="contact_form" action="">
+            <form class="contact_form" action="https://formsubmit.co/meverss@my.com" method="POST">
                 <label class="text" for="name">Name</label>
-                <input type="text" name="name" id="name" placeholder="Your name here">
-                <label class="text" for="name">E-mail</label>
-                <input type="text" name="email" id="email" placeholder="your@email.here">
-                <label class="text" for="name">Subject</label>
-                <text type="text" name="subject" id="subject" placeholder="Reason of your message">
-                <label class="text" for="name">Name</label>
-                <textarea name="message" id="message" rows="5" placeholder="Leave your message here"></textarea>
+                <input type="text" name="name" id="name" placeholder="Who is contacting me?">
+                <label class="text" for="email">E-mail</label>
+                <input type="email" name="email" id="email" placeholder="your@email.here">
+                <label class="text" for="subject">Subject</label>
+                <input type="text" name="subject" id="subject" placeholder="What is it about?">
+                <label class="text" for="message">Message</label>
+                <textarea name="message" id="name" rows="5" placeholder="Leave me your message"></textarea>
+                <input type="submit" class="button form_btn" value="Send">
+                <!-- <input type="hidden" name="_next" value="https://yourdomain.co/thanks.html"> -->
+                <input type="hidden" name="_subject" value="New submission from My Portfolio!">
+                <input type="hidden" name="_captcha" value="false">
+                <!-- This requires to enable CAPTCHA -->
+                <!-- <input type="hidden" name="_autoresponse" value="Thanks for contacting me! I will replay as soon as possible."> -->
             </form>
         </div>
     </div>
