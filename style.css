@@ -439,7 +439,7 @@ hr {
 .services_box_text p {
   width: 100%;
   padding: 40px;
-  text-align: left;
+  text-align: center;
 }
 
 .services_box_image {
@@ -550,7 +550,7 @@ hr {
 .contact_box {
   display: flex;
   justify-content:center;
-  width: 96%;
+  width: 98%;
   margin: auto;
   margin-bottom: 100px;
   border: 1px solid #bbb;
