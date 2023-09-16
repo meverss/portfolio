@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<!-- <html lang="en"> -->
 <head>
     <!-- COOKIES -->
     <link rel="stylesheet" href="./css/pdcc.min.css">
@@ -256,8 +256,8 @@
             <p class="title">Contact</p>
         </div>
         <div class="contact_message" id="contact_message">
-            <form id="contact_form" class="contact_form" action="https://formsubmit.co/meverss@my.com" method="POST">
-            <!-- <form id="contact_form" class="contact_form" action=""> -->
+            <!-- <form id="contact_form" class="contact_form" action="https://formsubmit.co/meverss@my.com" method="POST"> -->
+            <form id="contact_form" class="contact_form" action="">
                 <label class="text" for="name">Name</label>
                 <input type="text" name="name" id="name" placeholder="Who is contacting me?" required>
                 <label class="text" for="email">E-mail</label>
@@ -267,8 +267,8 @@
                 <label class="text" for="message">Message</label>
                 <textarea name="message" id="message" rows="5" placeholder="Leave me your message" required></textarea>
                 <input type="submit" class="button form_btn" value="Send">
-                <!-- <input type="hidden" name="_next" value="http://localhost:5500"> -->
-                <input type="hidden" name="_next" value="https://meverss.github.io/portfolio">
+                <input type="hidden" name="_next" value="http://localhost:5500">
+                <!-- <input type="hidden" name="_next" value="https://meverss.github.io/portfolio"> -->
                 <input type="hidden" name="_subject" value="New submission from My Portfolio!">
                 <input type="hidden" name="_captcha" value="false">
                 <!-- This requires to enable CAPTCHA -->
@@ -282,17 +282,17 @@
                     const f_message = document.getElementById('message');
 
                     
-                    // f_form.addEventListener('submit', e => {
-                    //     e.preventDefault();
-                    //     n = f_name.value.lenght
-                    //     console.log(n);
-                    //     if(n < 2){
-                    //         console.log('Too short')
-                    //     } else { 
-                    //         console.log('Name OK')
+                    f_form.addEventListener('submit', e => {
+                        e.preventDefault();
+                        n = f_name.value.lenght
+                        console.log(n);
+                        if(n < 2){
+                            console.log('Too short')
+                        } else { 
+                            console.log('Name OK')
                             
-                    //     }
-                    // })
+                        }
+                    })
                 </script>
             </form>
         </div>
