@@ -469,7 +469,7 @@ hr {
   width: auto;
   height: auto;
   margin: auto;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   border: 1px solid #bbb;
   padding: 20px;
