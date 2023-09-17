@@ -133,7 +133,7 @@
         </div>
     </div>
 </section>
-<br><br><br><br><br><br><br><br><br><br><br><br>
+<!-- <br><br><br><br><br><br><br><br><br><br><br><br> -->
 
 <!-- ABOUT ME -->
 
@@ -158,7 +158,7 @@
         </div>
     </div>
 </section>
-<br><br><br><br><br><br><br><br><br><br><br><br>
+<!-- <br><br><br><br><br><br><br><br><br><br><br><br> -->
 
 <!-- SERVICES -->
 <section id="s_m_services">
@@ -183,7 +183,7 @@
     </div>
 </section>
 
-<br><br><br><br><br><br><br><br><br><br><br><br>
+<!-- <br><br><br><br><br><br><br><br><br><br><br><br> -->
 
 <!--  PROJECTS -->
 
@@ -247,7 +247,7 @@
     </section>
 </div>
 
-<br><br><br><br><br><br><br><br><br><br><br><br>
+<!-- <br><br><br><br><br><br><br><br><br><br><br><br> -->
 
 <!-- CONTACT -->
 <section id="s_m_contact">
@@ -261,12 +261,16 @@
             <!-- <form id="contact_form" class="contact_form" action=""> -->
                 <label class="text" for="name">Name</label>
                 <input type="text" name="name" id="name" placeholder="Who is contacting me?" required>
+
                 <label class="text" for="email">E-mail</label>
                 <input type="email" name="email" id="email" placeholder="your@email.here" required>
+
                 <label class="text" for="subject">Subject</label>
                 <input type="text" name="subject" id="subject" placeholder="What is it about?">
+
                 <label class="text" for="message">Message</label>
                 <textarea name="message" id="message" rows="5" placeholder="Leave me your message" required></textarea>
+
                 <input type="submit" class="button form_btn" value="Send">
                 <!-- <input type="hidden" name="_next" value="http://localhost:5500"> -->
                 <input type="hidden" name="_next" value="https://meverss.github.io/portfolio">
@@ -282,6 +286,7 @@
                     const f_email = document.getElementById('email');
                     const f_message = document.getElementById('message');
 
+                    f_form.req = false;
                     
                     // f_form.addEventListener('submit', e => {
                     //     e.preventDefault();
@@ -361,7 +366,7 @@
     function scroll_to_section_m(section){
         var element = document.getElementById(section);
         var position = element.offsetTop;
-        window.scrollTo(0, position - 100);
+        window.scrollTo(0, position - 75);
     }
 
     var menu = document.querySelectorAll('.menu_item');

@@ -7,17 +7,17 @@
 
 @font-face {
   font-family: 'Gabriele';
-  src : url("https://meverss.github.io/portfolio/fonts/gabriele.ttf") format('truetype');
+  src : url("./fonts/gabriele.ttf") format('truetype');
 }
 
 @font-face {
   font-family: 'Harting';
-  src : url("https://meverss.github.io/portfolio/fonts/harting.ttf") format('truetype');
+  src : url("./fonts/harting.ttf") format('truetype');
 }
 
 @font-face {
   font-family: 'Symbols';
-  src : url("https://meverss.github.io/portfolio/fonts/symbols.ttf") format('truetype');
+  src : url("./fonts/symbols.ttf") format('truetype');
 }
 
 * {
@@ -89,6 +89,11 @@ hr {
 
 .page_content {
   opacity: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .title {
@@ -185,7 +190,7 @@ hr {
 .top_bar {
   display: flex;
   z-index: 101;
-  width: 100%;
+  width: 104%;
   position:sticky;
   top: 0;
   background-color: #222;
@@ -209,13 +214,17 @@ hr {
 
 .menu p, .social p {
   display: flex;
-  /* font-size: 2rem; */
   color: #fff;
   width: auto;
   height: 100%;
   justify-content: center;
   align-content: center;
   padding: 0;
+}
+
+.social p {
+  width: 15px;
+  gap: px;
 }
 
 .menu_item:hover, .social_item:hover {
@@ -290,7 +299,7 @@ hr {
   padding: 0;
   margin: auto;
   animation-duration: .3s;
-  right: 0;
+  margin-right: 15px;
 }
 
 .m_menu_btn p {
@@ -313,7 +322,7 @@ hr {
 
 .logo_box {
   display: flex;
-  margin-top: 30px;
+  /* margin-top: 30px; */
   z-index: 99;
   width: 100vw;
   justify-content: center;
@@ -344,7 +353,7 @@ hr {
   justify-content: center;
   width: 100vw;
   margin:auto;
-  margin-top: 55px;
+  /* margin-top: 55px; */
 }
 
 .welcome_box {
@@ -368,6 +377,7 @@ hr {
   display: flex;
   flex-wrap: wrap;
   margin: auto;
+  margin-top: 110px;
   width: 100%;
   justify-content: center;
   ;
@@ -421,6 +431,7 @@ hr {
   align-items: center;
   text-align: center;
   margin: auto;
+  margin-top: 110px;
 }
 
 .services_box_text {
@@ -464,17 +475,15 @@ hr {
 
 .container {
   display: block;
-  flex-wrap: wrap;
   gap: 20px;
-  width: auto;
+  width: 96%;
   height: auto;
   margin: auto;
-  justify-content: space-between;
+  margin-top: 110px;
+  justify-content: center;
   align-items: center;
   border: 1px solid #bbb;
   padding: 20px;
-  margin-left: 10px;
-  margin-right: 20px;
 }
 
 .projects {
@@ -494,8 +503,8 @@ hr {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  width: 320px;
-  height: 500px;
+  max-width: 320px;
+  min-height: 500px;
   margin: auto;
   justify-content: center;
   align-items: center;
@@ -553,6 +562,7 @@ hr {
   flex-direction: column;
   width: 96%;
   margin: auto;
+  margin-top: 110px;
   margin-bottom: 100px;
   border: 1px solid #bbb;
   height: 600px;
@@ -630,12 +640,13 @@ input, textarea {
   display: flex;
   position: fixed;
   z-index: 101;
-  width: 100%;
+  width: 104%;
   height: 40px;
   background-color: #222;
   bottom: 0;
   justify-content: center;
   overflow: hidden;
+  margin: auto;
 }
 
 #footer {
@@ -662,13 +673,9 @@ input, textarea {
 
 /* RESPONSIVE */
 
-@media screen and (max-width: 352px) {
-  
-}
-
 @media screen and (max-width: 576px) {
   #it {
-    width: 350px;
+    max-width: 350px;
   }
 }
 
@@ -687,11 +694,7 @@ input, textarea {
     order: 1;
     margin-left: 10px;
   }
-  .services_box {
-    margin-top: -120px;
-    margin-right: auto;
-    margin-left: auto;
-  }
+  
 .services_box {
   gap: 35px;
 }
@@ -721,6 +724,10 @@ input, textarea {
     display: flex;
     width:10%;
     right: 0;
+  }
+
+  .services_box {
+    margin-top: 60px;
   }
 
 }
