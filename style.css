@@ -708,9 +708,9 @@ background-color: #fff;
 
 /* RESPONSIVE */
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 370px) {
   html {
-    width: 350px;
+    width: 360px;
   }
 }
 
