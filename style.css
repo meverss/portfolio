@@ -255,7 +255,6 @@ hr {
 }
 
 .m_menu p {
-  /* font-size: 2rem; */
   color: #fff;
   text-shadow: .7px .7px 2px #000, -.7px -.7px 2px #000;
   align-content: center;
@@ -322,7 +321,6 @@ hr {
 
 .logo_box {
   display: flex;
-  /* margin-top: 30px; */
   z-index: 99;
   width: 100vw;
   justify-content: center;
@@ -349,18 +347,16 @@ hr {
 .welcome {
   display: flex;
   flex-wrap: wrap;
-  gap: 80px;
   justify-content: center;
   width: 100vw;
   margin:auto;
-  /* margin-top: 55px; */
+  /* margin-top: 20px; */
 }
 
 .welcome_box {
   width: 800px;
   border: 1px solid #bbb;
   background-color: #eee;
-  /* border-radius: 20px; */
   padding: 10px;
   margin: 12px;
 }
@@ -614,7 +610,6 @@ input, textarea {
   text-align: justify;
   background-color: #eee;
   outline-color: #999;
-  /* box-shadow: 1px 1px 3px 0.1px #999; */
   transition: .3s;
 }
 
