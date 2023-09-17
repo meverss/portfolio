@@ -645,7 +645,7 @@ label {
 
 input, textarea {
   border: 1px solid #bbb;
-  border-radius: 10px;
+  border-radius: 8px;
   text-align: justify;
   background-color: #eee;
   outline-color: #999;
