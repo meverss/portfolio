@@ -132,7 +132,6 @@
         </div>
     </div>
 </section>
-<!-- <br><br><br><br><br><br><br><br><br><br><br><br> -->
 
 <!-- ABOUT ME -->
 
@@ -157,7 +156,6 @@
         </div>
     </div>
 </section>
-<!-- <br><br><br><br><br><br><br><br><br><br><br><br> -->
 
 <!-- SERVICES -->
 <section id="s_m_services">
@@ -182,7 +180,6 @@
     </div>
 </section>
 
-<!-- <br><br><br><br><br><br><br><br><br><br><br><br> -->
 
 <!--  PROJECTS -->
 
@@ -246,7 +243,7 @@
     </section>
 </div>
 
-<!-- <br><br><br><br><br><br><br><br><br><br><br><br> -->
+
 
 <!-- CONTACT -->
 <section id="s_m_contact">
@@ -284,20 +281,18 @@
                     const f_name = document.getElementById('name');
                     const f_email = document.getElementById('email');
                     const f_message = document.getElementById('message');
-
-                    f_form.req = false;
                     
-                    // f_form.addEventListener('submit', e => {
-                    //     e.preventDefault();
-                    //     n = f_name.value.lenght
-                    //     console.log(n);
-                    //     if(n < 2){
-                    //         console.log('Too short')
-                    //     } else { 
-                    //         console.log('Name OK')
+                    f_form.addEventListener('submit', e => {
+                        e.preventDefault();
+                        n = f_name.value.lenght
+                        console.log(n);
+                        if(n < 2){
+                            console.log('Too short')
+                        } else { 
+                            console.log('Name OK')
                             
-                    //     }
-                    // })
+                        }
+                    })
                     
                 </script>
             </form>
