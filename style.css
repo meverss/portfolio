@@ -741,8 +741,8 @@ background-color: #fff;
 }
 
 @media screen and (max-width: 768px) {
-  .about_box_text {
-    margin-left: 0;
+  .about_box_text, .services_box_text {
+    margin: auto
   }
   .about_box_text p {
     padding-top: 50px;
