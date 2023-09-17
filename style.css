@@ -46,6 +46,7 @@ body {
   overflow: auto;
   transition: .3s;
   overflow: hidden;
+  width: 100%;
 }
 
 p, li {
@@ -96,6 +97,11 @@ hr {
   align-items: center;
 }
 
+#s_home, #s_welcome, #s_about, #s_services, #s_projects, #s_contact {
+  width: 100%;
+  margin: auto;
+}
+
 .title {
   color: chocolate;
   font-size: 4rem;
@@ -106,7 +112,7 @@ hr {
 .sections {
   display: flex;
   flex-wrap: wrap;
-  width:100vw;
+  width:100%;
 }
 
 .box {
@@ -217,7 +223,7 @@ hr {
   display: flex;
   z-index: 101;
   width: 100%;
-  position:sticky;
+  position:fixed;
   top: 0;
   background-color: #222;
   height: 40px;
@@ -348,7 +354,8 @@ hr {
 .logo_box {
   display: flex;
   z-index: 99;
-  width: 100vw;
+  width: 100%;
+  margin-top: 70px;
   justify-content: center;
   background-color: #f0f0f0;
   box-shadow: 0px 20px 20px 5px #f0f0f0, 0px -35px #f0f0f0;
@@ -374,7 +381,7 @@ hr {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  width: 100vw;
+  width: 100%;
   margin:auto;
   /* margin-top: 20px; */
 }
@@ -592,22 +599,26 @@ hr {
   background-position: center;
 }
 
-.contact_title, .contact_message {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  margin: auto;
-}
-
 .contact_form {
   display: flex;
   flex-direction: column;
   margin: auto;
-  width: 35%;
+  width: 600px;
   min-width: 360px;
   justify-content: center;
-  align-items: left;
+  align-items: center;
+}
+
+.contact_form label, .contact_form input, .contact_form textarea {
+  width: 95%;
+}
+
+.contact_title, .contact_message {
+  display: flex;
+  width: 96%;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
 }
 
 .contact_title {
@@ -616,12 +627,16 @@ hr {
 }
 
 .contact_message {
-  width: 100%;
   height: 85%;
 }
 
 label, textarea {
   margin-bottom: 10px;
+}
+
+textarea {
+  resize: none;
+  height: 120px;
 }
 
 label {
@@ -665,7 +680,7 @@ background-color: #fff;
 }
 
 .wrong {
-  border-color: red;
+  border: 2px solid red;
 }
 
 
@@ -709,9 +724,14 @@ background-color: #fff;
 /* RESPONSIVE */
 
 @media screen and (max-width: 370px) {
-  html {
-    width: 360px;
+  .page_content {
+    width: 370px;
   }
+
+  #s_top_bar, #s_home, #s_welcome, #s_about, #s_services, #s_projects, #s_contact {
+    width: 370px;
+  }
+
 }
 
 @media screen and (max-width: 576px) {
@@ -726,6 +746,10 @@ background-color: #fff;
   }
   .about_box_text p {
     padding-top: 50px;
+  }
+
+  .contact_form {
+    width: 100%;
   }
 
 }
@@ -770,13 +794,10 @@ background-color: #fff;
   .services_box {
     margin-top: 60px;
   }
-
 }
 
 @media screen and (max-width: 1200px) {
-  .m-container {
-    max-width: 1232px;
-  }
+
 }
 
 /* ANIMATIONS */

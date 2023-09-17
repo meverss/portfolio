@@ -78,3 +78,4 @@ my_age.innerHTML = fecha.getFullYear() - 1985;
 function show_cookies_policy(){
     window.open('/pages/cookies.html', '', 'resizable=no, top=200, left=500, width=800, height=600');
 }
+
