@@ -710,6 +710,12 @@ background-color: #fff;
 
 /* RESPONSIVE */
 
+@media screen and (max-width: 360px) {
+  html {
+    width: 350px;
+  }
+}
+
 @media screen and (max-width: 576px) {
   #it {
     max-width: 350px;
@@ -777,6 +783,10 @@ background-color: #fff;
 
 /* ANIMATIONS */
 
+@keyframes l6 {
+  100% {inset:0}
+}
+
 @keyframes show {
   0% {opacity: 0;}
   100% {opacity:1; transform: translate(1rem,0);}
@@ -811,6 +821,4 @@ background-color: #fff;
   transform: var(--transform);
 }
 
-@keyframes l6 {
-    100% {inset:0}
-}
+
