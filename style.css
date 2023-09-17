@@ -140,6 +140,27 @@ hr {
 
 /* COOKIES */
 
+.cookies {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: auto;
+  justify-content: space-between;
+  text-align: justify;
+  padding: 20px;
+  overflow: hidden;
+  background-color: #f0f0f0;
+}
+
+.cookies p, .cookies h1, .cookies ul{
+  text-align: justify;
+  width: 100%;
+}
+
+.cookies a {
+  color: #D2691E;
+}
+
 .cookies_policy:hover {
   color: #D2691E;
   cursor: pointer;
@@ -172,7 +193,7 @@ hr {
   height: 22px;
   border-radius: 20px;
   color: chocolate;
-  border: 3px solid #555;
+  border: 2px solid #555;
   position: relative;
 }
 .loader::before {
@@ -187,7 +208,6 @@ hr {
 
 .loader_text {
   font-family: Gabriele;
-  font-weight: 600;
   font-size: 1.8rem;
 }
 
