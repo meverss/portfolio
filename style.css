@@ -635,6 +635,22 @@ input, textarea {
   margin-top: 10px;
 }
 
+.form_btn:disabled {
+  background-color: #bbb;
+  border-color: #aaa;
+  color: #ddd
+}
+
+.form_btn:enabled {
+color: #444;
+background-color: #fff;
+}
+
+.wrong {
+  border-color: red;
+}
+
+
 /* FOOTER */
 
 .footer {
