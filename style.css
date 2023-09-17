@@ -185,6 +185,12 @@ hr {
   animation: l6 2s infinite;
 }
 
+.loader_text {
+  font-family: Gabriele;
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+
 /* TOP BAR */
 
 .top_bar {
