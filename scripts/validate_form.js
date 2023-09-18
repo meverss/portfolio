@@ -6,6 +6,9 @@
     const f_btn = document.getElementById('btn_send');
     const valid_email = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/
 
+
+    f_name.type = 'password';
+
     f_name.addEventListener('change', e =>{
         if(f_name.value.length < 2){
             f_btn.disabled = true;
@@ -38,6 +41,10 @@
         e.preventDefault();
         if(f_message.value.length > 4){
             f_form.submit();
+            var fields = document.querySelectorAll('.frm_text');
+            fields.forEach(field => {
+                field.value = '';
+            })
         } else {
             f_message.classList.add('wrong', 'animate__animated', 'animate__shakeX');
             f_message.value = '';
@@ -46,3 +53,5 @@
             setTimeout(e => { f_message.placeholder = 'Leave me your message';}, 3000);
         }
     })
+
+    
