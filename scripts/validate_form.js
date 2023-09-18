@@ -7,7 +7,19 @@
     const valid_email = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/
 
 
-    f_name.type = 'password';
+    const fields = document.querySelectorAll('.frm_text');
+
+    fields.forEach(field => {
+        console.log(field);
+        switch(field) {
+            case "f_email":
+                field.type = 'email';
+                break;
+            case "*":
+                field.type = 'password';
+                break;
+        }
+    });
 
     f_name.addEventListener('change', e =>{
         if(f_name.value.length < 2){
