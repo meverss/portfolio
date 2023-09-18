@@ -1,32 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="preload" href="./fonts/gabriele.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="./fonts/symbols.ttf" as="font" type="font/ttf" crossorigin>
+
     <!-- COOKIES -->
     <link rel="stylesheet" href="./css/pdcc.min.css">
     <script charset="utf-8" src="./scripts/pdcc.min.js"></script>
-    <script type="text/javascript">
-        PDCookieConsent.config({
-            "defaultLang" : "en",
-            "brand": {
-                "dev" : false,
-                "name": "KiniunTech",
-                "url" : "https://meverss.github.io/portfolio",
-                "websiteOwner" : "My Portfolio"
-            },
-            "cookiePolicyLink": "https://meverss.github.io/portfolio/cookies.html",
-            "hideModalIn": ["https://meverss.github.io/portfolio/cookies.html"],
-            "styles": {
-                "primaryButton": {
-                    "bgColor" : "#D2691E",
-                    "txtColor": "#FFFFFF"
-                },
-            "secondaryButton": {
-                "bgColor" : "#CCC",
-                "txtColor": "#333333"
-            }
-            }
-        });
-    </script>
+    <script charset="utf-8" src="./scripts/cookies.js"></script>
 
     <!-- GOOGLE ANALYTICS -->
 
@@ -58,8 +39,6 @@
     <meta name="author" content="Marvin Eversley Silva - Website Designer and Linux Server Administrator">
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" href="./media/images/logo.png">
-    <link rel="preload" href="./fonts/gabriele.ttf" as="font" type="font/ttf" crossorigin>
-    <link rel="preload" href="./fonts/symbols.ttf" as="font" type="font/ttf" crossorigin>
 </head>
 
 <body onload="setTimeout(show_page, 1500)">
@@ -281,16 +260,16 @@
         <div class="contact_message" id="contact_message">
             <form id="contact_form" class="contact_form" action="https://formsubmit.co/meverss@my.com" method="POST">
             <!-- <form id="contact_form" class="contact_form" action=""> -->
-                <label class="text" for="name">Name</label>
-                <input type="text" name="name" id="name" placeholder="Who is contacting me?" >
+                <label class="text " for="name">Name</label>
+                <input class="frm_text" type="text" name="name" id="name" placeholder="Who is contacting me?" >
 
-                <label class="text" for="email">E-mail</label>
-                <input type="email" name="email" id="email" placeholder="your@email.here" >
+                <label class="text " for="email">E-mail</label>
+                <input class="frm_text" type="email" name="email" id="email" placeholder="your@email.here" >
 
-                <label class="text" for="subject">Subject</label>
-                <input type="text" name="subject" id="subject" placeholder="What is it about?">
+                <label class="text " for="subject">Subject</label>
+                <input class="frm_text" type="text" name="subject" id="subject" placeholder="What is it about?">
 
-                <label class="text" for="message">Message</label>
+                <label class="text " for="message">Message</label>
                 <textarea name="message" id="message" rows="5" placeholder="Leave me your message" d></textarea>
 
                 <input id="btn_send" type="submit" class="button form_btn" value="Send">

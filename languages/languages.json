@@ -1,12 +1,20 @@
 {
-    "español": {
-        "welcome":"Bienvenido!",
-        "home":"INICIO",
-        "career":"Carrera"
-    },
-    "frances": {
-        "welcome":"Benvenue!",
-        "home":"Le Inicie",
-        "career":"Le carreré"
-    }
+    "languages": [
+        {
+            "spanish": [
+                {
+                    "nombre":"Marvin Eversley Silva",
+                    "edad":38,
+                    "sexo":"masculino"
+                }
+            ],
+            "english": [
+                {
+                    "name":"Marvin Eversley Silva",
+                    "age":38,
+                    "sex":"masculino"
+                }
+            ]
+        }
+    ]
 }

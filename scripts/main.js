@@ -79,3 +79,12 @@ function show_cookies_policy(){
     window.open('/pages/cookies.html', '', 'resizable=no, top=200, left=500, width=800, height=600');
 }
 
+// TEST
+
+fetch('./languages/languages.json')
+.then(resp => resp.json())
+.then(d => showInfo(d));
+
+function showInfo(){
+    console.table(data.languages);
+}

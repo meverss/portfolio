@@ -55,6 +55,7 @@ p, li {
   font-size: 2rem;
   padding-top: 15px;
   color: #444;
+  
 }
 
 li {
@@ -609,7 +610,7 @@ hr {
   align-items: center;
 }
 
-.contact_form label, .contact_form input, .contact_form textarea {
+.contact_form label, .contact_form .frm_text, .contact_form textarea {
   width: 95%;
 }
 
@@ -666,6 +667,7 @@ input, textarea {
 .form_btn {
   margin: auto;
   margin-top: 10px;
+  width: 150px;
 }
 
 .form_btn:disabled {
