@@ -1,7 +1,5 @@
 @import url(./css/animate.css);
 
-/* @charset "UTF-8"; */
-
 @-ms-viewport {
   width: device-width; }
 
@@ -642,6 +640,7 @@ textarea {
 
 label {
   font-weight: 500;
+  margin-left: 20px;
 }
 
 input, textarea {
