@@ -81,10 +81,10 @@ function show_cookies_policy(){
 
 // TEST
 
-fetch('./languages/languages.json')
-.then(resp => resp.json())
-.then(d => showInfo(d));
+// fetch('./languages/languages.json')
+// .then(resp => resp.json())
+// .then(d => showInfo(d));
 
-function showInfo(){
-    console.table(data.languages);
-}
+// function showInfo(){
+//     console.table(data.languages);
+// }

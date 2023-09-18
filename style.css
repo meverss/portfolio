@@ -685,6 +685,12 @@ background-color: #fff;
   border: 2px solid red;
 }
 
+.important {
+  color: #D2691E;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
 
 /* FOOTER */
 
