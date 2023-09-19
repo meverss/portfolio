@@ -1,13 +1,20 @@
+function show_cookies_policy(){
+    page = location.origin +'/pages/cookies.html';
+    window.open(page, '', 'resizable=no, toolbar=0, status=0, top=200, left=500, width=800, height=600');
+}
+
 PDCookieConsent.config({
     "defaultLang" : "en",
     "brand": {
         "dev" : false,
         "name": "My Portfolio",
-        "url" : "https://meverss.github.io/portfolio",
-        "websiteOwner" : "My Portfolio"
+        "url" : location.origin,
+        "websiteOwner" : "KiniunTech"
     },
-    "cookiePolicyLink": "https://meverss.github.io/portfolio/cookies.html",
-    "hideModalIn": ["https://meverss.github.io/portfolio/cookies.html"],
+
+    "cookiePolicyLink": location.origin + "/cookies.html",
+    "hideModalIn": [location.origin + "/cookies.html"],
+    
     "styles": {
         "primaryButton": {
             "bgColor" : "#D2691E",
@@ -19,3 +26,4 @@ PDCookieConsent.config({
     }
     }
 });
+

@@ -6,22 +6,7 @@
     const f_btn = document.getElementById('btn_send');
     const valid_email = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/
 
-
-    const fields = document.querySelectorAll('.frm_text');
-
-    fields.forEach(field => {
-        console.log(field);
-        switch(field) {
-            case "f_email":
-                field.type = 'email';
-                break;
-            case "*":
-                field.type = 'password';
-                break;
-        }
-    });
-
-    f_name.addEventListener('change', e =>{
+    f_name.addEventListener('focusout', e =>{
         if(f_name.value.length < 2){
             f_btn.disabled = true;
             f_name.classList.add('wrong', 'animate__animated', 'animate__shakeX');
@@ -32,7 +17,7 @@
         }
     })
 
-    f_email.addEventListener('change', e => {
+    f_email.addEventListener('focusout', e => {
         if(!valid_email.test(f_email.value)){
             f_btn.disabled = true;
             f_email.classList.add('wrong', 'animate__animated', 'animate__shakeX');
@@ -66,4 +51,3 @@
         }
     })
 
-    

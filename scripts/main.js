@@ -75,9 +75,6 @@ const copyright = 'Copyright ©'+ fecha.getFullYear()+' KiniunTech.';
 footer.innerHTML = copyright;
 my_age.innerHTML = fecha.getFullYear() - 1985;
 
-function show_cookies_policy(){
-    window.open('/pages/cookies.html', '', 'resizable=no, top=200, left=500, width=800, height=600');
-}
 
 // TEST
 
@@ -88,3 +85,65 @@ function show_cookies_policy(){
 // function showInfo(){
 //     console.table(data.languages);
 // }
+
+// SHARE MY PORTFOLIO
+
+const social_n = document.querySelectorAll('.social_item');
+const my_website = encodeURIComponent(location.origin);
+const my_website_title = document.title;
+const url_facebook = 'http://www.facebook.com/sharer.php?u='+ my_website +'&t= Marvin%27s%20Portfolio';
+const url_tweeter = 'https://twitter.com/intent/tweet?url=' + my_website + '&text = Marvin%27s%20Portfolio';
+const url_linkedin = 'https://www.linkedin.com/shareArticle?mini=true&url=' + my_website;
+const url_telegram = 'https://telegram.me/share/url?url=' + my_website + '&text = Marvin%27s%20Portfolio';
+
+social_n.forEach(item => {
+    item.addEventListener('click', function(){
+        link = 'url_' + item.id;
+        window.open(eval(link), '_blank', 'resizable=no, toolbar=0, status=0');
+    });
+})
+
+
+// FORM FIELDS DATA TYPE
+
+const fields = document.querySelectorAll('.frm_text');
+
+fields.forEach(field => {
+    switch(field.id) {
+        case "email":
+            field.type = 'email';
+            break;
+        default:
+            field.type = 'text';
+            break;    
+    }
+});
+
+
+// url = "https://twitter.com/intent/tweet?url=" + pageUrl + "&text=" + tweet;
+// url = "https://www.linkedin.com/shareArticle?mini=true&url=" + pageUrl;
+
+// function share(s_media){
+//      w = location.href;
+//      t = document.title;
+
+//     switch (item) {
+//         case "facebook":
+//             window.open('http://www.facebook.com/sharer.php?u='+encodeURIComponent(u)+'&t='+encodeURIComponent(t),'sharer','toolbar=0,status=0,width=626,height=436');
+//             break;
+//             case "facebook":
+//                 window.open('http://www.facebook.com/sharer.php?u='+encodeURIComponent(u)+'&t='+encodeURIComponent(t),'sharer','toolbar=0,status=0,width=626,height=436');
+//                 break;
+//             case "tweeter":
+//                 window.open('http://www.facebook.com/sharer.php?u='+encodeURIComponent(u)+'&t='+encodeURIComponent(t),'sharer','toolbar=0,status=0,width=626,height=436');
+//                 break;
+//     }
+// }
+
+// function fbk_share() {
+//     u=location.href;
+//     t=document.title;
+//     window.open('http://www.facebook.com/sharer.php?u='+encodeURIComponent(u)+'&t='+encodeURIComponent(t),'sharer','toolbar=0,status=0,width=626,height=436');
+//     return false;
+// }
+
