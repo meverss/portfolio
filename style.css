@@ -222,6 +222,7 @@ hr {
 .loader_text {
   font-family: Hack;
   font-size: 1.6rem;
+  line-height: 18px;
 }
 
 /* TOP BAR */
