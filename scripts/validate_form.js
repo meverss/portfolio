@@ -13,7 +13,7 @@
             f_name.value = '';
             f_name.placeholder = 'More than one character, please';
             setTimeout(e => {f_name.classList.remove('wrong', 'animate__animated', 'animate__shakeX');},1000);
-            setTimeout(e => { f_name.placeholder = 'Who is writing me?';}, 3000);
+            setTimeout(e => { f_name.placeholder = 'Who is contacting me?';}, 3000);
         }
     })
 
