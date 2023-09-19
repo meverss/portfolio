@@ -3,11 +3,38 @@
 <head>
     <link rel="preload" href="./fonts/hack.woff" as="font" type="font/woff" crossorigin>
     <link rel="preload" href="./fonts/symbols.woff" as="font" type="font/woff" crossorigin>
-
+    <link rel="stylesheet" href="./style.css">
     <!-- COOKIES -->
     <link rel="stylesheet" href="./css/pdcc.min.css">
     <script charset="utf-8" src="./scripts/pdcc.min.js"></script>
-    <script type="text/javascript" src="./scripts/cookies.js"></script>
+    <script type="text/javascript">
+        PDCookieConsent.config({
+            "defaultLang" : "en",
+            "brand": {
+                "dev" : false,
+                "name": "My Portfolio",
+                "url" : "https://meverss.github.io/portfolio",
+                "websiteOwner" : "KiniunTech"
+            },
+            "cookiePolicyLink": "https://meverss.github.io/portfolio/cookies.html",
+            "hideModalIn": ["https://meverss.github.io/portfolio/cookies.html"],
+            "styles": {
+                "primaryButton": {
+                    "bgColor" : "#D2691E",
+                    "txtColor": "#FFFFFF"
+                },
+            "secondaryButton": {
+                "bgColor" : "#CCC",
+                "txtColor": "#333333"
+            }
+            }
+        });
+
+    function show_cookies_policy(){
+        page = "http://localhost:5500/pages/cookies.html";
+        window.open(page, '', 'resizable=0, toolbar=0, status=0, top=200, left=500, width=800, height=600');
+    }
+    </script>
 
     <!-- META -->
 
@@ -26,7 +53,7 @@
     <meta property="twitter:title" content="My Portfolio" />
     <meta name="robots" content="follow, index">
     <meta name="author" content="Marvin Eversley Silva - Website Designer and Linux Server Administrator">
-    <link rel="stylesheet" href="./style.css">
+    <!-- <link rel="stylesheet" href="./style.css"> -->
     <link rel="icon" href="./media/images/logo.png">
 </head>
 
@@ -117,9 +144,9 @@
     
                 Hey there! I’m Marvin, and I’m <span id="my_age"></span> years old.<br><br>
 
-                I am qualified as a Computer Science engineer specializing in website UI/UX development, database management, Linux server installation, and administration.<br><br>
+                I'm a Computer Science engineer specializing in website UI/UX development, database management, Linux server installation, and administration.<br><br>
                 
-                I’m passionate about all subjects relating Computer Science, especially <b>Software Libre</b> and website designs.<br><br>
+                I’m passionate about all subjects relating Computer Science, especially <b>Software Libre</b> and website design.<br><br>
 
                 In 2022, after working on several projects, I started my own named <b><u>KiniunTech</u></b>. The project's objective is software production and website development.<br>
             </p>

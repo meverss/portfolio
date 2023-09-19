@@ -48,7 +48,7 @@ p, li {
   font-size: 1.8rem;
   padding-top: 15px;
   color: #444;
-  line-height: 28px;
+  line-height: 1.6;
 }
 p {
   
@@ -155,12 +155,23 @@ hr {
   background-color: #f0f0f0;
 }
 
+.cookies_contain {
+  height: 100%;
+  background-color: red;
+}
+
 .cookies p, .cookies h1, .cookies ul{
   text-align: justify;
   width: 100%;
+  line-height: 0px;
 }
 
 .cookies a {
+  color: #D2691E;
+}
+
+.cookies_policy {
+  height: 1700px;
   color: #D2691E;
 }
 
@@ -622,7 +633,8 @@ hr {
 
 .contact_title {
   height: 15%;
-  
+  padding-top: 0;
+  margin-top: -60px;
 }
 
 .contact_message {
