@@ -89,7 +89,7 @@ my_age.innerHTML = fecha.getFullYear() - 1985;
 // SHARE MY PORTFOLIO
 
 const social_n = document.querySelectorAll('.social_item');
-const my_website = encodeURIComponent(location.origin);
+const my_website = encodeURIComponent(location.origin + '/portfolio');
 const my_website_title = document.title;
 const url_facebook = 'http://www.facebook.com/sharer.php?u='+ my_website +'&t= Marvin%27s%20Portfolio';
 const url_tweeter = 'https://twitter.com/intent/tweet?url=' + my_website + '&text = Marvin%27s%20Portfolio';
