@@ -5,22 +5,12 @@
 
   @font-face {
     font-family: 'Hack';
-    src : url("./fonts/hack.ttf") format('truetype');
+    src : url("./fonts/hack.woff") format('woff');
   }
-  
-  @font-face {
-  font-family: 'Gabriele';
-  src : url("./fonts/gabriele.ttf") format('truetype');
-}
-
-@font-face {
-  font-family: 'Harting';
-  src : url("./fonts/harting.ttf") format('truetype');
-}
 
 @font-face {
   font-family: 'Symbols';
-  src : url("./fonts/symbols.ttf") format('truetype');
+  src : url("./fonts/symbols.woff") format('woff');
 }
 
 * {
