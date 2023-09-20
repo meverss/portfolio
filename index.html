@@ -4,7 +4,7 @@
     <link rel="preload" href="./fonts/hack.woff" as="font" type="font/woff" crossorigin>
     <link rel="preload" href="./fonts/symbols.woff" as="font" type="font/woff" crossorigin>
     <link rel="stylesheet" href="./style.css">
-    
+
     <!-- COOKIES -->
     <link rel="stylesheet" href="./css/pdcc.min.css">
     <script charset="utf-8" src="./scripts/pdcc.min.js"></script>
@@ -32,7 +32,7 @@
         });
 
     function show_cookies_policy(){
-        page = "http://localhost:5500/pages/cookies.html";
+        page = location.origin + "/pages/cookies.html";
         window.open(page, '', 'resizable=0, toolbar=0, status=0, top=200, left=500, width=800, height=600');
     }
     </script>
