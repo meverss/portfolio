@@ -1,4 +1,5 @@
 // SHOW WEBSITE AFTER LOADED
+
 function show_page() {
   page_content.style.opacity = "1";
   page_loader.style.display = "none";
@@ -68,6 +69,7 @@ alt_menu.forEach((obj1) => {
 });
 
 //COPYRIGHT
+
 const fecha = new Date();
 const copyright = "Copyright ©" + fecha.getFullYear() + " KiniunTech.";
 footer.innerHTML = copyright;
