@@ -120,30 +120,3 @@ fields.forEach(field => {
 });
 
 
-// url = "https://twitter.com/intent/tweet?url=" + pageUrl + "&text=" + tweet;
-// url = "https://www.linkedin.com/shareArticle?mini=true&url=" + pageUrl;
-
-// function share(s_media){
-//      w = location.href;
-//      t = document.title;
-
-//     switch (item) {
-//         case "facebook":
-//             window.open('http://www.facebook.com/sharer.php?u='+encodeURIComponent(u)+'&t='+encodeURIComponent(t),'sharer','toolbar=0,status=0,width=626,height=436');
-//             break;
-//             case "facebook":
-//                 window.open('http://www.facebook.com/sharer.php?u='+encodeURIComponent(u)+'&t='+encodeURIComponent(t),'sharer','toolbar=0,status=0,width=626,height=436');
-//                 break;
-//             case "tweeter":
-//                 window.open('http://www.facebook.com/sharer.php?u='+encodeURIComponent(u)+'&t='+encodeURIComponent(t),'sharer','toolbar=0,status=0,width=626,height=436');
-//                 break;
-//     }
-// }
-
-// function fbk_share() {
-//     u=location.href;
-//     t=document.title;
-//     window.open('http://www.facebook.com/sharer.php?u='+encodeURIComponent(u)+'&t='+encodeURIComponent(t),'sharer','toolbar=0,status=0,width=626,height=436');
-//     return false;
-// }
-
