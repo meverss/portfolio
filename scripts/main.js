@@ -76,16 +76,6 @@ footer.innerHTML = copyright;
 my_age.innerHTML = fecha.getFullYear() - 1985;
 
 
-// TEST
-
-// fetch('./languages/languages.json')
-// .then(resp => resp.json())
-// .then(d => showInfo(d));
-
-// function showInfo(){
-//     console.table(data.languages);
-// }
-
 // SHARE MY PORTFOLIO
 
 const social_n = document.querySelectorAll('.social_item');
@@ -93,8 +83,8 @@ const my_website = encodeURIComponent(location.origin + '/portfolio');
 const my_website_title = document.title;
 const url_facebook = 'http://www.facebook.com/sharer.php?u='+ my_website +'&t= Marvin%27s%20Portfolio';
 const url_tweeter = 'https://twitter.com/intent/tweet?url=' + my_website + '&text = Marvin%27s%20Portfolio';
-const url_linkedin = 'https://www.linkedin.com/shareArticle?mini=true&url=' + my_website;
 const url_telegram = 'https://telegram.me/share/url?url=' + my_website + '&text = Marvin%27s%20Portfolio';
+const url_linkedin = 'https://www.linkedin.com/shareArticle?mini=true&url=' + my_website;
 
 social_n.forEach(item => {
     item.addEventListener('click', function(){
