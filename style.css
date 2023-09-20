@@ -35,7 +35,7 @@ html {
 }
 
 body {
-  background-color:#f0f0f0;
+  background-color:#fff;
   overflow: auto;
   transition: .3s;
   overflow: hidden;
@@ -155,7 +155,7 @@ hr {
   text-align: justify;
   padding: 20px;
   overflow: hidden;
-  background-color: #f0f0f0;
+  background-color: #fff;
 }
 
 .cookies_contain {
@@ -369,8 +369,7 @@ hr {
   width: 100%;
   margin-top: 100px;
   justify-content: center;
-  background-color: #f0f0f0;
-  box-shadow: 0px 20px 20px 5px #f0f0f0, 0px -35px #f0f0f0;
+  background-color: #fff;
 }
 
 .portfolio {
@@ -401,7 +400,7 @@ hr {
 .welcome_box {
   width: 800px;
   border: 1px solid #bbb;
-  background-color: #eee;
+  background-color: #fff;
   padding: 10px;
   margin: 12px;
 }
@@ -430,7 +429,7 @@ hr {
   width: 60%;
   min-width: 380px;
   border: 1px solid #bbb;
-  background-color: #eee;
+  background-color: #fff;
   border-radius: 8px;
   margin-left: -50px;
 
@@ -480,7 +479,7 @@ hr {
   width: 50%;
   min-width: 380px;
   border: 1px solid #bbb;
-  background-color: #eee;
+  background-color: #fff;
   border-radius: 8px;
   margin-left: -40px;
   order: -1;
@@ -549,7 +548,7 @@ hr {
   align-items: center;
   border: 1px solid #bbb;
   text-align: center;
-  background-color: #eee;
+  background-color: #fff
   transition: .3s;
 }
 
@@ -662,7 +661,7 @@ textarea {
   border: 1px solid #bbb;
   border-radius: 8px;
   text-align: justify;
-  background-color: #eee;
+  background-color: #fff
   outline-color: #999;
   transition: .3s;
   
