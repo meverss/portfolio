@@ -68,9 +68,6 @@ a {
   transition: .3s ease;
 }
 
-h1 {
-  opacity: 0;
-}
 
 a:hover {
   color: chocolate;
@@ -105,6 +102,11 @@ hr {
   font-size: 4rem;
   font-weight: bold;
   text-align: center !important;
+}
+
+#main_title {
+  opacity: 0;
+  font-size: 24px;
 }
 
 .sections {
