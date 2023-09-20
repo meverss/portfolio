@@ -68,6 +68,10 @@ a {
   transition: .3s ease;
 }
 
+h1 {
+  opacity: 0;
+}
+
 a:hover {
   color: chocolate;
   cursor:pointer;
