@@ -50,9 +50,6 @@ p, li {
   color: #444;
   line-height: 1.6;
 }
-p {
-  
-}
 
 li {
   text-align: left;
@@ -271,6 +268,7 @@ hr {
   transition: .3s;
   transform: scale(1.2);
   cursor: pointer;
+  color: #D2691E;
 }
 
 .m_menu {
@@ -658,7 +656,7 @@ textarea {
   border: 1px solid #bbb;
   border-radius: 8px;
   text-align: justify;
-  background-color: #fff;
+  background-color: #eee;
   outline-color: #999;
   transition: .3s;
   
