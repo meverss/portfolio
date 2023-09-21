@@ -11,8 +11,6 @@ data.forEach((project) => {
   //   const my_image = "project_3.png";
   // };
 
-
-
   my_projects.innerHTML += `<div class="project" id="project${project.index}">
               <div class="thumbnail_container">
                 <img
@@ -46,12 +44,9 @@ vmb.forEach((btn) => {
   let scrsht = data[data.findIndex((std) => std.index == id)].screenshot;
 
   btn.addEventListener("click", (e) => {
-    viewmore_container.style['display'] = 'flex';
+    viewmore_container.style["display"] = "flex";
     viewmore_container.style["opacity"] = "1";
     document.body.style.overflow = "hidden";
     viewmore_pict.innerHTML = `<img src="https://meverss.github.io/portfolio/media/images/sample.png" alt="Proyecto web">`;
   });
-  
 });
-
-

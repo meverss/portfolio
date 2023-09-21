@@ -11,7 +11,8 @@
 
 @font-face {
   font-family: "Symbols";
-  src: url("https://meverss.github.io/portfolio/fonts/symbols.woff") format("woff");
+  src: url("https://meverss.github.io/portfolio/fonts/symbols.woff")
+    format("woff");
 }
 
 * {
@@ -601,7 +602,6 @@ hr {
   margin-bottom: 0;
   margin-bottom: 15px;
   align-items: center;
-
 }
 
 /* View More */
@@ -612,12 +612,12 @@ hr {
   position: fixed;
   width: 100%;
   height: 100%;
-  background-color: rgba(20,20,20,0.9);
+  background-color: rgba(20, 20, 20, 0.9);
   align-content: center;
   align-items: center;
   z-index: 10000;
   margin: auto;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .viewmore_close {
@@ -627,7 +627,7 @@ hr {
   height: 45px;
   margin: auto;
   margin-bottom: 5px;
-  justify-content: right;  
+  justify-content: right;
   align-items: center;
 }
 
@@ -690,7 +690,6 @@ hr {
   align-items: center;
   height: 98%;
   margin: auto;
-
 }
 
 .viewmore_text {
