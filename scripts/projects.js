@@ -1,25 +1,31 @@
 import data from "../data/projects.json" assert { type: "json" };
 // import lang from ".../data/languages.json" assert { type: "json" };
 
+
+
+
 data.forEach((project) => {
   // Check if is even or odd
-  // let my_image = "";
+  let my_image = "";
 
-  // if (Math.round(project.index % 2) == 0) {
-  //   const my_image = "project_1.png";
-  // } else {
-  //   const my_image = "project_3.png";
-  // };
+  if (Math.round(project.index % 2) == 0) {
+    const my_image = "project_1.png";
+  } else {
+    const my_image = "project_3.png";
+  };
 
-  my_projects.innerHTML += `<div class="project" id="project${project.index}">
+console.log(project.index);
+
+  let mp = document.getElementById('my_projects');
+  let new_project = `<div class="project" id="project${project.index}">
               <div class="thumbnail_container">
                 <img
                   class="thumbnail"
-                  src="https://meverss.github.io/portfolio/media/images/${project.thumbnail}"
+                  src="./media/images/${project.thumbnail}"
                   alt="Portfolio Proyect ${project.index}"
                 />
               </div>
-              <hr />
+              <hr>
               <ul class="project_desc">
                 <li><spam class="info">Name: </spam>${project.name}</li>
                 <li>
@@ -30,6 +36,8 @@ data.forEach((project) => {
                 <span class="button view_more" id="view_more${project.index}">View more</span>
               </p>
             </div>`;
+
+  mp.innerHTML = new_project;
 });
 
 // VIEW MORE INFO
@@ -50,3 +58,4 @@ vmb.forEach((btn) => {
     viewmore_pict.innerHTML = `<img src="https://meverss.github.io/portfolio/media/images/sample.png" alt="Proyecto web">`;
   });
 });
+

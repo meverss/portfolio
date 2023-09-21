@@ -688,7 +688,8 @@ hr {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 98%;
+  /* height: 98%; */
+  width: 96%;
   margin: auto;
 }
 

@@ -134,5 +134,3 @@ fields.forEach((field) => {
 });
 
 // LANGUAGE
-
-let userLang = navigator.language.split("-")[0];
