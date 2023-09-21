@@ -49,7 +49,7 @@ vmb.forEach((btn) => {
     viewmore_container.style['display'] = 'flex';
     viewmore_container.style["opacity"] = "1";
     document.body.style.overflow = "hidden";
-    viewmore_pict.innerHTML = `<img src=".https://meverss.github.io/portfolio/media/images/sample.png" alt="Proyecto web">`;
+    viewmore_pict.innerHTML = `<img src="https://meverss.github.io/portfolio/media/images/sample.png" alt="Proyecto web">`;
   });
   
 });
