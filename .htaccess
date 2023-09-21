@@ -5,3 +5,6 @@
 
 //Redirect to New Domain
 //"RedirectMatch 301 ^(.*)$ http://newdomain.com/";
+
+//Move a folder to a new one keeping all structure
+//
