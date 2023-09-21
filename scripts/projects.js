@@ -1,20 +1,18 @@
 import data from "../data/projects.json" assert { type: "json" };
-
-console.log(data.findIndex((std) => std.index == 357));
-
-data.forEach((project) => {
-  console.log(project);
-});
-
-console.table(data);
+// import lang from "../data/languages.json" assert { type: "json" };
 
 data.forEach((project) => {
   // Check if is even or odd
-  if (Math.round(project.index % 2) == 0) {
-    let p_image = "project_1.png";
-  } else {
-    let p_image = "project_3.png";
-  }
+  // let my_image = "";
+
+  // if (Math.round(project.index % 2) == 0) {
+  //   const my_image = "project_1.png";
+  // } else {
+  //   const my_image = "project_3.png";
+  // };
+
+
+
   my_projects.innerHTML += `<div class="project" id="project${project.index}">
               <div class="thumbnail_container">
                 <img
@@ -42,7 +40,18 @@ const vmb = document.querySelectorAll(".view_more");
 
 vmb.forEach((btn) => {
   let id = btn.id.split("view_more")[1];
+  let short_desc = data[data.findIndex((std) => std.index == id)].description;
+  let full_desc = data[data.findIndex((std) => std.index == id)].viewmore;
+  let thumb = data[data.findIndex((std) => std.index == id)].thumbnail;
+  let scrsht = data[data.findIndex((std) => std.index == id)].screenshot;
+
   btn.addEventListener("click", (e) => {
-    console.log(data[data.findIndex((std) => std.index == id)].description);
+    viewmore_container.style['display'] = 'flex';
+    viewmore_container.style["opacity"] = "1";
+    document.body.style.overflow = "hidden";
+    viewmore_pict.innerHTML = `<img src="../media/images/sample.png" alt="Proyecto web">`;
   });
+  
 });
+
+
