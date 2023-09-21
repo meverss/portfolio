@@ -1,5 +1,5 @@
 import data from "../data/projects.json" assert { type: "json" };
-// import lang from "../data/languages.json" assert { type: "json" };
+// import lang from ".../data/languages.json" assert { type: "json" };
 
 data.forEach((project) => {
   // Check if is even or odd
@@ -17,7 +17,7 @@ data.forEach((project) => {
               <div class="thumbnail_container">
                 <img
                   class="thumbnail"
-                  src="./media/images/${project.thumbnail}"
+                  src="https://meverss.github.io/portfolio/media/images/${project.thumbnail}"
                   alt="Portfolio Proyect ${project.index}"
                 />
               </div>
@@ -49,7 +49,7 @@ vmb.forEach((btn) => {
     viewmore_container.style['display'] = 'flex';
     viewmore_container.style["opacity"] = "1";
     document.body.style.overflow = "hidden";
-    viewmore_pict.innerHTML = `<img src="../media/images/sample.png" alt="Proyecto web">`;
+    viewmore_pict.innerHTML = `<img src=".https://meverss.github.io/portfolio/media/images/sample.png" alt="Proyecto web">`;
   });
   
 });
