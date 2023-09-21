@@ -1,32 +1,30 @@
-{
-  "projects": [
-    {
-      "index": 1,
-      "name": "Project 1",
-      "description": "Here goes a short dscription of PROJECT #1",
-      "thumbnail":"project_1.png",
-      "viewmore": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium aut unde mollitia ipsa blanditiis enim doloremque quasi eligendi ullam quidem qui, autem corporis possimus consequatur incidunt in! Sit corporis in eaque vitae temporibus dolore, voluptatem reiciendis adipisci? Voluptates enim iusto unde beatae error praesentium fugit quasi magnam sapiente? Sequi quos consectetur molestias omnis, necessitatibus laboriosam, distinctio, magni temporibus illo ullam accusantium. Assumenda, atque quas?"
-    },
-    {
-      "index": 2,
-      "name": "Project 2",
-      "description": "Here goes a short dscription of PROJECT #2",
-      "thumbnail":"project_3.png",
-      "viewmore": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium aut unde mollitia ipsa blanditiis enim doloremque quasi eligendi ullam quidem qui, autem corporis possimus consequatur incidunt in! Sit corporis in eaque vitae temporibus dolore, voluptatem reiciendis adipisci? Voluptates enim iusto unde beatae error praesentium fugit quasi magnam sapiente? Sequi quos consectetur molestias omnis, necessitatibus laboriosam, distinctio, magni temporibus illo ullam accusantium. Assumenda, atque quas?"
-    },
-    {
-      "index": 3,
-      "name": "Project 3",
-      "description": "Here goes a short dscription of PROJECT #3",
-      "thumbnail":"project_1.png",
-      "viewmore": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium aut unde mollitia ipsa blanditiis enim doloremque quasi eligendi ullam quidem qui, autem corporis possimus consequatur incidunt in! Sit corporis in eaque vitae temporibus dolore, voluptatem reiciendis adipisci? Voluptates enim iusto unde beatae error praesentium fugit quasi magnam sapiente? Sequi quos consectetur molestias omnis, necessitatibus laboriosam, distinctio, magni temporibus illo ullam accusantium. Assumenda, atque quas?"
-    },
-    {
-      "index": 4,
-      "name": "Project 4",
-      "description": "Here goes a short dscription of PROJECT #4",
-      "thumbnail":"project_3.png",
-      "viewmore": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium aut unde mollitia ipsa blanditiis enim doloremque quasi eligendi ullam quidem qui, autem corporis possimus consequatur incidunt in! Sit corporis in eaque vitae temporibus dolore, voluptatem reiciendis adipisci? Voluptates enim iusto unde beatae error praesentium fugit quasi magnam sapiente? Sequi quos consectetur molestias omnis, necessitatibus laboriosam, distinctio, magni temporibus illo ullam accusantium. Assumenda, atque quas?"
-    }
-  ]
-}
+[
+  {
+    "index": 1,
+    "name": "Project 1",
+    "description": "Here goes a short dscription of PROJECT #1",
+    "thumbnail": "project_1.png",
+    "viewmore": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium aut unde mollitia ipsa blanditiis enim doloremque quasi eligendi ullam quidem qui, autem corporis possimus consequatur incidunt in! Sit corporis in eaque vitae temporibus dolore, voluptatem reiciendis adipisci? Voluptates enim iusto unde beatae error praesentium fugit quasi magnam sapiente? Sequi quos consectetur molestias omnis, necessitatibus laboriosam, distinctio, magni temporibus illo ullam accusantium. Assumenda, atque quas?"
+  },
+  {
+    "index": 2,
+    "name": "Project 2",
+    "description": "Here goes a short dscription of PROJECT #2",
+    "thumbnail": "project_3.png",
+    "viewmore": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium aut unde mollitia ipsa blanditiis enim doloremque quasi eligendi ullam quidem qui, autem corporis possimus consequatur incidunt in! Sit corporis in eaque vitae temporibus dolore, voluptatem reiciendis adipisci? Voluptates enim iusto unde beatae error praesentium fugit quasi magnam sapiente? Sequi quos consectetur molestias omnis, necessitatibus laboriosam, distinctio, magni temporibus illo ullam accusantium. Assumenda, atque quas?"
+  },
+  {
+    "index": 357,
+    "name": "Project 357",
+    "description": "Here goes a short dscription of PROJECT #357",
+    "thumbnail": "project_1.png",
+    "viewmore": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium aut unde mollitia ipsa blanditiis enim doloremque quasi eligendi ullam quidem qui, autem corporis possimus consequatur incidunt in! Sit corporis in eaque vitae temporibus dolore, voluptatem reiciendis adipisci? Voluptates enim iusto unde beatae error praesentium fugit quasi magnam sapiente? Sequi quos consectetur molestias omnis, necessitatibus laboriosam, distinctio, magni temporibus illo ullam accusantium. Assumenda, atque quas?"
+  },
+  {
+    "index": 4,
+    "name": "Project 4",
+    "description": "Here goes a short dscription of PROJECT #4",
+    "thumbnail": "project_3.png",
+    "viewmore": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium aut unde mollitia ipsa blanditiis enim doloremque quasi eligendi ullam quidem qui, autem corporis possimus consequatur incidunt in! Sit corporis in eaque vitae temporibus dolore, voluptatem reiciendis adipisci? Voluptates enim iusto unde beatae error praesentium fugit quasi magnam sapiente? Sequi quos consectetur molestias omnis, necessitatibus laboriosam, distinctio, magni temporibus illo ullam accusantium. Assumenda, atque quas?"
+  }
+]

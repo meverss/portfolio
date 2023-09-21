@@ -38,12 +38,28 @@ m_menu_items.forEach((menu) => {
 function scroll_to_section(section) {
   var element = document.getElementById(section);
   var position = element.offsetTop;
-  window.scrollTo(0, position - 200);
+  window.scrollTo(0, position - 70);
 }
+
 function scroll_to_section_m(section) {
   var element = document.getElementById(section);
   var position = element.offsetTop;
-  window.scrollTo(0, position - 75);
+  if (window.innerWidth <= 500) {
+    switch (section) {
+      case "s_m_about":
+        window.scrollTo(0, position - 50);
+        break;
+      case "s_m_services":
+        window.scrollTo(0, position - 10);
+        break;
+      case "s_m_projects":
+        window.scrollTo(0, position);
+        break;
+      default:
+        window.scrollTo(0, position - 80);
+        break;
+    }
+  }
 }
 
 var menu = document.querySelectorAll(".menu_item");
@@ -116,3 +132,7 @@ fields.forEach((field) => {
       break;
   }
 });
+
+// LANGUAGE
+
+let userLang = navigator.language.split("-")[0];
