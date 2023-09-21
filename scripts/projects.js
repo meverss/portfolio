@@ -1,11 +1,5 @@
-// import data from "../data/projects.json" assert { type: "json" };
-// import lang from ".../data/languages.json" assert { type: "json" };
-
-fetch("./data.json")
-  .then((response) => response.json())
-  .then((json) => console.log(json));
-
 // Get data from .json file
+
 fetch("https://meverss.github.io/portfolio/data/projects.json")
   .then((data) => data.json())
   .then((data) => {
