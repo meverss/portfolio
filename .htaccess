@@ -1,8 +1,5 @@
-RewriteEngine on
-Options -Indexes
-RewriteCond %{HTTP_HOST} ^www.meverss.github.io/portfolio [NC]
-RewriteRule ^(.*)$ http://meverss.github.io/portfolio/$1 [L,R=301,NC]
+"Options -Indexes";
+"Redirect 301 /http://meverss.github.io/portfolio/";
 
-RewriteCond %{HTTPS} off
-RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-
+//Redirect to New Domain
+//"RedirectMatch 301 ^(.*)$ http://newdomain.com/";
