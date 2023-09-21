@@ -136,7 +136,6 @@ fields.forEach((field) => {
 
 // FORM VALIDATION
 
-function f_check() {
   const f_form = document.getElementById("contact_form");
   const f_name = document.getElementById("name");
   const f_email = document.getElementById("email");
@@ -212,7 +211,7 @@ function f_check() {
       }, 3000);
     }
   });
-}
+
 
 // GET A JSON FILE FROM A URL TO GENERATE PREJECTS
 

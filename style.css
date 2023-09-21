@@ -923,6 +923,12 @@ textarea {
   }
 }
 
+@media screen and (max-width: 960px) {
+  .viewmore_pict, .viewmore_text {
+    width: 98%;
+  }
+}
+
 @media screen and (max-width: 1024px) {
 }
 
