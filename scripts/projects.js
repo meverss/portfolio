@@ -31,24 +31,23 @@ fetch("https://meverss.github.io/portfolio/data/projects.json")
             </div>`;
     });
 
-    // console.log(data);
+    // VIEW MORE INFO
+
+    const vmb = document.querySelectorAll(".view_more");
+
+    vmb.forEach((btn) => {
+      let id = btn.id.split("view_more")[1];
+      let short_desc =
+        data[data.findIndex((std) => std.index == id)].description;
+      let full_desc = data[data.findIndex((std) => std.index == id)].viewmore;
+      let thumb = data[data.findIndex((std) => std.index == id)].thumbnail;
+      let scrsht = data[data.findIndex((std) => std.index == id)].screenshot;
+
+      btn.addEventListener("click", (e) => {
+        viewmore_container.style["display"] = "flex";
+        viewmore_container.style["opacity"] = "1";
+        document.body.style.overflow = "hidden";
+        viewmore_pict.innerHTML = `<img src="https://meverss.github.io/portfolio/media/images/sample.png" alt="Proyecto web">`;
+      });
+    });
   });
-
-// VIEW MORE INFO
-
-const vmb = document.querySelectorAll(".view_more");
-
-vmb.forEach((btn) => {
-  let id = btn.id.split("view_more")[1];
-  let short_desc = data[data.findIndex((std) => std.index == id)].description;
-  let full_desc = data[data.findIndex((std) => std.index == id)].viewmore;
-  let thumb = data[data.findIndex((std) => std.index == id)].thumbnail;
-  let scrsht = data[data.findIndex((std) => std.index == id)].screenshot;
-
-  btn.addEventListener("click", (e) => {
-    viewmore_container.style["display"] = "flex";
-    viewmore_container.style["opacity"] = "1";
-    document.body.style.overflow = "hidden";
-    viewmore_pict.innerHTML = `<img src="https://meverss.github.io/portfolio/media/images/sample.png" alt="Proyecto web">`;
-  });
-});
