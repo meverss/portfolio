@@ -36,16 +36,16 @@ m_menu_items.forEach((menu) => {
 // SACROLL TO SECTIONS
 
 function scroll_to_section(section) {
-  var element = document.getElementById(section);
-  var position = element.offsetTop;
+  let element = document.getElementById(section);
+  let position = element.offsetTop;
   window.scrollTo(0, position - 70);
 }
 
-function scroll_to_section_m(section) {
-  var element = document.getElementById(section);
-  var position = element.offsetTop;
-  if (window.innerWidth <= 500) {
-    switch (section) {
+function scroll_to_section_m(section_m) {
+  let element = document.getElementById(section_m);
+  let position = element.offsetTop;
+  if (window.innerWidth <= 1140) {
+    switch (section_m) {
       case "s_m_about":
         window.scrollTo(0, position - 50);
         break;
@@ -60,14 +60,18 @@ function scroll_to_section_m(section) {
         break;
     }
   }
+}
 
-  var menu = document.querySelectorAll(".menu_item");
-  var alt_menu = document.querySelectorAll(".m_menu_item");
+  let menu = document.querySelectorAll(".menu_item");
+  let alt_menu = document.querySelectorAll(".m_menu_item");
+  
+
+// console.log(sec)
 
   menu.forEach((obj) => {
+    let sec = obj.id;
     if (obj.classList[1] != "m_menu_item") {
       if (obj.id != "") {
-        const sec = obj.id;
         obj.addEventListener("click", function () {
           scroll_to_section("s_" + sec);
         });
@@ -76,14 +80,16 @@ function scroll_to_section_m(section) {
   });
 
   alt_menu.forEach((obj1) => {
-    console.log(obj1);
+        let sec = obj1.id;
+        
     if (obj1 != "s_m_menu_open_btn") {
+  console.log("s_" + sec);
       obj1.addEventListener("click", function () {
-        scroll_to_section_m("s_" + obj1.id);
+        scroll_to_section_m("s_" + sec);
       });
     }
   });
-}
+
 
 //COPYRIGHT
 
@@ -136,82 +142,73 @@ fields.forEach((field) => {
 
 // FORM VALIDATION
 
-  const f_form = document.getElementById("contact_form");
-  const f_name = document.getElementById("name");
-  const f_email = document.getElementById("email");
-  const f_message = document.getElementById("message");
-  const f_btn = document.getElementById("btn_send");
-  const valid_email = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
+const f_form = document.getElementById("contact_form");
+const f_name = document.getElementById("name");
+const f_email = document.getElementById("email");
+const f_message = document.getElementById("message");
+const f_btn = document.getElementById("btn_send");
+const valid_email = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
 
-  f_name.addEventListener("focusout", (e) => {
-    if (f_name.value.length < 2) {
-      f_btn.disabled = true;
-      f_name.classList.add("wrong", "animate__animated", "animate__shakeX");
-      f_name.value = "";
-      f_name.placeholder = "More than one character, please";
-      setTimeout((e) => {
-        f_name.classList.remove(
-          "wrong",
-          "animate__animated",
-          "animate__shakeX"
-        );
-      }, 1000);
-      setTimeout((e) => {
-        f_name.placeholder = "Who is contacting me?";
-      }, 3000);
-    }
-  });
+f_name.addEventListener("focusout", (e) => {
+  if (f_name.value.length < 2) {
+    f_btn.disabled = true;
+    f_name.classList.add("wrong", "animate__animated", "animate__shakeX");
+    f_name.value = "";
+    f_name.placeholder = "More than one character, please";
+    setTimeout((e) => {
+      f_name.classList.remove("wrong", "animate__animated", "animate__shakeX");
+    }, 1000);
+    setTimeout((e) => {
+      f_name.placeholder = "Who is contacting me?";
+    }, 3000);
+  }
+});
 
-  f_email.addEventListener("focusout", (e) => {
-    if (!valid_email.test(f_email.value)) {
-      f_btn.disabled = true;
-      f_email.classList.add("wrong", "animate__animated", "animate__shakeX");
-      f_email.value = "";
-      f_email.placeholder = "Enter a valid e-mail address";
-      setTimeout((e) => {
-        f_email.classList.remove(
-          "wrong",
-          "animate__animated",
-          "animate__shakeX"
-        );
-      }, 1000);
-      setTimeout((e) => {
-        f_email.placeholder = "your@email.here";
-      }, 3000);
-    }
-  });
+f_email.addEventListener("focusout", (e) => {
+  if (!valid_email.test(f_email.value)) {
+    f_btn.disabled = true;
+    f_email.classList.add("wrong", "animate__animated", "animate__shakeX");
+    f_email.value = "";
+    f_email.placeholder = "Enter a valid e-mail address";
+    setTimeout((e) => {
+      f_email.classList.remove("wrong", "animate__animated", "animate__shakeX");
+    }, 1000);
+    setTimeout((e) => {
+      f_email.placeholder = "your@email.here";
+    }, 3000);
+  }
+});
 
-  f_message.addEventListener("focus", (e) => {
-    if (f_name.value != "" && f_email.value != "") {
-      f_btn.disabled = false;
-    }
-  });
+f_message.addEventListener("focus", (e) => {
+  if (f_name.value != "" && f_email.value != "") {
+    f_btn.disabled = false;
+  }
+});
 
-  f_form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    if (f_message.value.length > 4) {
-      f_form.submit();
-      var fields = document.querySelectorAll(".frm_text");
-      fields.forEach((field) => {
-        field.value = "";
-      });
-    } else {
-      f_message.classList.add("wrong", "animate__animated", "animate__shakeX");
-      f_message.value = "";
-      f_message.placeholder = "Please, write something!";
-      setTimeout((e) => {
-        f_message.classList.remove(
-          "wrong",
-          "animate__animated",
-          "animate__shakeX"
-        );
-      }, 1000);
-      setTimeout((e) => {
-        f_message.placeholder = "Leave me your message";
-      }, 3000);
-    }
-  });
-
+f_form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  if (f_message.value.length > 4) {
+    f_form.submit();
+    let fields = document.querySelectorAll(".frm_text");
+    fields.forEach((field) => {
+      field.value = "";
+    });
+  } else {
+    f_message.classList.add("wrong", "animate__animated", "animate__shakeX");
+    f_message.value = "";
+    f_message.placeholder = "Please, write something!";
+    setTimeout((e) => {
+      f_message.classList.remove(
+        "wrong",
+        "animate__animated",
+        "animate__shakeX"
+      );
+    }, 1000);
+    setTimeout((e) => {
+      f_message.placeholder = "Leave me your message";
+    }, 3000);
+  }
+});
 
 // GET A JSON FILE FROM A URL TO GENERATE PREJECTS
 
@@ -237,7 +234,7 @@ fetch("https://meverss.github.io/portfolio/data/projects.json")
                 />
               </div>
               <hr>
-              <ul class="project_desc">
+              <ul class="project_desc text">
                 <li><spam class="info">Name: </spam>${project.name}</li>
                 <li>
                   <spam class="info">Description: </spam>${project.description}
@@ -262,6 +259,7 @@ fetch("https://meverss.github.io/portfolio/data/projects.json")
       let scrsht = data[data.findIndex((std) => std.index == id)].screenshot;
 
       btn.addEventListener("click", (e) => {
+        viewmore_container.scrollTo(0, 0);
         viewmore_container.style["display"] = "flex";
         viewmore_container.style["opacity"] = "1";
         document.body.style.overflow = "hidden";
