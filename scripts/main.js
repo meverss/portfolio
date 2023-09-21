@@ -60,29 +60,30 @@ function scroll_to_section_m(section) {
         break;
     }
   }
-}
 
-var menu = document.querySelectorAll(".menu_item");
-var alt_menu = document.querySelectorAll(".m_menu_item");
+  var menu = document.querySelectorAll(".menu_item");
+  var alt_menu = document.querySelectorAll(".m_menu_item");
 
-menu.forEach((obj) => {
-  if (obj.classList[1] != "m_menu_item") {
-    if (obj.id != "") {
-      const sec = obj.id;
-      obj.addEventListener("click", function () {
-        scroll_to_section("s_" + sec);
+  menu.forEach((obj) => {
+    if (obj.classList[1] != "m_menu_item") {
+      if (obj.id != "") {
+        const sec = obj.id;
+        obj.addEventListener("click", function () {
+          scroll_to_section("s_" + sec);
+        });
+      }
+    }
+  });
+
+  alt_menu.forEach((obj1) => {
+    console.log(obj1);
+    if (obj1 != "s_m_menu_open_btn") {
+      obj1.addEventListener("click", function () {
+        scroll_to_section_m("s_" + obj1.id);
       });
     }
-  }
-});
-
-alt_menu.forEach((obj1) => {
-  if (obj1 != "s_m_menu_open_btn") {
-    obj1.addEventListener("click", function () {
-      scroll_to_section_m("s_" + obj1.id);
-    });
-  }
-});
+  });
+}
 
 //COPYRIGHT
 
@@ -133,6 +134,85 @@ fields.forEach((field) => {
   }
 });
 
+// FORM VALIDATION
+
+function f_check() {
+  const f_form = document.getElementById("contact_form");
+  const f_name = document.getElementById("name");
+  const f_email = document.getElementById("email");
+  const f_message = document.getElementById("message");
+  const f_btn = document.getElementById("btn_send");
+  const valid_email = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
+
+  f_name.addEventListener("focusout", (e) => {
+    if (f_name.value.length < 2) {
+      f_btn.disabled = true;
+      f_name.classList.add("wrong", "animate__animated", "animate__shakeX");
+      f_name.value = "";
+      f_name.placeholder = "More than one character, please";
+      setTimeout((e) => {
+        f_name.classList.remove(
+          "wrong",
+          "animate__animated",
+          "animate__shakeX"
+        );
+      }, 1000);
+      setTimeout((e) => {
+        f_name.placeholder = "Who is contacting me?";
+      }, 3000);
+    }
+  });
+
+  f_email.addEventListener("focusout", (e) => {
+    if (!valid_email.test(f_email.value)) {
+      f_btn.disabled = true;
+      f_email.classList.add("wrong", "animate__animated", "animate__shakeX");
+      f_email.value = "";
+      f_email.placeholder = "Enter a valid e-mail address";
+      setTimeout((e) => {
+        f_email.classList.remove(
+          "wrong",
+          "animate__animated",
+          "animate__shakeX"
+        );
+      }, 1000);
+      setTimeout((e) => {
+        f_email.placeholder = "your@email.here";
+      }, 3000);
+    }
+  });
+
+  f_message.addEventListener("focus", (e) => {
+    if (f_name.value != "" && f_email.value != "") {
+      f_btn.disabled = false;
+    }
+  });
+
+  f_form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    if (f_message.value.length > 4) {
+      f_form.submit();
+      var fields = document.querySelectorAll(".frm_text");
+      fields.forEach((field) => {
+        field.value = "";
+      });
+    } else {
+      f_message.classList.add("wrong", "animate__animated", "animate__shakeX");
+      f_message.value = "";
+      f_message.placeholder = "Please, write something!";
+      setTimeout((e) => {
+        f_message.classList.remove(
+          "wrong",
+          "animate__animated",
+          "animate__shakeX"
+        );
+      }, 1000);
+      setTimeout((e) => {
+        f_message.placeholder = "Leave me your message";
+      }, 3000);
+    }
+  });
+}
 
 // GET A JSON FILE FROM A URL TO GENERATE PREJECTS
 
@@ -143,7 +223,7 @@ fields.forEach((field) => {
 //   },
 // });
 
-function gen_projects(){}
+function gen_projects() {}
 fetch("https://meverss.github.io/portfolio/data/projects.json")
   .then((data) => data.json())
   .then((data) => {
@@ -188,11 +268,10 @@ fetch("https://meverss.github.io/portfolio/data/projects.json")
         document.body.style.overflow = "hidden";
         viewmore_pict.innerHTML = `<img src="${my_url}/media/images/${scrsht}" alt="Proyecto web">`;
       });
-    })
+    });
 
     viewmore_close.addEventListener("click", (close) => {
       viewmore_container.style["display"] = "none";
       document.body.style["overflow"] = "auto";
     });
-
   });
