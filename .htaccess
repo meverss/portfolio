@@ -3,3 +3,6 @@ Options -Indexes
 RewriteCond %{HTTP_HOST} ^www.meverss.github.io/portfolio [NC]
 RewriteRule ^(.*)$ http://meverss.github.io/portfolio/$1 [L,R=301,NC]
 
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
