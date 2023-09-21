@@ -1,10 +1,5 @@
-//Move to a new domain
-
-"Options -Indexes";
-"Redirect 301 /http://meverss.github.io/portfolio/";
-
-//Redirect to New Domain
-//"RedirectMatch 301 ^(.*)$ http://newdomain.com/";
-
-//Move a folder to a new one keeping all structure
-//
+RewriteEngine on
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+RewriteCond %{HTTPS_HOST} ^www.meverss.github.io [NC]
+RewriteRule ^(.*)$ https://meverss.github.io/$1 [L,R=301,NC]
