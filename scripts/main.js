@@ -224,7 +224,7 @@ fetch("https://meverss.github.io/portfolio/data/projects.json")
               <div class="thumbnail_container">
                 <img
                   class="thumbnail"
-                  src="./media/images/${project.thumbnail}"
+                  src="https://meverss.github.io/portfolio/media/images/${project.thumbnail}"
                   alt="Portfolio Proyect ${project.index}"
                 />
               </div>
