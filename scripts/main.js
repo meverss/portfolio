@@ -155,7 +155,7 @@ f_name.addEventListener("focusout", (e) => {
     }, 1000);
     setTimeout((e) => {
       f_name.placeholder = "Who is contacting me?";
-    }, 3000);
+    }, 3500);
   }
 });
 
@@ -170,7 +170,7 @@ f_email.addEventListener("focusout", (e) => {
     }, 1000);
     setTimeout((e) => {
       f_email.placeholder = "your@email.here";
-    }, 3000);
+    }, 3500);
   }
 });
 
@@ -201,7 +201,7 @@ f_form.addEventListener("submit", (e) => {
     }, 1000);
     setTimeout((e) => {
       f_message.placeholder = "Leave me your message";
-    }, 3000);
+    }, 3500);
   }
 });
 
@@ -249,22 +249,31 @@ fetch("https://meverss.github.io/portfolio/data/projects.json")
       let id = btn.id.split("view_more")[1];
       let short_desc =
         data[data.findIndex((std) => std.index == id)].description;
+      id = btn.id.split("view_more")[1];
+      let p_name = data[data.findIndex((std) => std.index == id)].name;
       let full_desc = data[data.findIndex((std) => std.index == id)].viewmore;
       let thumb = data[data.findIndex((std) => std.index == id)].thumbnail;
       let scrsht = data[data.findIndex((std) => std.index == id)].screenshot;
 
       btn.addEventListener("click", (e) => {
-        viewmore_container.scrollTo(0, 0);
+        viewmore_anim.classList.remove("animate__animated", "animate__zoomOut");
+        viewmore_anim.classList.add("animate__animated", "animate__zoomIn");
         viewmore_container.style["display"] = "flex";
         viewmore_container.style["opacity"] = "1";
         document.body.style.overflow = "hidden";
         viewmore_pict.innerHTML = `<img src="${my_url}/media/images/${scrsht}" alt="Proyecto web">`;
-        viewmore_text.innerHTML = `<p class='text'>${full_desc}</p>`;
+        viewmore_text.innerHTML = `
+        <h3 class="title">${p_name}</h3>
+        <p class='text'>${full_desc}</p>`;
       });
     });
 
     viewmore_close.addEventListener("click", (close) => {
-      viewmore_container.style["display"] = "none";
+      viewmore_anim.classList.remove("animate__animated", "animate__zoomIn");
+      viewmore_anim.classList.add("animate__animated", "animate__zoomOut");
+      setTimeout(function () {
+        viewmore_container.style["display"] = "none";
+      }, 700);
       document.body.style["overflow"] = "auto";
     });
   });
