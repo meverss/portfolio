@@ -341,9 +341,8 @@ hr {
 }
 .menu_item:hover,
 .social_item a:hover {
-  color:#d2691e;
+  color: #d2691e;
 }
-
 
 .m_menu_btn:hover {
   color: #7a6c67;
@@ -624,6 +623,20 @@ hr {
   justify-content: center;
 }
 
+.viewmore_anim {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  z-index: 10001;
+  margin: auto;
+  transition: 0.3s;
+}
+
 .viewmore_close {
   display: flex;
   width: 60%;
@@ -678,7 +691,8 @@ hr {
   background-color: #fff;
   border: 2px solid #bbb;
   border-radius: 8px;
-  overflow-y: scroll;
+  overflow-y:scroll;
+  overflow-x: hidden;
 }
 
 .viewmore_pict {
@@ -715,6 +729,11 @@ hr {
   text-align: justify;
   padding: 40px;
   font-size: 1.6rem;
+}
+
+.viewmore_text .title {
+  /* margin-top: 20px; */
+  font-size: 2.6rem;
 }
 
 /* CONTACT */
