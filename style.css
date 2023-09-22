@@ -691,7 +691,7 @@ hr {
   background-color: #fff;
   border: 2px solid #bbb;
   border-radius: 8px;
-  overflow-y:scroll;
+  overflow-y: auto;
   overflow-x: hidden;
 }
 
@@ -863,6 +863,19 @@ textarea {
   color: #d2691e;
   font-size: 1.5rem;
   font-weight: bold;
+}
+
+/* Contact Me Info */
+
+.contact_me_info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  background-color: red;
+  width: 100%;
+  height: 80px;
 }
 
 /* FOOTER */

@@ -1,5 +1,5 @@
-RewriteEngine on
-RewriteCond %{HTTPS} off
-RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-RewriteCond %{HTTP_HOST} ^www.meverss.github.io/portfolio [NC]
-RewriteRule ^(.*)$ http://meverss.github.io/portfolio/$1 [L,R=301,NC]
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www.meverss.github.io$
+RewriteRule (.*) http://meverss.github.io/$1 [R=301,L]
+</IfModule>
