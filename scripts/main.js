@@ -62,30 +62,29 @@ function scroll_to_section_m(section_m) {
   }
 }
 
-  let menu = document.querySelectorAll(".menu_item");
-  let alt_menu = document.querySelectorAll(".m_menu_item");
-  
-  menu.forEach((obj) => {
-    let sec = obj.id;
-    if (obj.classList[1] != "m_menu_item") {
-      if (obj.id != "") {
-        obj.addEventListener("click", function () {
-          scroll_to_section("s_" + sec);
-        });
-      }
-    }
-  });
+let menu = document.querySelectorAll(".menu_item");
+let alt_menu = document.querySelectorAll(".m_menu_item");
 
-  alt_menu.forEach((obj1) => {
-        let sec = obj1.id;
-        
-    if (obj1 != "s_m_menu_open_btn") {
-      obj1.addEventListener("click", function () {
-        scroll_to_section_m("s_" + sec);
+menu.forEach((obj) => {
+  let sec = obj.id;
+  if (obj.classList[1] != "m_menu_item") {
+    if (obj.id != "") {
+      obj.addEventListener("click", function () {
+        scroll_to_section("s_" + sec);
       });
     }
-  });
+  }
+});
 
+alt_menu.forEach((obj1) => {
+  let sec = obj1.id;
+
+  if (obj1 != "s_m_menu_open_btn") {
+    obj1.addEventListener("click", function () {
+      scroll_to_section_m("s_" + sec);
+    });
+  }
+});
 
 //COPYRIGHT
 
@@ -98,7 +97,7 @@ my_age.innerHTML = fecha.getFullYear() - 1985;
 
 const social_n = document.querySelectorAll(".social_item");
 const my_website = encodeURIComponent(location.origin + "/portfolio");
-const my_website_title = document.title;
+const my_website_title = "https://meverss.github.io/portfolio";
 const url_facebook =
   "http://www.facebook.com/sharer.php?u=" +
   my_website +
