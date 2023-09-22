@@ -340,9 +340,13 @@ hr {
   color: #fff;
 }
 .menu_item:hover,
-.social_item a:hover,
+.social_item a:hover {
+  color:#d2691e;
+}
+
+
 .m_menu_btn:hover {
-  color: chocolate;
+  color: #7a6c67;
 }
 
 .m_menu_btn {
@@ -359,7 +363,7 @@ hr {
 }
 
 .m_menu_btn p {
-  color: #7a6c67;
+  color: #d2691e;
   text-shadow: 0.7px 0.7px 2px #000, -0.7px -0.7px 2px #000;
   align-items: center;
   justify-content: center;
@@ -646,7 +650,8 @@ hr {
   right: 0;
 }
 
-.viewmore_close_btn:hover, .viewmore_close_btn:hover p {
+.viewmore_close_btn:hover,
+.viewmore_close_btn:hover p {
   background-color: chocolate;
   color: #333;
   border: 1px solid #333;
@@ -699,12 +704,17 @@ hr {
 }
 
 .viewmore_text {
-  background-color: #222;
   width: 55%;
   min-width: 350px;
   height: 96%;
   min-height: 20%;
   margin: auto;
+}
+
+.viewmore_text p {
+  text-align: justify;
+  padding: 40px;
+  font-size: 1.6rem;
 }
 
 /* CONTACT */
@@ -929,7 +939,8 @@ textarea {
 }
 
 @media screen and (max-width: 960px) {
-  .viewmore_pict, .viewmore_text {
+  .viewmore_pict,
+  .viewmore_text {
     width: 98%;
   }
 }

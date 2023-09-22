@@ -65,9 +65,6 @@ function scroll_to_section_m(section_m) {
   let menu = document.querySelectorAll(".menu_item");
   let alt_menu = document.querySelectorAll(".m_menu_item");
   
-
-// console.log(sec)
-
   menu.forEach((obj) => {
     let sec = obj.id;
     if (obj.classList[1] != "m_menu_item") {
@@ -83,7 +80,6 @@ function scroll_to_section_m(section_m) {
         let sec = obj1.id;
         
     if (obj1 != "s_m_menu_open_btn") {
-  console.log("s_" + sec);
       obj1.addEventListener("click", function () {
         scroll_to_section_m("s_" + sec);
       });
@@ -264,6 +260,7 @@ fetch("https://meverss.github.io/portfolio/data/projects.json")
         viewmore_container.style["opacity"] = "1";
         document.body.style.overflow = "hidden";
         viewmore_pict.innerHTML = `<img src="${my_url}/media/images/${scrsht}" alt="Proyecto web">`;
+        viewmore_text.innerHTML = `<p class='text'>${full_desc}</p>`;
       });
     });
 
