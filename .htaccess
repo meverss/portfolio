@@ -13,5 +13,4 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 # <IfModule mod_rewrite.c>
 # RewriteEngine On
 # ErrorDocument 404 https://meverss.github.io/portfolio/pages/404error.html
-
 # </IfModule>
