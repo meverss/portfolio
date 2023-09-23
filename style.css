@@ -701,25 +701,33 @@ hr {
 .viewmore_pict {
   display: flex;
   flex-direction: column;
-  gap: 20px;;
+  gap: 5px;;
   justify-content: center;
-  align-items: center;
+  align-items:center;
   width: 40%;
   height: 98%;
   margin: auto;
   border-radius: 8px;
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
 .viewmore_pict img {
   display: flex;
   justify-content: center;
-  align-items: center;
-  max-height: 99%;
+  align-self: flex-start;
+  max-width: 90%;
+  max-height: 90%;
   margin: auto;
   border: 1px solid #ddd;
   border-radius: 8px;
-  overflow-y: hidden;
+}
+
+.viewmore_page_link a {
+  width: 96%;
+  height: 40px;
+  font-size: 8rem;
+  text-align: center;
+  background-color: red;
 }
 
 .thumbnail {
