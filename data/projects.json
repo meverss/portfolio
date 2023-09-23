@@ -20,11 +20,11 @@
   {
     "index": 3,
     "name": "Barracuda",
-    "link":"https://meverss.github.io/portfolio/pages/cookies.html",
+    "link":"https://meverss.github.io/barracuda",
     "description": "Theme for the Fish Shell.",
     "thumbnail": "barracuda_thumbnail.png",
     "screenshot": "barracuda.png",
-    "viewmore": "Barracuda theme makes fish shell even more powerful and user-friendly. It’s equipped with a set of useful functions and key bindings to speed up your workflow. Also, the use of Powerline Nerds makes the visual experience smooth and fancy. This theme is a fork of oh-my-fish/theme-budspencer, which means it keeps most of it’s awesome features."
+    "viewmore": "Barracuda theme makes fish shell even more powerful and user-friendly. It’s equipped with a set of useful functions and key bindings to speed up your workflow. Also, the use of <b>Powerline Nerds</b> makes the visual experience smooth and fancy. This theme is a fork of oh-my-fish/theme-budspencer, which means it keeps most of it’s awesome features."
   },
   {
     "index": 4,

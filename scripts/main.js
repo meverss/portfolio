@@ -225,7 +225,7 @@ fetch("./data/projects.json")
                 <img
                   class="thumbnail"
                   src="./media/images/projects/${project.thumbnail}"
-                  alt="${project.name}"
+                  alt="${project.name}_thumbnail"
                 />
               </div>
               <hr>
@@ -255,7 +255,7 @@ fetch("./data/projects.json")
 			let full_desc = data[data.findIndex((std) => std.index == id)].viewmore;
 			let thumb = data[data.findIndex((std) => std.index == id)].thumbnail;
 			let scrsht = data[data.findIndex((std) => std.index == id)].screenshot;
-      let w_link = data[data.findIndex((std) => std.index == id)].link;
+			let w_link = data[data.findIndex((std) => std.index == id)].link;
 
 			btn.addEventListener("click", (e) => {
 				viewmore_anim.classList.remove("animate__animated", "animate__zoomOut");
@@ -264,12 +264,12 @@ fetch("./data/projects.json")
 				viewmore_container.style["opacity"] = "1";
 				document.body.style.overflow = "hidden";
 				viewmore_pict.innerHTML = `
-        <img src="${my_url}/media/images/projects/${scrsht}" alt="Proyecto web">
+        <img src="${my_url}/media/images/projects/${scrsht}" alt="${p_name}">
         <a class="viewmore_page_link button" id="viewmore_page_link" href="${w_link}" target="_blank"> Visit website </a>
         `;
 				viewmore_text.innerHTML = `
         <h3 class="title">${p_name}</h3>
-        <p class='text'>${full_desc}</p>`;
+        <p class='text'><spam>${full_desc}</spam></p>`;
 			});
 		});
 

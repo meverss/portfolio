@@ -43,20 +43,22 @@ body {
 	width: 100%;
 }
 
-p,
-li {
+p {
 	width: 100%;
-	text-align: center;
+	text-align: justify;
 	font-size: 1.8rem;
-	padding-top: 15px;
+	padding: 25px;
 	color: #444;
 	line-height: 1.6;
 }
 
 li {
+	font-size: 1.8rem;
 	text-align: left;
 	margin-left: 35px;
 	margin-right: 35px;
+	line-height: 1.6;
+	color: #444;
 }
 
 ul {
@@ -105,9 +107,10 @@ hr {
 
 .title {
 	color: chocolate;
-	font-size: 4rem;
+	font-size: 2.5rem;
 	font-weight: bold;
-	text-align: center !important;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
 #main_title {
@@ -124,6 +127,7 @@ hr {
 .box {
 	opacity: 0;
 	border-radius: 8px;
+	padding: 20px;
 }
 
 .button {
@@ -141,7 +145,7 @@ hr {
 .button:hover {
 	background-color: chocolate;
 	border: 1px solid #333;
-  color: #444;
+	color: #444;
 	cursor: pointer;
 	transform: scale(1.1);
 }
@@ -240,22 +244,23 @@ hr {
 
 .top_bar {
 	display: flex;
-	z-index: 101;
+	align-items: center;
+	justify-content: center;
+  z-index: 101;
 	width: 100%;
 	position: fixed;
 	top: 0;
 	background-color: #222;
 	height: 40px;
-	align-items: center;
-	justify-content: center;
 	padding: 0;
 	margin: auto;
 }
 
 .menu {
 	display: flex;
-	width: 65%;
-	justify-content: right;
+	width: 100%;
+	position: fixed;
+	justify-content: center;
 	gap: 40px;
 	align-items: center;
 	text-align: center;
@@ -269,18 +274,19 @@ hr {
 	height: 40px;
 	justify-content: center;
 	align-items: center;
-	padding-top: 0;
+	padding: 0;
 }
 
 .social {
 	display: flex;
 	font-family: Symbols;
-	width: 25%;
-	justify-content: center;
+	width: 15%;
+	position: fixed;
+	justify-content: right;
 	align-content: center;
 	gap: 8px;
 	padding: 0;
-	margin: auto;
+	right: 30px;
 }
 
 .social p {
@@ -300,10 +306,9 @@ hr {
 
 .m_menu {
 	display: flex;
-	flex: 1;
 	flex-direction: column;
 	position: fixed;
-	top: 0;
+	top: 38px;
 	z-index: 100;
 	background-color: rgb(30, 30, 30, 0.95);
 	border: 1px solid #333;
@@ -352,6 +357,7 @@ hr {
 	position: fixed;
 	font-family: Symbols;
 	width: 10%;
+  height: 40px;
 	justify-content: center;
 	align-items: center;
 	padding: 0;
@@ -362,11 +368,9 @@ hr {
 
 .m_menu_btn p {
 	color: #999;
+  text-align: right;
 	text-shadow: 0.7px 0.7px 2px #000, -0.7px -0.7px 2px #000;
-	align-items: center;
-	justify-content: center;
-	margin: auto;
-	padding: 0;
+	right: 0;
 	transition: 0.3s;
 }
 
@@ -415,13 +419,17 @@ hr {
 	width: 800px;
 	border: 1px solid #bbb;
 	background-color: #fff;
-	padding: 10px;
 	margin: 12px;
 }
 
 .welcome_box p {
 	padding-left: 2px;
 	padding-right: 2px;
+	text-align: justify;
+}
+
+.welcome_box .title {
+	width: 100%;
 	text-align: center;
 }
 
@@ -438,7 +446,7 @@ hr {
 
 .about_box_text {
 	display: flex;
-	flex-wrap: wrap;
+	flex-direction: column;
 	width: 60%;
 	min-width: 380px;
 	border: 1px solid #bbb;
@@ -447,9 +455,11 @@ hr {
 	margin-left: -50px;
 }
 
-.about_box_text p {
+.about_title .title {
 	width: 100%;
-	padding: 20px;
+	text-align: center;
+	font-size: 4rem;
+	margin-top: 50px;
 }
 
 .about_box_image {
@@ -477,6 +487,7 @@ hr {
 	flex-wrap: wrap;
 	gap: 20px;
 	width: 90%;
+	height: auto;
 	justify-content: center;
 	align-items: center;
 	text-align: center;
@@ -486,20 +497,25 @@ hr {
 
 .services_box_text {
 	display: flex;
-	flex-wrap: wrap;
+	flex-direction: column;
 	width: 50%;
+	height: auto;
 	min-width: 380px;
 	border: 1px solid #bbb;
-	background-color: #fff;
 	border-radius: 8px;
 	margin-left: -40px;
 	order: -1;
+	padding-bottom: 20px;
 }
 
-.services_box_text p {
+.services_title .title {
 	width: 100%;
-	padding: 40px;
-	text-align: center;
+	font-size: 4rem;
+	margin-top: 50px;
+}
+
+.services_box_text li {
+	padding: 5px;
 }
 
 .services_box_image {
@@ -532,7 +548,15 @@ hr {
 	justify-content: center;
 	align-items: center;
 	border: 1px solid #bbb;
-	padding: 20px;
+	padding-bottom: 60px;
+}
+
+.projects_title .title {
+	width: 100%;
+	font-size: 4rem;
+	margin-top: 50px;
+  text-align: center;
+  margin-bottom: 50px;
 }
 
 .projects {
@@ -671,7 +695,7 @@ hr {
 	transform: scale(1.2);
 }
 
-.viewmore_close_btn p {
+.viewmore_close p {
 	text-align: center;
 }
 
@@ -761,12 +785,13 @@ hr {
 	justify-content: center;
 	flex-direction: column;
 	width: 96%;
+	height: auto;
 	margin: auto;
 	margin-top: 110px;
 	margin-bottom: 100px;
 	border: 1px solid #bbb;
 	border-radius: 8px;
-	height: 600px;
+	/* height: 600px; */
 	background-image: url(./media/images/contact_me.png);
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -798,10 +823,9 @@ hr {
 	margin: auto;
 }
 
-.contact_title {
-	height: 15%;
-	padding-top: 0;
-	margin-top: -60px;
+.contact_title .title {
+  font-size: 4rem;
+  margin-top: 50px;
 }
 
 .contact_message {
@@ -1004,14 +1028,17 @@ textarea {
 	}
 	.social {
 		display: flex;
-		gap: 8px;
-		width: 70%;
+    position: fixed;
+		width: 100%;
 		justify-content: center;
+    background-color: red;
 	}
 	.m_menu_btn {
 		display: flex;
+    position: fixed;
 		width: 10%;
 		right: 0;
+    background-color: green;
 	}
 
 	.services_box {
