@@ -127,7 +127,7 @@ hr {
 .box {
 	opacity: 0;
 	border-radius: 8px;
-	padding: 20px;
+	/* padding: 20px; */
 }
 
 .button {
@@ -235,9 +235,11 @@ hr {
 }
 
 .loader_text {
+	text-align: center;
 	font-family: Hack;
 	font-size: 1.6rem;
-	line-height: 18px;
+	margin: 0;
+	height: 30px;
 }
 
 /* TOP BAR */
@@ -246,10 +248,9 @@ hr {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-  z-index: 101;
+	z-index: 101;
 	width: 100%;
 	position: fixed;
-	top: 0;
 	background-color: #222;
 	height: 40px;
 	padding: 0;
@@ -315,6 +316,7 @@ hr {
 	border-bottom-left-radius: 10px;
 	width: 200px;
 	height: 300px;
+  padding-bottom: 30px;
 	align-content: center;
 	justify-content: center;
 	align-items: center;
@@ -328,6 +330,11 @@ hr {
 	color: #fff;
 	text-shadow: 0.7px 0.7px 2px #000, -0.7px -0.7px 2px #000;
 	align-content: center;
+}
+
+.m_menu .menu_item {
+  height: 40px;
+  text-align: center;
 }
 
 #m_menu_close_btn {
@@ -357,7 +364,7 @@ hr {
 	position: fixed;
 	font-family: Symbols;
 	width: 10%;
-  height: 40px;
+	height: 40px;
 	justify-content: center;
 	align-items: center;
 	padding: 0;
@@ -368,7 +375,7 @@ hr {
 
 .m_menu_btn p {
 	color: #999;
-  text-align: right;
+	text-align: right;
 	text-shadow: 0.7px 0.7px 2px #000, -0.7px -0.7px 2px #000;
 	right: 0;
 	transition: 0.3s;
@@ -420,6 +427,7 @@ hr {
 	border: 1px solid #bbb;
 	background-color: #fff;
 	margin: 12px;
+	padding: 20px;
 }
 
 .welcome_box p {
@@ -555,8 +563,8 @@ hr {
 	width: 100%;
 	font-size: 4rem;
 	margin-top: 50px;
-  text-align: center;
-  margin-bottom: 50px;
+	text-align: center;
+	margin-bottom: 50px;
 }
 
 .projects {
@@ -784,14 +792,14 @@ hr {
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
+	padding: 0;
 	width: 96%;
 	height: auto;
 	margin: auto;
 	margin-top: 110px;
-	margin-bottom: 100px;
+	margin-bottom: 50px;
 	border: 1px solid #bbb;
 	border-radius: 8px;
-	/* height: 600px; */
 	background-image: url(./media/images/contact_me.png);
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -824,8 +832,8 @@ hr {
 }
 
 .contact_title .title {
-  font-size: 4rem;
-  margin-top: 50px;
+	font-size: 4rem;
+	margin-top: 50px;
 }
 
 .contact_message {
@@ -911,13 +919,25 @@ textarea {
 
 .contact_me_info {
 	display: flex;
-	flex-wrap: wrap;
+	flex-direction: row;
 	justify-content: center;
 	align-items: center;
 	margin: auto;
-	background-color: red;
+  margin-top: 10px;
+	background-color: #222;
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
 	width: 100%;
-	height: 80px;
+	/* height: auto; */
+	padding: 10px;
+}
+
+.contact_me_info p {
+	text-align: center;
+  color: #bbb;
+	height: 30px;
+  width: 200px;
+	padding: 0;
 }
 
 /* FOOTER */
@@ -1028,17 +1048,16 @@ textarea {
 	}
 	.social {
 		display: flex;
-    position: fixed;
+		position: fixed;
 		width: 100%;
 		justify-content: center;
-    background-color: red;
+    right: 0;
 	}
 	.m_menu_btn {
 		display: flex;
-    position: fixed;
+		position: fixed;
 		width: 10%;
 		right: 0;
-    background-color: green;
 	}
 
 	.services_box {
