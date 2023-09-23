@@ -265,7 +265,7 @@ fetch("./data/projects.json")
 				document.body.style.overflow = "hidden";
 				viewmore_pict.innerHTML = `
         <img src="${my_url}/media/images/projects/${scrsht}" alt="Proyecto web">
-        <a class="viewmore_page_link" id="viewmore_page_link" href="${w_link}" target="_blank">Visit website <span style="font-family: Symbols; font-size: 1.2rem"> </span></a>
+        <a class="viewmore_page_link button" id="viewmore_page_link" href="${w_link}" target="_blank"> Visit website </a>
         `;
 				viewmore_text.innerHTML = `
         <h3 class="title">${p_name}</h3>
