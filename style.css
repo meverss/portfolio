@@ -49,7 +49,7 @@ p {
 	font-size: 1.8rem;
 	padding: 25px;
 	color: #444;
-	line-height: 1.6;
+	line-height: 1.5;
 }
 
 li {
@@ -316,7 +316,7 @@ hr {
 	border-bottom-left-radius: 10px;
 	width: 200px;
 	height: 300px;
-  padding-bottom: 30px;
+	padding-bottom: 30px;
 	align-content: center;
 	justify-content: center;
 	align-items: center;
@@ -333,8 +333,8 @@ hr {
 }
 
 .m_menu .menu_item {
-  height: 40px;
-  text-align: center;
+	height: 40px;
+	text-align: center;
 }
 
 #m_menu_close_btn {
@@ -923,7 +923,7 @@ textarea {
 	justify-content: center;
 	align-items: center;
 	margin: auto;
-  margin-top: 10px;
+	margin-top: 10px;
 	background-color: #222;
 	border-bottom-left-radius: 8px;
 	border-bottom-right-radius: 8px;
@@ -934,9 +934,9 @@ textarea {
 
 .contact_me_info p {
 	text-align: center;
-  color: #bbb;
+	color: #bbb;
 	height: 30px;
-  width: 200px;
+	width: 200px;
 	padding: 0;
 }
 
@@ -999,6 +999,9 @@ textarea {
 	#it {
 		max-width: 350px;
 	}
+	p {
+		padding: 10px;
+	}
 }
 
 @media screen and (max-width: 768px) {
@@ -1051,7 +1054,7 @@ textarea {
 		position: fixed;
 		width: 100%;
 		justify-content: center;
-    right: 0;
+		right: 0;
 	}
 	.m_menu_btn {
 		display: flex;

@@ -38,7 +38,6 @@ m_menu_items.forEach((menu) => {
 function scroll_to_section(section) {
 	let element = document.getElementById(section);
 	let position = element.offsetTop;
-  alert(position);
 	window.scrollTo(0, position - 40);
 }
 
