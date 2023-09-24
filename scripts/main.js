@@ -266,6 +266,7 @@ fetch("./data/projects.json")
 				viewmore_pict.innerHTML = `
         <img src="${my_url}/media/images/projects/${scrsht}" alt="${p_name}">
         <a class="viewmore_page_link button" id="viewmore_page_link" href="${w_link}" target="_blank"> Visit website </a>
+        <span id="arrow" style="font-family: Symbols; font-size: 2.5rem">  </span>
         `;
 				viewmore_text.innerHTML = `
         <h3 class="title">${p_name}</h3>
@@ -280,5 +281,9 @@ fetch("./data/projects.json")
 				viewmore_container.style["display"] = "none";
 			}, 700);
 			document.body.style["overflow"] = "auto";
+		});
+    
+    viewmore_box.addEventListener("scroll", () => {
+      arrow.style['display'] = 'none';
 		});
 	});
