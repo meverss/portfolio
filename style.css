@@ -128,7 +128,6 @@ hr {
 .box {
 	opacity: 0;
 	border-radius: 8px;
-	/* padding: 20px; */
 }
 
 .button {
@@ -788,7 +787,6 @@ hr {
 }
 
 .viewmore_text .title {
-	/* margin-top: 20px; */
 	font-size: 2.6rem;
 }
 
@@ -934,7 +932,6 @@ textarea {
 	border-bottom-left-radius: 8px;
 	border-bottom-right-radius: 8px;
 	width: 100%;
-	/* height: auto; */
 	padding: 10px;
 }
 
@@ -947,7 +944,7 @@ textarea {
 }
 
 #arrow {
-  display: none;
+	display: none;
 }
 
 /* FOOTER */
@@ -1018,9 +1015,9 @@ textarea {
 	.viewmore_anim {
 		margin-top: 90px;
 	}
-  .social p {
-    color: #fff;
-  }
+	.social p {
+		color: #fff;
+	}
 }
 
 @media screen and (max-width: 768px) {
@@ -1059,9 +1056,9 @@ textarea {
 	.viewmore_text {
 		width: 98%;
 	}
-  #arrow {
-    display: flex;
-  }
+	#arrow {
+		display: flex;
+	}
 }
 
 @media screen and (max-width: 1024px) {

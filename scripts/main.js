@@ -282,8 +282,8 @@ fetch("./data/projects.json")
 			}, 700);
 			document.body.style["overflow"] = "auto";
 		});
-    
-    viewmore_box.addEventListener("scroll", () => {
-      arrow.style['display'] = 'none';
+
+		viewmore_box.addEventListener("scroll", () => {
+			arrow.style["display"] = "none";
 		});
 	});
