@@ -945,6 +945,7 @@ textarea {
 
 #arrow {
 	display: none;
+	transition: .3s;
 }
 
 /* FOOTER */

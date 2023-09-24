@@ -258,6 +258,7 @@ fetch("./data/projects.json")
 			let w_link = data[data.findIndex((std) => std.index == id)].link;
 
 			btn.addEventListener("click", (e) => {
+				let dat = viewmore_pict.getBoundingClientRect();
 				viewmore_anim.classList.remove("animate__animated", "animate__zoomOut");
 				viewmore_anim.classList.add("animate__animated", "animate__zoomIn");
 				viewmore_container.style["display"] = "flex";
@@ -271,6 +272,11 @@ fetch("./data/projects.json")
 				viewmore_text.innerHTML = `
         <h3 class="title">${p_name}</h3>
         <p class='text'><spam>${full_desc}</spam></p>`;
+
+				console.log(dat.top);
+				setTimeout(function () {
+					viewmore_pict.scrollTo(0, 0);
+				}, 1000);
 			});
 		});
 
@@ -283,7 +289,26 @@ fetch("./data/projects.json")
 			document.body.style["overflow"] = "auto";
 		});
 
+		// viewmore_box.addEventListener("scroll", () => {
+		// 	arrow.style["display"] = "none";
+		// });
+
 		viewmore_box.addEventListener("scroll", () => {
-			arrow.style["display"] = "none";
+			let dat = viewmore_pict.getBoundingClientRect();
+			if (dat.top < 137) {
+				arrow.classList.add("animate__animated", "animate__bounceOut");
+				arrow.classList.remove("animate__bounceIn");
+			} else {
+				arrow.classList.add("animate__animated", "animate__bounceIn");
+				arrow.classList.remove("animate__bounceOut");
+			}
 		});
 	});
+
+// window.addEventListener("scroll", () => {
+// 	let dat = mypict.getBoundingClientRect();
+// 	console.log(dat.top);
+// 	if (dat.top <= 20) {
+// 		alert("llego a 20");
+// 	}
+// });
