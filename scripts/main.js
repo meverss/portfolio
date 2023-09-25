@@ -288,9 +288,27 @@ fetch("./data/projects.json")
 			document.body.style["overflow"] = "auto";
 		});
 
+		window.addEventListener("keydown", function (event) {
+			let k = event.key;
+			let d = getComputedStyle(viewmore_container).display;
+			if (d != "none") {
+				if (k == 27 || k === "Escape" || k === "Esc") {
+					viewmore_anim.classList.remove(
+						"animate__animated",
+						"animate__zoomIn"
+					);
+					viewmore_anim.classList.add("animate__animated", "animate__zoomOut");
+					setTimeout(function () {
+						viewmore_container.style["display"] = "none";
+					}, 700);
+					document.body.style["overflow"] = "auto";
+				}
+			}
+		});
+
 		viewmore_box.addEventListener("scroll", () => {
 			let dat = viewmore_pict.getBoundingClientRect();
-			if (dat.top <= 137) {
+			if (dat.top <= 135) {
 				arrow.classList.add("animate__animated", "animate__bounceOut");
 				arrow.classList.remove("animate__bounceIn");
 			} else {
@@ -305,21 +323,6 @@ fetch("./data/projects.json")
 				m_menu_open_btn.style.display = "none";
 			} else {
 				m_menu_open_btn.style.display = "flex";
-			}
-		});
-
-		window.addEventListener("keydown", function (event) {
-			let k = event.key;
-			let d = getComputedStyle(viewmore_container).display;
-			if (d != "none") {
-				if (k == 27 || k === "Escape" || k === "Esc") {
-					viewmore_anim.classList.remove("animate__animated", "animate__zoomIn");
-					viewmore_anim.classList.add("animate__animated", "animate__zoomOut");
-					setTimeout(function () {
-						viewmore_container.style["display"] = "none";
-					}, 700);
-					document.body.style["overflow"] = "auto";
-				}
 			}
 		});
 	});
