@@ -40,8 +40,8 @@ function playVideo(entries) {
 
 const options = {
 	root: null,
-	rootMargin: "-180px",
-	//threshold: .2
+	//rootMargin: "-180px",
+	threshold: .5
 };
 
 const obBoxes = new IntersectionObserver(triggerAnimation, options);
