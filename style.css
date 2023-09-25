@@ -94,6 +94,7 @@ hr {
 	gap: 20px;
 	justify-content: space-between;
 	align-items: center;
+	transition: .5s;
 }
 
 #s_home,
