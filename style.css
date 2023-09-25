@@ -362,21 +362,26 @@ hr {
 	display: none;
 	position: fixed;
 	font-family: Symbols;
-	width: 10%;
-	height: 40px;
+	width: 60px;
+	height: 30px;
 	justify-content: center;
 	align-items: center;
 	padding: 0;
 	margin: auto;
 	animation-duration: 0.3s;
-	margin-right: 15px;
+	right: 0;
 }
 
 .m_menu_btn p {
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	width: 100%;
 	color: #999;
-	text-align: right;
+	text-align: center;
 	text-shadow: 0.7px 0.7px 2px #000, -0.7px -0.7px 2px #000;
-	right: 0;
 	transition: 0.3s;
 }
 
@@ -945,7 +950,7 @@ textarea {
 
 #arrow {
 	display: none;
-	transition: .3s;
+	transition: 0.3s;
 }
 
 /* FOOTER */
@@ -1078,9 +1083,6 @@ textarea {
 	}
 	.m_menu_btn {
 		display: flex;
-		position: fixed;
-		width: 10%;
-		right: 0;
 	}
 
 	.services_box {

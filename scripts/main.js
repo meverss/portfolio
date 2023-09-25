@@ -289,13 +289,9 @@ fetch("./data/projects.json")
 			document.body.style["overflow"] = "auto";
 		});
 
-		// viewmore_box.addEventListener("scroll", () => {
-		// 	arrow.style["display"] = "none";
-		// });
-
 		viewmore_box.addEventListener("scroll", () => {
 			let dat = viewmore_pict.getBoundingClientRect();
-			if (dat.top < 137) {
+			if (dat.top <= 137) {
 				arrow.classList.add("animate__animated", "animate__bounceOut");
 				arrow.classList.remove("animate__bounceIn");
 			} else {
@@ -303,12 +299,13 @@ fetch("./data/projects.json")
 				arrow.classList.remove("animate__bounceOut");
 			}
 		});
-	});
 
-// window.addEventListener("scroll", () => {
-// 	let dat = mypict.getBoundingClientRect();
-// 	console.log(dat.top);
-// 	if (dat.top <= 20) {
-// 		alert("llego a 20");
-// 	}
-// });
+		window.addEventListener("resize", (a) => {
+			let w = window.innerWidth;
+			if (w > 1140) {
+				m_menu_open_btn.style.display = "none";
+			} else {
+				m_menu_open_btn.style.display = "flex";
+			}
+		});
+	});
