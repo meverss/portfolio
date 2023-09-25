@@ -39,7 +39,7 @@ html {
 body {
 	background-image: url(./media/images/background_1.png);
 	background-repeat: no-repeat;
-	background-size: contain;
+	background-size: cover;
 	background-position:left;
 	background-attachment: fixed;
 	overflow: auto;
