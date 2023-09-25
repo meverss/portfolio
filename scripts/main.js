@@ -326,3 +326,5 @@ fetch("./data/projects.json")
 			}
 		});
 	});
+
+document.cookie = 'SameSite=secure'

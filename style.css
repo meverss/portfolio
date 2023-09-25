@@ -40,7 +40,7 @@ body {
 	background-image: url(./media/images/background_1.png);
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-position:left;
+	background-position: left;
 	background-attachment: fixed;
 	overflow: auto;
 	transition: 0.3s;
@@ -98,7 +98,7 @@ hr {
 	gap: 20px;
 	justify-content: space-between;
 	align-items: center;
-	transition: .3s;
+	transition: 0.3s;
 }
 
 #s_home,
@@ -161,7 +161,7 @@ hr {
 
 /* COOKIES */
 
-.cookies {
+.cc-cp-body-content-entry-title {
 	display: flex;
 	flex-direction: column;
 	width: 100%;
@@ -453,6 +453,8 @@ hr {
 /* ABOUT ME */
 
 .about_box {
+	opacity: 0;
+
 	display: flex;
 	flex-wrap: wrap;
 	margin: auto;
@@ -510,7 +512,6 @@ hr {
 	text-align: center;
 	margin: auto;
 	margin-top: 110px;
-	
 }
 
 .services_box_text {
