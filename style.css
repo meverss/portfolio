@@ -37,7 +37,11 @@ html {
 }
 
 body {
-	background-color: #fff;
+	background-image: url(./media/images/background_1.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position:left;
+	background-attachment: fixed;
 	overflow: auto;
 	transition: 0.3s;
 	overflow: hidden;
@@ -400,7 +404,7 @@ hr {
 	width: 100%;
 	margin-top: 100px;
 	justify-content: center;
-	background-color: #fff;
+	background-color: transparent;
 }
 
 .portfolio {
@@ -506,6 +510,7 @@ hr {
 	text-align: center;
 	margin: auto;
 	margin-top: 110px;
+	
 }
 
 .services_box_text {
@@ -519,6 +524,7 @@ hr {
 	margin-left: -40px;
 	order: -1;
 	padding-bottom: 20px;
+	background-color: #fff;
 }
 
 .services_title .title {
@@ -562,6 +568,7 @@ hr {
 	align-items: center;
 	border: 1px solid #bbb;
 	padding-bottom: 60px;
+	background-color: #fff;
 }
 
 .projects_title .title {
@@ -814,6 +821,7 @@ hr {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
+	background-color: #fff;
 }
 
 .contact_form {
@@ -984,6 +992,10 @@ textarea {
 
 .show {
 	opacity: 1;
+}
+
+.hide {
+	opacity: 0;
 }
 
 .show_menu {
