@@ -15,12 +15,12 @@ function triggerAnimation(entries) {
 			);
 		} else {
 			entry.target.classList.add(
-				"show",
+				"hide",
 				"animate__fadeOut"
 			);
 			// obBoxes.unobserve(entry.target);
 			entry.target.classList.remove(
-				"hide",
+				"show",
 				"animate__fadeIn"
 			);
 		}
@@ -40,8 +40,8 @@ function playVideo(entries) {
 
 const options = {
 	root: null,
-	//rootMargin: "-180px",
-	threshold: .5
+	rootMargin: "-180px",
+	//threshold: .5
 };
 
 const obBoxes = new IntersectionObserver(triggerAnimation, options);

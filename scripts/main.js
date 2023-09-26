@@ -38,7 +38,15 @@ m_menu_items.forEach((menu) => {
 function scroll_to_section(section) {
 	let element = document.getElementById(section);
 	let position = element.offsetTop;
-	window.scrollTo(0, position - 115);
+	switch (section) {
+		case "s_projects":
+			window.scrollTo(0, position - 65);
+			break;
+		default:
+			window.scrollTo(0, position - 135);
+			break;
+	}
+
 }
 
 function scroll_to_section_m(section_m) {
