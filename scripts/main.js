@@ -323,8 +323,6 @@ fetch("https://meverss.github.io/portfolio/data/projects.json")
 			let w = window.innerWidth;
 			if (w > 1140) {
 				m_menu_open_btn.style.display = "none";
-			} else {
-				m_menu_open_btn.style.display = "flex";
 			}
 		});
 	});

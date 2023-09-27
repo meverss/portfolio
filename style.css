@@ -747,7 +747,12 @@ hr {
 	min-width: 80%;
 	height: 80%;
 	min-height: 70%;
+	background-image: url(https://meverss.github.io/portfolio/media/images/background.png);
 	background-color: #fff;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: left;
+	background-attachment: fixed;
 	border: 2px solid #bbb;
 	border-radius: 8px;
 	overflow-y: auto;
