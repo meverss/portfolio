@@ -26,7 +26,7 @@ function triggerAnimation(entries) {
 
 const options = {
 	root: null,
-	rootMargin: "-180px",
+	rootMargin: "-150px",
 	//threshold: .5
 };
 

@@ -308,8 +308,8 @@ fetch("./data/projects.json")
 			let d = getComputedStyle(viewmore_container).display;
 			if (d != "none") {
 				if (k == 27 || k == "Escape" || k == "Esc") {
-					viewmore_anim.classList.remove("animate__zoomIn");
-					viewmore_anim.classList.add("animate__zoomOut");
+					viewmore_anim.classList.remove("animate__animated", "animate__zoomIn");
+					viewmore_anim.classList.add("animate__animated", "animate__zoomOut");
 					viewmore_container.style["display"] = "none";
 					document.body.style["overflow"] = "auto";
 				}
@@ -319,10 +319,10 @@ fetch("./data/projects.json")
 		viewmore_box.addEventListener("scroll", () => {
 			let dat = viewmore_pict.getBoundingClientRect();
 			if (dat.top <= 135) {
-				arrow.classList.remove("animate__bounceIn");
+				arrow.classList.remove("animate__animated", "animate__bounceIn");
 				arrow.classList.add("animate__animated", "animate__bounceOut");
 			} else {
-				arrow.classList.remove("animate__bounceOut");
+				arrow.classList.remove("animate__animated", "animate__bounceOut");
 				arrow.classList.add("animate__animated", "animate__bounceIn");
 			}
 		});
@@ -343,6 +343,6 @@ document.cookie = 'SameSite=secure'
 cookies_policy.innerHTML = 'We use cookies only to analyze our website traffic, and to understand where our visitors are coming from. <a href="https://meverss.github.io/portfolio/pages/cookies.html" target="_blank">Read cookies policy</a>';
 
 // Acept cookies //
-// cookies_ok.addEventListener('click', e => {
-// 	cookies.classList.add('animate__animated', 'animate__backOutUp');
-// })
+cookies_ok.addEventListener('click', e => {
+	cookies.classList.add('animate__animated', 'animate__backOutUp');
+})

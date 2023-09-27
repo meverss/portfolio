@@ -137,6 +137,7 @@ hr {
 	border-radius: 8px;
 	padding-bottom: 20px !important;
 	transition: .3s;
+	/* animation-duration: 1s; */
 }
 
 .button {
@@ -167,7 +168,7 @@ hr {
 /* COOKIES */
 
 .cookies {
-	display: none;
+	display: flex;
 	flex-direction: row;
 	position: fixed;
 	z-index: 105;
@@ -853,11 +854,6 @@ hr {
 	margin: auto;
 }
 
-.contact_title .title {
-	font-size: 4rem;
-	margin-top: 50px;
-}
-
 .contact_message {
 	height: 85%;
 }
@@ -897,9 +893,15 @@ textarea {
 .contact_form input,
 .contact_form textarea {
 	font-family: Hack;
-	font-size: 1.6rem;
+	font-size: 11pt;
 	padding: 8px;
 	margin-bottom: 10px;
+}
+
+.form .title {
+	font-size: 20pt;
+	margin-top: 50px;
+	text-align: center;
 }
 
 .form_btn {
@@ -912,7 +914,7 @@ textarea {
 .form_btn:disabled {
 	background-color: #bbb;
 	border-color: #aaa;
-	color: #ddd;
+	color: #fff;
 	text-align: center;
 }
 
@@ -933,7 +935,7 @@ textarea {
 
 .important {
 	color: #d2691e;
-	font-size: 1.5rem;
+	font-size: 12pt;
 	font-weight: bold;
 }
 
