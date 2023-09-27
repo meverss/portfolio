@@ -186,7 +186,7 @@ hr {
 }
 
 .cookies .text {
-	font-size: 12pt;
+	font-size: 11pt;
 	text-align: justify;
 	padding: 0;
 	height: 100%;
@@ -985,7 +985,7 @@ textarea {
 
 #footer {
 	color: #ccc;
-	font-size: 1.4rem;
+	font-size: 11pt;
 	text-align: center;
 	margin: auto;
 	padding: 0;

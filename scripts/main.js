@@ -340,7 +340,7 @@ fetch("./data/projects.json")
 // COOKIES
 
 document.cookie = 'SameSite=secure'
-cookies_policy.innerHTML = 'We use cookies only to analyze our website traffic, and to understand where our visitors are coming from. <a href="https://meverss.github.io/portfolio/pages/cookies.html" target="_blank">Read cookies policy</a>';
+cookies_policy.innerHTML = 'We use cookies with th only pourpose to analyze our website traffic. If you like to know more, you can <a href="https://meverss.github.io/portfolio/pages/cookies.html" target="_blank">read our cookies policy</a>.';
 
 // Acept cookies //
 cookies_ok.addEventListener('click', e => {
