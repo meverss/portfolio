@@ -3,25 +3,12 @@ const notes = document.querySelectorAll(".box");
 function triggerAnimation(entries) {
 	entries.forEach((entry) => {
 		if (entry.isIntersecting) {
-			entry.target.classList.add(
-				"show",
-				"animate__animated",
-				"animate__fadeIn"
-			);
+			entry.target.classList.remove("animate__animated", "animate__fadeOut", "hide");
+			entry.target.classList.add("animate__animated", "animate__fadeIn", "show");
 			// obBoxes.unobserve(entry.target);
-			entry.target.classList.remove(
-				"hide",
-				"animate__fadeOut"
-			);
 		} else {
-			entry.target.classList.add(
-				"hide",
-				"animate__fadeOut"
-			);
-			entry.target.classList.remove(
-				"show",
-				"animate__fadeIn"
-			);
+			entry.target.classList.remove("animate__animated", "animate__fadeIn", "show");
+			entry.target.classList.add("animate__animated", "animate__fadeOut", "hide");
 		}
 	});
 }

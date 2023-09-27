@@ -319,11 +319,11 @@ fetch("./data/projects.json")
 		viewmore_box.addEventListener("scroll", () => {
 			let dat = viewmore_pict.getBoundingClientRect();
 			if (dat.top <= 135) {
-				arrow.classList.add("animate__animated", "animate__bounceOut");
 				arrow.classList.remove("animate__bounceIn");
+				arrow.classList.add("animate__animated", "animate__bounceOut");
 			} else {
-				arrow.classList.add("animate__animated", "animate__bounceIn");
 				arrow.classList.remove("animate__bounceOut");
+				arrow.classList.add("animate__animated", "animate__bounceIn");
 			}
 		});
 
