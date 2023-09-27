@@ -53,7 +53,7 @@ p {
 	width: 100%;
 	text-align: justify;
 	font-size: 12pt;
-	padding: 25px;
+	padding: 20px;
 	color: #444;
 	line-height: 1.6;
 }
@@ -148,6 +148,7 @@ hr {
 	padding: 5px;
 	color: #444;
 	border: 1px solid #888;
+	background-color: #fff;
 	border-radius: 8px;
 	transition: 0.3s;
 }
@@ -176,7 +177,8 @@ hr {
 	top: 45px;
 	height: auto;
 	width: fit-content;
-	margin: auto;
+	margin-left: 20px;
+	margin-right: 20px;
 	justify-content: center;
 	align-items: center;
 	padding: 20px;
@@ -451,7 +453,7 @@ hr {
 	border: 1px solid #bbb;
 	background-color: #fff;
 	margin: 12px;
-	padding: 20px;
+	padding: 10px;
 }
 
 .welcome_box p {
@@ -544,7 +546,7 @@ hr {
 	background-color: #fff;
 }
 
-.services_title .title {
+.services_box .title {
 	width: 100%;
 	font-size: 20pt;
 	margin-top: 50px;
@@ -1039,6 +1041,14 @@ textarea {
 }
 
 @media screen and (max-width: 576px) {
+	.cookies {
+		flex-direction: column;
+	}
+
+	.cookies .button {
+		width: 120px;
+	}
+
 	.logo {
 		width: 85vw;
 	}
@@ -1067,6 +1077,12 @@ textarea {
 @media screen and (max-width: 673px) {
 	.services_box_text {
 		width: 100vw;
+		order: 1;
+		margin-left: 10px;
+	}
+
+	.services_box_image {
+		margin-bottom: -45px;
 	}
 }
 
@@ -1089,11 +1105,8 @@ textarea {
 	}
 }
 
-@media screen and (max-width: 945px) {
-	.services_box_text {
-		order: 1;
-		margin-left: 10px;
-	}
+
+media screen and (max-width: 945px) {
 
 	.services_box {
 		gap: 35px;
@@ -1127,9 +1140,7 @@ textarea {
 	}
 }
 
-@media screen and (max-width: 1024px) {}
-
-@media screen and (max-width: 1140px) {
+@media screen and (max-width: 1000px) {
 	.menu {
 		display: none;
 	}
@@ -1146,12 +1157,15 @@ textarea {
 		display: flex;
 	}
 
+}
+
+@media screen and (max-width: 1140px) {
+
 	.services_box {
 		margin-top: 60px;
 	}
 }
 
-@media screen and (max-width: 1200px) {}
 
 /* ANIMATIONS */
 
@@ -1199,15 +1213,4 @@ textarea {
 .unset {
 	opacity: var(--opacity);
 	transform: var(--transform);
-}
-
-.prueba {
-	opacity: 1;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	width: 60%;
-	height: 500px;
-	background-color: #bbb;
 }

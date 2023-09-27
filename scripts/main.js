@@ -321,8 +321,10 @@ fetch("https://meverss.github.io/portfolio/data/projects.json")
 
 		window.addEventListener("resize", (a) => {
 			let w = window.innerWidth;
-			if (w > 1140) {
+			if (w > 1000) {
 				m_menu_open_btn.style.display = "none";
+			} else {
+				hidemenu();
 			}
 		});
 	});
