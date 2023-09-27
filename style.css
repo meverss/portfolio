@@ -392,6 +392,7 @@ hr {
 }
 
 .m_menu_btn p {
+	font-size: 20pt;
 	padding: 0;
 	display: flex;
 	justify-content: center;
@@ -497,10 +498,11 @@ hr {
 }
 
 .about_box_image {
+	display: flex;
 	position: sticky;
 	left: 80px;
-	display: flex;
 	height: 100%;
+	margin-bottom: auto;
 }
 
 #mypict {
@@ -510,7 +512,6 @@ hr {
 	box-shadow: 4px 4px 10px 2px #bbb;
 	margin: -45px;
 	margin-top: -100px;
-	margin-left: -60px;
 	z-index: 50;
 }
 

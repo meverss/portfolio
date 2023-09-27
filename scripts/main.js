@@ -285,27 +285,29 @@ fetch("./data/projects.json")
         		<p class='text'><spam>${full_desc}</spam></p>`;
 
 			});
-		});
 
+		});
+		
 		// viewmore_box.addEventListener('click', e => {
-		// 	setTimeout(function () {
-		// 		let s = viewmore_pict.getBoundingClientRect().top;
-		// 		alert(s);
-		// 		if (s != 137) {
-		// 			viewmore_box.getBoundingClientRect().top = 137;
-		// 		}
-		// 	}
-		// 		, 1000);
-
-		// })
-
-		viewmore_close.addEventListener("click", (close) => {
-			viewmore_anim.classList.remove("animate__animated", "animate__zoomIn");
-			viewmore_anim.classList.add("animate__animated", "animate__zoomOut");
-			viewmore_container.style["display"] = "none";
-			document.body.style["overflow"] = "auto";
-		});
-
+			// 	setTimeout(function () {
+				// 		let s = viewmore_pict.getBoundingClientRect().top;
+				// 		alert(s);
+				// 		if (s != 137) {
+					// 			viewmore_box.getBoundingClientRect().top = 137;
+					// 		}
+					// 	}
+					// 		, 1000);
+					
+					// })
+					
+					viewmore_close.addEventListener("click", (close) => {
+						document.getElementById('viewmore_box').scrollTop = 0;
+						viewmore_anim.classList.remove("animate__animated", "animate__zoomIn");
+						viewmore_anim.classList.add("animate__animated", "animate__zoomOut");
+						viewmore_container.style["display"] = "none";
+						document.body.style["overflow"] = "auto";
+					});
+					
 		window.addEventListener("keydown", function (event) {
 			let k = event.key;
 			let d = getComputedStyle(viewmore_container).display;
