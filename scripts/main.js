@@ -128,7 +128,10 @@ social_n.forEach((item) => {
 	});
 });
 
-// FORM FIELDS DATA TYPE
+
+// FORM VALIDATION
+
+// Form fields data-type
 
 const fields = document.querySelectorAll(".frm_text");
 
@@ -143,7 +146,7 @@ fields.forEach((field) => {
 	}
 });
 
-// FORM VALIDATION
+// ---------------------
 
 const f_form = document.getElementById("contact_form");
 const f_name = document.getElementById("name");
@@ -284,7 +287,7 @@ fetch("./data/projects.json")
 			});
 		});
 
-		// viewmore_box.addEventListener('focus', e => {
+		// viewmore_box.addEventListener('click', e => {
 		// 	setTimeout(function () {
 		// 		let s = viewmore_pict.getBoundingClientRect().top;
 		// 		alert(s);
@@ -340,7 +343,7 @@ fetch("./data/projects.json")
 // COOKIES
 
 document.cookie = 'SameSite=secure'
-cookies_policy.innerHTML = 'We use cookies with th only pourpose to analyze our website traffic. If you like to know more, you can <a href="https://meverss.github.io/portfolio/pages/cookies.html" target="_blank">read our cookies policy</a>.';
+cookies_policy.innerHTML = 'We use cookies with th only pourpose to analyze our website traffic. If you like to know more, you can <a href="./pages/cookies.html" target="_blank">read our cookies policy</a>.';
 
 // Acept cookies //
 cookies_ok.addEventListener('click', e => {

@@ -171,7 +171,7 @@ hr {
 	display: flex;
 	flex-direction: row;
 	position: fixed;
-	z-index: 105;
+	z-index: 99;
 	gap: 20px;
 	top: 45px;
 	height: auto;
@@ -210,6 +210,11 @@ hr {
 .cookies .button:hover {
 	color: #000;
 	transform: scale(1.2);
+}
+
+.cookies_policy .title {
+	font-size: 20pt;
+	text-align: center;
 }
 
 /* LOADER */
