@@ -343,7 +343,7 @@ fetch("./data/projects.json")
 // COOKIES
 
 document.cookie = 'SameSite=secure'
-cookies_policy.innerHTML = 'We use cookies with th only pourpose to analyze our website traffic. If you like to know more, you can <a href="./pages/cookies.html" target="_blank">read our cookies policy</a>.';
+cookies_policy.innerHTML = 'We use cookies with the only purpose to analyze our website traffic. If you want to know more about it, you can read our <a href="./pages/cookies.html" target="_blank">cookies policy</a>.';
 
 // Acept cookies //
 cookies_ok.addEventListener('click', e => {
