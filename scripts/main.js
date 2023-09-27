@@ -225,17 +225,17 @@ f_form.addEventListener("submit", (e) => {
 //   },
 // });
 
-fetch("./data/projects.json")
+fetch("https://meverss.github.io/portfolio/data/projects.json")
 	.then((data) => data.json())
 	.then((data) => {
-		const my_url = "."; /*"https://meverss.github.io/portfolio";*/
+		const my_url = "https://meverss.github.io/portfolio";
 		data.forEach((project) => {
 			my_projects.innerHTML += `
               <div class="project" id="project${project.index}">
               <div class="thumbnail_container">
                 <img
                   class="thumbnail"
-                  src="./media/images/projects/${project.thumbnail}"
+                  src="https://meverss.github.io/portfolio/media/images/projects/${project.thumbnail}"
                   alt="${project.name}_thumbnail"
                 />
               </div>
@@ -269,7 +269,6 @@ fetch("./data/projects.json")
 			let w_link = data[data.findIndex((std) => std.index == id)].link;
 
 			btn.addEventListener("click", (e) => {
-				// let dat = viewmore_pict.getBoundingClientRect();
 				viewmore_anim.classList.remove("animate__animated", "animate__zoomOut");
 				viewmore_anim.classList.add("animate__animated", "animate__zoomIn");
 				viewmore_container.style["display"] = "flex";
@@ -287,27 +286,15 @@ fetch("./data/projects.json")
 			});
 
 		});
-		
-		// viewmore_box.addEventListener('click', e => {
-			// 	setTimeout(function () {
-				// 		let s = viewmore_pict.getBoundingClientRect().top;
-				// 		alert(s);
-				// 		if (s != 137) {
-					// 			viewmore_box.getBoundingClientRect().top = 137;
-					// 		}
-					// 	}
-					// 		, 1000);
-					
-					// })
-					
-					viewmore_close.addEventListener("click", (close) => {
-						document.getElementById('viewmore_box').scrollTop = 0;
-						viewmore_anim.classList.remove("animate__animated", "animate__zoomIn");
-						viewmore_anim.classList.add("animate__animated", "animate__zoomOut");
-						viewmore_container.style["display"] = "none";
-						document.body.style["overflow"] = "auto";
-					});
-					
+
+		viewmore_close.addEventListener("click", (close) => {
+			document.getElementById('viewmore_box').scrollTop = 0;
+			viewmore_anim.classList.remove("animate__animated", "animate__zoomIn");
+			viewmore_anim.classList.add("animate__animated", "animate__zoomOut");
+			viewmore_container.style["display"] = "none";
+			document.body.style["overflow"] = "auto";
+		});
+
 		window.addEventListener("keydown", function (event) {
 			let k = event.key;
 			let d = getComputedStyle(viewmore_container).display;
@@ -345,7 +332,7 @@ fetch("./data/projects.json")
 // COOKIES
 
 document.cookie = 'SameSite=secure'
-cookies_policy.innerHTML = 'We use cookies with the only purpose to analyze our website traffic. If you want to know more about it, you can read our <a href="./pages/cookies.html" target="_blank">cookies policy</a>.';
+cookies_policy.innerHTML = 'We use cookies with the only purpose to analyze our website traffic. If you want to know more about it, you can read our <a href="https://meverss.github.io/portfolio/pages/cookies.html" target="_blank">cookies policy</a>.';
 
 // Acept cookies //
 cookies_ok.addEventListener('click', e => {

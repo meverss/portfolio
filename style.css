@@ -1,4 +1,4 @@
-@import url(./css/animate.css);
+@import url(https://meverss.github.io/portfolio/css/animate.css);
 
 @-ms-viewport {
 	width: device-width;
@@ -6,12 +6,12 @@
 
 @font-face {
 	font-family: "Hack";
-	src: url("./fonts/hack.woff") format("woff");
+	src: url("https://meverss.github.io/portfolio/fonts/hack.woff") format("woff");
 }
 
 @font-face {
 	font-family: "Symbols";
-	src: url("./fonts/symbols.woff") format("woff");
+	src: url("https://meverss.github.io/portfolio/fonts/symbols.woff") format("woff");
 }
 
 * {
@@ -37,7 +37,7 @@ html {
 }
 
 body {
-	background-image: url(./media/images/background.png);
+	background-image: url(https://meverss.github.io/portfolio/media/images/background.png);
 	background-color: #fff;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -828,7 +828,7 @@ hr {
 	margin-bottom: 50px;
 	border: 1px solid #bbb;
 	border-radius: 8px;
-	background-image: url(./media/images/contact_me.png);
+	background-image: url(https://meverss.github.io/portfolio/media/images/contact_me.png);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
