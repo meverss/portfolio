@@ -18,7 +18,6 @@ function triggerAnimation(entries) {
 				"hide",
 				"animate__fadeOut"
 			);
-			// obBoxes.unobserve(entry.target);
 			entry.target.classList.remove(
 				"show",
 				"animate__fadeIn"
@@ -27,16 +26,16 @@ function triggerAnimation(entries) {
 	});
 }
 
-function playVideo(entries) {
-	if (entries[0].isIntersecting) {
-		video.classList.add("animate__animated", "animate__fadeIn");
-		video.play();
-		obVideo.unobserve(video);
-	} else {
-		video.classList.remove("animate__animated", "animate__fadeIn");
-		video.pause();
-	}
-}
+// function playVideo(entries) {
+// 	if (entries[0].isIntersecting) {
+// 		video.classList.add("animate__animated", "animate__fadeIn");
+// 		video.play();
+// 		obVideo.unobserve(video);
+// 	} else {
+// 		video.classList.remove("animate__animated", "animate__fadeIn");
+// 		video.pause();
+// 	}
+// }
 
 const options = {
 	root: null,

@@ -43,7 +43,7 @@ function scroll_to_section(section) {
 			window.scrollTo(0, position - 65);
 			break;
 		default:
-			window.scrollTo(0, position - 135);
+			window.scrollTo(0, position - 105);
 			break;
 	}
 
@@ -61,10 +61,10 @@ function scroll_to_section_m(section_m) {
 				window.scrollTo(0, position - 10);
 				break;
 			case "s_m_projects":
-				window.scrollTo(0, position);
+				window.scrollTo(0, position + 40);
 				break;
 			default:
-				window.scrollTo(0, position - 80);
+				window.scrollTo(0, position - 20);
 				break;
 		}
 	}
@@ -266,33 +266,40 @@ fetch("./data/projects.json")
 			let w_link = data[data.findIndex((std) => std.index == id)].link;
 
 			btn.addEventListener("click", (e) => {
-				let dat = viewmore_pict.getBoundingClientRect();
+				// let dat = viewmore_pict.getBoundingClientRect();
 				viewmore_anim.classList.remove("animate__animated", "animate__zoomOut");
 				viewmore_anim.classList.add("animate__animated", "animate__zoomIn");
 				viewmore_container.style["display"] = "flex";
 				viewmore_container.style["opacity"] = "1";
 				document.body.style.overflow = "hidden";
 				viewmore_pict.innerHTML = `
-        <img src="${my_url}/media/images/projects/${scrsht}" alt="${p_name}">
-        <a class="viewmore_page_link button" id="viewmore_page_link" href="${w_link}" target="_blank"> Visit website </a>
-        <span id="arrow" style="font-family: Symbols; font-size: 2.5rem">  </span>
-        `;
+		        <img src="${my_url}/media/images/projects/${scrsht}" alt="${p_name}">
+        		<a class="button" id="viewmore_page_link" href="${w_link}" target="_blank"> Visit website </a>
+        		<span id="arrow" style="font-family: Symbols">  </span>
+        		`;
 				viewmore_text.innerHTML = `
-        <h3 class="title">${p_name}</h3>
-        <p class='text'><spam>${full_desc}</spam></p>`;
+        		<h3 class="title">${p_name}</h3>
+        		<p class='text'><spam>${full_desc}</spam></p>`;
 
-				setTimeout(function () {
-					viewmore_pict.scrollTo(0, 0);
-				}, 1000);
 			});
 		});
+
+		// viewmore_box.addEventListener('focus', e => {
+		// 	setTimeout(function () {
+		// 		let s = viewmore_pict.getBoundingClientRect().top;
+		// 		alert(s);
+		// 		if (s != 137) {
+		// 			viewmore_box.getBoundingClientRect().top = 137;
+		// 		}
+		// 	}
+		// 		, 1000);
+
+		// })
 
 		viewmore_close.addEventListener("click", (close) => {
 			viewmore_anim.classList.remove("animate__animated", "animate__zoomIn");
 			viewmore_anim.classList.add("animate__animated", "animate__zoomOut");
-			setTimeout(function () {
-				viewmore_container.style["display"] = "none";
-			}, 700);
+			viewmore_container.style["display"] = "none";
 			document.body.style["overflow"] = "auto";
 		});
 
@@ -300,15 +307,10 @@ fetch("./data/projects.json")
 			let k = event.key;
 			let d = getComputedStyle(viewmore_container).display;
 			if (d != "none") {
-				if (k == 27 || k === "Escape" || k === "Esc") {
-					viewmore_anim.classList.remove(
-						"animate__animated",
-						"animate__zoomIn"
-					);
-					viewmore_anim.classList.add("animate__animated", "animate__zoomOut");
-					setTimeout(function () {
-						viewmore_container.style["display"] = "none";
-					}, 700);
+				if (k == 27 || k == "Escape" || k == "Esc") {
+					viewmore_anim.classList.remove("animate__zoomIn");
+					viewmore_anim.classList.add("animate__zoomOut");
+					viewmore_container.style["display"] = "none";
 					document.body.style["overflow"] = "auto";
 				}
 			}
@@ -335,4 +337,12 @@ fetch("./data/projects.json")
 		});
 	});
 
+// COOKIES
+
 document.cookie = 'SameSite=secure'
+cookies_policy.innerHTML = 'We use cookies only to analyze our website traffic, and to understand where our visitors are coming from. <a href="https://meverss.github.io/portfolio/pages/cookies.html" target="_blank">Read cookies policy</a>';
+
+// Acept cookies //
+// cookies_ok.addEventListener('click', e => {
+// 	cookies.classList.add('animate__animated', 'animate__backOutUp');
+// })

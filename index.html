@@ -1,405 +1,278 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<link
-			rel="preload"
-			href="./fonts/hack.woff"
-			as="font"
-			type="font/woff"
-			crossorigin
-		/>
-		<link
-			rel="preload"
-			href="./fonts/symbols.woff"
-			as="font"
-			type="font/woff"
-			crossorigin
-		/>
-		<link rel="stylesheet" href="./style.css" />
 
-		<!-- COOKIES -->
-		<link rel="stylesheet" href="./css/cookies-consent.css" />
-		<script
-			type="text/javascript"
-			src="./scripts/cookie-consent.js"
-			charset="UTF-8"
-		></script>
-		<script type="text/javascript" charset="UTF-8">
-			document.addEventListener("DOMContentLoaded", function () {
-				cookieconsent.run({
-					notice_banner_type: "interstitial",
-					consent_type: "implied",
-					palette: "light",
-					language: "en",
-					page_load_consent_levels: [
-						"strictly-necessary",
-						"functionality",
-						"tracking",
-						"targeting",
-					],
-					notice_banner_reject_button_hide: false,
-					preferences_center_close_button_hide: false,
-					page_refresh_confirmation_buttons: false,
-					website_name: "https://meverss.github.io/portfolio",
-					website_privacy_policy_url:
-						"https://meverss.github.io/portfolio/pages/cookies.html",
-				});
-			});
-		</script>
+<head>
+	<link rel="preload" href="./fonts/hack.woff" as="font" type="font/woff" crossorigin />
+	<link rel="preload" href="./fonts/symbols.woff" as="font" type="font/woff" crossorigin />
+	<link rel="stylesheet" href="./style.css" />
 
-		<!-- META -->
+	<title>My Portfolio | Marvin Eversley Silva</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="google-site-verification" content="cehdsf0hOsUh171Swv6YgnAI3pMaXwpHDHyEuskXbeE" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="keywords"
+		content="marvin's portfolio, portfolio, my portfolio, webdesign cuba, webdesign, webdesigner, cuba, web design, diseño web, diseño, webmaster, marvin, eversley, marvin eversley silva, IT, web, design, UI, UX, computer, science, linux, developer, freelancer, informática" />
+	<meta name="description"
+		content="I'm Marvin, a Computer Science engineer specializing in website Frontend and UI/UX development, and SEO optimization." />
+	<meta property="og:description"
+		content="I'm Marvin, a Computer Science engineer specializing in website UI/UX development, database management, Linux server installation, and administration." />
+	<link rel="canonical" href="https://meverss.github.io/portfolio/" />
+	<meta property="og:url" content="https://meverss.github.io/portfolio" />
+	<meta property="og:site_name" content="My Portfolio | Marvin Eversley Silva" />
+	<meta property="og:type" content="website" />
+	<meta name="twitter:card" content="summary" />
+	<meta property="twitter:title" content="My Portfolio | Marvin Eversley Silva" />
+	<meta name="robots" content="follow, index" />
+	<meta name="author" content="Marvin Eversley Silva - Website Designer and Linux Server Administrator" />
+	<link rel="icon" href="./media/images/logo.png" />
+	<link rel="apple-touch-icon" href="./media/images/apple-touch-icon.png" />
+	<link rel="apple-touch-icon" sizes="57x57" href="./media/images/touch-icon-iphone.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="./media/images/touch-icon-ipad.png" />
+</head>
 
-		<title>My Portfolio | Marvin Eversley Silva</title>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<meta
-			name="google-site-verification"
-			content="cehdsf0hOsUh171Swv6YgnAI3pMaXwpHDHyEuskXbeE"
-		/>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta
-			name="keywords"
-			content="marvin's portfolio, portfolio, my portfolio, webdesign cuba, webdesign, webdesigner, cuba, web design, diseño web, diseño, webmaster, marvin, eversley, marvin eversley silva, IT, web, design, UI, UX, computer, science, linux, developer, freelancer, informática"
-		/>
-		<meta
-			name="description"
-			content="I'm Marvin, a Computer Science engineer specializing in website UI/UX development, database management, Linux server installation, and administration."
-		/>
-		<meta
-			property="og:description"
-			content="I'm Marvin, a Computer Science engineer specializing in website UI/UX development, database management, Linux server installation, and administration."
-		/>
-		<link rel="canonical" href="https://meverss.github.io/portfolio/" />
-		<meta property="og:url" content="https://meverss.github.io/portfolio" />
-		<meta
-			property="og:site_name"
-			content="My Portfolio | Marvin Eversley Silva"
-		/>
-		<meta property="og:type" content="website" />
-		<meta name="twitter:card" content="summary" />
-		<meta
-			property="twitter:title"
-			content="My Portfolio | Marvin Eversley Silva"
-		/>
-		<meta name="robots" content="follow, index" />
-		<meta
-			name="author"
-			content="Marvin Eversley Silva - Website Designer and Linux Server Administrator"
-		/>
-		<link rel="icon" href="./media/images/logo.png" />
-		<link rel="apple-touch-icon" href="./media/images/apple-touch-icon.png" />
-		<link
-			rel="apple-touch-icon"
-			sizes="57x57"
-			href="./media/images/touch-icon-iphone.png"
-		/>
-		<link
-			rel="apple-touch-icon"
-			sizes="114x114"
-			href="./media/images/touch-icon-ipad.png"
-		/>
-	</head>
+<body onload="setTimeout(show_page, 1500)">
+	<!-- LOADER -->
 
-	<body onload="setTimeout(show_page, 1500)">
-		<!-- LOADER -->
+	<div class="loader_container" id="page_loader">
+		<p class="loader_text">Loading...</p>
+		<div class="loader"></div>
+	</div>
 
-		<div class="loader_container" id="page_loader">
-			<p class="loader_text">Loading...</p>
-			<div class="loader"></div>
+	<main class="page_content" id="page_content">
+		<!-- TOP BAR -->
+
+		<div class="top_bar">
+			<div class="menu" id="top_menu">
+				<p class="menu_item" id="home">HOME</p>
+				<p class="menu_item" id="about">About me</p>
+				<p class="menu_item" id="services">Services</p>
+				<p class="menu_item" id="projects">My projects</p>
+				<p class="menu_item" id="contact">Contact</p>
+			</div>
+			<div class="social">
+				<p class="social_item" id="facebook" title="Share on Facebook"></p>
+				<p class="social_item" id="tweeter" title="Share on Tweeter"></p>
+				<p class="social_item" id="linkedin" title="Share on LinkedIn"></p>
+				<p class="social_item" id="telegram" title="Share on Telegram"></p>
+			</div>
+			<div class="m_menu_btn animate__animated animate__zoomIn" id="m_menu_open_btn">
+				<p class="menu_item" onclick="showmenu()">󰍜</p>
+			</div>
+			<div class="m_menu_btn animate__animated animate__zoomIn" id="m_menu_close_btn">
+				<p class="menu_item" onclick="hidemenu()"></p>
+			</div>
+		</div>
+		<div class="m_menu" id="m_menu">
+			<p class="menu_item m_menu_item" id="m_home">HOME</p>
+			<p class="menu_item m_menu_item" id="m_about">About me</p>
+			<p class="menu_item m_menu_item" id="m_services">Services</p>
+			<p class="menu_item m_menu_item" id="m_projects">My projects</p>
+			<p class="menu_item m_menu_item" id="m_contact">Contact</p>
+		</div>
+		<!-- COOKIES BANER -->
+
+		<div class="cookies" id="cookies">
+			<p class="cookies_policy text" id="cookies_policy"></p>
+			<p class="cookies_ok button" id="cookies_ok">OK</p>
 		</div>
 
-		<main class="page_content" id="page_content">
-			<!-- TOP BAR -->
-
-			<div class="top_bar">
-				<div class="menu" id="top_menu">
-					<p class="menu_item" id="home">HOME</p>
-					<p class="menu_item" id="about">About me</p>
-					<p class="menu_item" id="services">Services</p>
-					<p class="menu_item" id="projects">My projects</p>
-					<p class="menu_item" id="contact">Contact</p>
-				</div>
-				<div class="social">
-					<p class="social_item" id="facebook" title="Share on Facebook"></p>
-					<p class="social_item" id="tweeter" title="Share on Tweeter"></p>
-					<p class="social_item" id="linkedin" title="Share on LinkedIn"></p>
-					<p class="social_item" id="telegram" title="Share on Telegram"></p>
-				</div>
-				<div
-					class="m_menu_btn animate__animated animate__zoomIn"
-					id="m_menu_open_btn"
-				>
-					<p class="menu_item" onclick="showmenu()">󰍜</p>
-				</div>
-				<div
-					class="m_menu_btn animate__animated animate__zoomIn"
-					id="m_menu_close_btn"
-				>
-					<p class="menu_item" onclick="hidemenu()"></p>
+		<!-- LOGO -->
+		<section id="s_home">
+			<section id="s_m_home"></section>
+			<div class="logo_box">
+				<div class="portfolio">
+					<img class="logo" src="./media/images/portfolio.png" alt="Marvin Eversley Silva" />
 				</div>
 			</div>
-			<div class="m_menu" id="m_menu">
-				<p class="menu_item m_menu_item" id="m_home">HOME</p>
-				<p class="menu_item m_menu_item" id="m_about">About me</p>
-				<p class="menu_item m_menu_item" id="m_services">Services</p>
-				<p class="menu_item m_menu_item" id="m_projects">My projects</p>
-				<p class="menu_item m_menu_item" id="m_contact">Contact</p>
-			</div>
+		</section>
 
-			<!-- LOGO -->
-			<section id="s_home">
-				<section id="s_m_home"></section>
-				<div class="logo_box">
-					<div class="portfolio">
-						<img
-							class="logo"
-							src="./media/images/portfolio.png"
-							alt="Marvin Eversley Silva"
-						/>
+		<h1 class="title" id="main_title">
+			You need a modern website design or any other digital service? Check my
+			Portfolio, I might be your guy!
+		</h1>
+
+		<!-- WELCOME -->
+		<section id="s_welcome">
+			<section id="s_m_welcome"></section>
+			<div class="welcome">
+				<div class="welcome_box box">
+					<div class="title animate__animated animate__fadeIn">
+						<h2>Welcome!</h2>
 					</div>
-				</div>
-			</section>
+					<p class="text">
+						Thanks for visiting my Portfolio!<br /><br />
 
-			<h1 class="title" id="main_title">
-				You need a modern website design or any other digital service? Check my
-				Portfolio, I might be your guy!
-			</h1>
+						Here you will know about my experience, my qualifications and
+						projects I have worked on.<br /><br />
 
-			<!-- WELCOME -->
-			<section id="s_welcome">
-				<section id="s_m_welcome"></section>
-				<div class="welcome">
-					<div class="welcome_box box">
-						<div class="title animate__animated animate__fadeIn">
-							<h2>Welcome!</h2>
-						</div>
-						<p class="text">
-							Thanks for visiting my Portfolio!<br /><br />
+						Please feel free to contact me for all your digital needs, or
+						discuse any of my projects. Or if you like to debate topics
+						related to <b>Computer Science</b> and
+						<b>Information Technologies</b> I'm in too.<br /><br />
 
-							Here you will know about my experience, my qualifications and
-							projects I have worked on.<br /><br />
-
-							Please feel free to contact me for all your digital needs, or
-							discuse any of my projects. Or if you like to debate topics
-							related to <b>Computer Science</b> and
-							<b>Information Technologies</b> I'm in too.<br /><br />
-
-							Once again, you are welcome here!
-						</p>
-					</div>
-				</div>
-			</section>
-
-			<!-- ABOUT ME -->
-
-			<section id="s_about">
-				<section id="s_m_about"></section>
-				<div class="about_box box">
-					<div class="about_box_image">
-						<img
-							id="mypict"
-							src="https://meverss.github.io/portfolio/media/images/me.jpg"
-							alt="Marvin Eversley Silva"
-						/>
-					</div>
-
-					<div class="about_box_text">
-						<div class="about_title" id="about_title">
-							<h2 class="title">About me</h2>
-						</div>
-						<p class="text">
-							Hey there! I’m Marvin, and I’m <span id="my_age"></span> years
-							old.<br /><br />
-
-							I'm a Computer Science engineer specializing in website UI/UX
-							development, database management, Linux server installation, and
-							administration.<br /><br />
-
-							I’m passionate about all subjects relating Computer Science,
-							especially <b>Software Libre</b> and website design.<br /><br />
-
-							In 2022, after working on several projects, I started my own named
-							<b><u>KiniunTech</u></b
-							>. The project's objective is software production and website
-							development, always taking in account the highest standards to
-							provide the client with a quality product.<br />
-						</p>
-					</div>
-				</div>
-			</section>
-
-			<!-- SERVICES -->
-			<section id="s_services">
-				<section id="s_m_services"></section>
-				<div class="services_box box">
-					<div class="services_box_image">
-						<img
-							id="it"
-							src="./media/images/services.png"
-							alt="Website design and IT services"
-						/>
-					</div>
-					<div class="services_box_text">
-						<div class="services_title" id="services_title">
-							<h2 class="title">Services</h2>
-						</div>
-
-						<ul>
-							<li>Websites UI/UX development.</li>
-							<li>Linux Server installation and administration.</li>
-							<li>Linux Systems Management.</li>
-							<li>PHP, Javascript, Python and Ruby programming assistance.</li>
-							<li>
-								Databases creation (MySQL, MariaDB) and management through web
-								interface.
-							</li>
-						</ul>
-					</div>
-				</div>
-			</section>
-
-			<!--  PROJECTS -->
-
-			<section id="s_projects">
-				<section id="s_m_projects"></section>
-				<div class="container box" id="container">
-					<div class="projects_title" id="projects_title">
-						<h2 class="title" id="projects">My Projects</h2>
-					</div>
-					<section class="projects" id="my_projects">
-						<!-- Auto generated -->
-					</section>
-				</div>
-			</section>
-
-			<!-- PROJECT DETAILS -->
-			<div class="viewmore_container" id="viewmore_container">
-				<div class="viewmore_anim" id="viewmore_anim">
-					<div class="viewmore_close" id="viewmore_close">
-						<p class="viewmore_close_btn" id="viewmore_close_btn"></p>
-					</div>
-					<div class="viewmore_box" id="viewmore_box">
-						<div class="viewmore_pict" id="viewmore_pict"></div>
-						<div class="viewmore_text" id="viewmore_text"></div>
-					</div>
+						Once again, you are welcome here!
+					</p>
 				</div>
 			</div>
+		</section>
 
-			<!-- CONTACT -->
-			<section id="s_contact">
-				<section id="s_m_contact">
-					<div class="contact_box" id="contact_box">
-						<div class="form box">
-							<div class="contact_title" id="contact_title">
-								<h2 class="title">Contact</h2>
-							</div>
-							<div class="contact_message" id="contact_message">
-								<form
-									id="contact_form"
-									class="contact_form"
-									action="https://formsubmit.co/meverss@my.com"
-									method="POST"
-								>
-									<label class="text" for="name"
-										>Name<span class="important">*</span></label
-									>
-									<input
-										class="frm_text"
-										name="name"
-										id="name"
-										autocomplete="off"
-										placeholder="Who is contacting me?"
-									/>
+		<!-- ABOUT ME -->
 
-									<label class="text" for="email"
-										>E-mail<span class="important">*</span></label
-									>
-									<input
-										class="frm_text"
-										id="email"
-										autocomplete="off"
-										placeholder="your@email.here"
-									/>
+		<section id="s_about">
+			<section id="s_m_about"></section>
+			<div class="about_box box">
+				<div class="about_box_image">
+					<img id="mypict" src="https://meverss.github.io/portfolio/media/images/me.jpg"
+						alt="Marvin Eversley Silva" />
+				</div>
 
-									<label class="text" for="subject">Subject</label>
-									<input
-										class="frm_text"
-										name="subject"
-										id="subject"
-										autocomplete="off"
-										placeholder="What is it about?"
-									/>
-
-									<label class="text" for="message"
-										>Message<span class="important">*</span></label
-									>
-									<textarea
-										class="frm_text"
-										name="message"
-										id="message"
-										rows="5"
-										autocomplete="off"
-										placeholder="Leave me your message"
-									></textarea>
-
-									<input
-										id="btn_send"
-										type="submit"
-										class="button form_btn"
-										value="Send"
-									/>
-									<input
-										type="hidden"
-										name="_next"
-										value="https://meverss.github.io/portfolio/"
-									/>
-									<input
-										type="hidden"
-										name="_subject"
-										value="New submission from My Portfolio!"
-									/>
-									<input type="hidden" name="_captcha" value="false" />
-									<!-- This requires to enable CAPTCHA -->
-									<!-- <input type="hidden" name="_autoresponse" value="Thanks for contacting me! I will replay as soon as possible."> -->
-								</form>
-							</div>
-						</div>
-						<div class="contact_me_info" id="contact_me_info">
-							<p>
-								<span style="font-family: Symbols; color: #fbbb40">  </span>
-								(+53) 58205225
-							</p>
-							<p>
-								<span style="font-family: Symbols; color: #fbbb40"> 󱡰 </span>
-								meverss@my.com
-							</p>
-						</div>
+				<div class="about_box_text">
+					<div class="title" id="about_title">
+						<h2>About me</h2>
 					</div>
+					<p class="text">
+						Hey there! I’m Marvin, and I’m <span id="my_age"></span> years
+						old.<br /><br />
+
+						I'm a Computer Science engineer specializing in website UI/UX
+						development, database management, Linux server installation, and
+						administration.<br /><br />
+
+						I’m passionate about all subjects relating Computer Science,
+						especially <b>Software Libre</b> and website design.<br /><br />
+
+						In 2022, after working on several projects, I started my own named
+						<b><u>KiniunTech</u></b>. The project's objective is software production and website
+						development, always taking in account the highest standards to
+						provide the client with a quality product.<br />
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- SERVICES -->
+		<section id="s_services">
+			<section id="s_m_services"></section>
+			<div class="services_box box">
+				<div class="services_box_image">
+					<img id="it" src="./media/images/services.png" alt="Website design and IT services" />
+				</div>
+				<div class="services_box_text">
+					<div class="title" id="services_title">
+						<h2>Services</h2>
+					</div>
+					<p class="text">
+						Regardless of the type of website you want me to design, you can always count on a product that
+						meets the highest market standards in terms of quality, robustness and reliability. To do this,
+						you can count on my experience in:
+					</p>
+					<ul>
+						<li>Frontend and UI/UX development.</li>
+						<li>SEO optimization for a better positioning of your website.</li>
+						<li>Hosting on dedicated trusted servers.</li>
+						<li>Databases management.</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<!--  PROJECTS -->
+
+		<section id="s_projects">
+			<section id="s_m_projects"></section>
+			<div class="container box" id="container">
+				<div class="title" id="projects_title">
+					<h2 id="projects">My Projects</h2>
+				</div>
+				<section class="projects" id="my_projects">
+					<!-- Auto generated -->
 				</section>
+			</div>
+		</section>
+
+		<!-- PROJECT DETAILS -->
+		<div class="viewmore_container" id="viewmore_container">
+			<div class="viewmore_anim" id="viewmore_anim">
+				<div class="viewmore_close" id="viewmore_close">
+					<p class="viewmore_close_btn" id="viewmore_close_btn"></p>
+				</div>
+				<div class="viewmore_box" id="viewmore_box">
+					<div class="viewmore_pict" id="viewmore_pict"></div>
+					<div class="viewmore_text" id="viewmore_text"></div>
+				</div>
+			</div>
+		</div>
+
+		<!-- CONTACT -->
+		<section id="s_contact">
+			<section id="s_m_contact">
+				<div class="contact_box" id="contact_box">
+					<div class="form box">
+						<div class="contact_title" id="contact_title">
+							<h2 class="title">Contact</h2>
+						</div>
+						<div class="contact_message" id="contact_message">
+							<form id="contact_form" class="contact_form" action="https://formsubmit.co/meverss@my.com"
+								method="POST">
+								<label class="text" for="name">Name<span class="important">*</span></label>
+								<input class="frm_text" name="name" id="name" autocomplete="off"
+									placeholder="Who is contacting me?" />
+
+								<label class="text" for="email">E-mail<span class="important">*</span></label>
+								<input class="frm_text" id="email" autocomplete="off" placeholder="your@email.here" />
+
+								<label class="text" for="subject">Subject</label>
+								<input class="frm_text" name="subject" id="subject" autocomplete="off"
+									placeholder="What is it about?" />
+
+								<label class="text" for="message">Message<span class="important">*</span></label>
+								<textarea class="frm_text" name="message" id="message" rows="5" autocomplete="off"
+									placeholder="Leave me your message"></textarea>
+
+								<input id="btn_send" type="submit" class="button form_btn" value="Send" />
+								<input type="hidden" name="_next" value="https://meverss.github.io/portfolio/" />
+								<input type="hidden" name="_subject" value="New submission from My Portfolio!" />
+								<input type="hidden" name="_captcha" value="false" />
+								<!-- This requires to enable CAPTCHA -->
+								<!-- <input type="hidden" name="_autoresponse" value="Thanks for contacting me! I will replay as soon as possible."> -->
+							</form>
+						</div>
+					</div>
+					<div class="contact_me_info" id="contact_me_info">
+						<p>
+							<span style="font-family: Symbols; color: #fbbb40">  </span>
+							(+53) 58205225
+						</p>
+						<p>
+							<span style="font-family: Symbols; color: #fbbb40"> 󱡰 </span>
+							meverss@my.com
+						</p>
+					</div>
+				</div>
 			</section>
+		</section>
 
-			<!-- FOOTER -->
-			<footer class="footer">
-				<p id="footer">Copyright ©2023 KiniunTech.</p>
-			</footer>
-		</main>
-		<!-- END OF PAGE BOX -->
+		<!-- FOOTER -->
+		<footer class="footer">
+			<p id="footer">Copyright ©2023 KiniunTech.</p>
+		</footer>
+	</main>
+	<!-- END OF PAGE BOX -->
 
-		<!-- Google tag (gtag.js) -->
-		<script
-			async
-			src="https://www.googletagmanager.com/gtag/js?id=G-MRQVK6QVS6"
-		></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag() {
-				dataLayer.push(arguments);
-			}
-			gtag("js", new Date());
-			gtag("config", "G-MRQVK6QVS6");
-		</script>
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-MRQVK6QVS6"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag("js", new Date());
+		gtag("config", "G-MRQVK6QVS6");
+	</script>
 
-		<!-- SCRIPTS -->
-		<script src="./scripts/anim.js"></script>
-		<script src="./scripts/main.js"></script>
-	</body>
+	<!-- SCRIPTS -->
+	<script src="./scripts/anim.js"></script>
+	<script src="./scripts/main.js"></script>
+</body>
+
 </html>
