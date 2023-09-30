@@ -183,6 +183,7 @@ hr {
 	align-items: center;
 	padding: 20px;
 	background-color: rgb(50, 50, 50, 0.99);
+	backdrop-filter: blur(3px);
 	border: 1px solid #bbb;
 	border-radius: 8px;
 }
