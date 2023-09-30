@@ -682,6 +682,7 @@ hr {
 	margin: auto;
 	transition: 0.3s;
 	justify-content: center;
+	backdrop-filter: blur(2px);
 }
 
 .viewmore_anim {
