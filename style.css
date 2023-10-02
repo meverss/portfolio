@@ -612,7 +612,8 @@ hr {
 	margin: auto;
 	justify-self: center;
 	overflow-x: scroll;
-	padding: 30px;
+	padding-left: 40px;
+	padding-right: 40px;
 	padding-top: 10px;
 }
 
