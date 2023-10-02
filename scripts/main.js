@@ -291,8 +291,10 @@ fetch("https://meverss.github.io/portfolio/data/projects.json")
 			document.getElementById('viewmore_box').scrollTop = 0;
 			viewmore_anim.classList.remove("animate__animated", "animate__zoomIn");
 			viewmore_anim.classList.add("animate__animated", "animate__zoomOut");
-			viewmore_container.style["display"] = "none";
 			document.body.style["overflow"] = "auto";
+			setTimeout(function () {
+				viewmore_container.style["display"] = "none";
+			}, 400)
 		});
 
 		window.addEventListener("keydown", function (event) {
@@ -302,8 +304,11 @@ fetch("https://meverss.github.io/portfolio/data/projects.json")
 				if (k == 27 || k == "Escape" || k == "Esc") {
 					viewmore_anim.classList.remove("animate__animated", "animate__zoomIn");
 					viewmore_anim.classList.add("animate__animated", "animate__zoomOut");
-					viewmore_container.style["display"] = "none";
 					document.body.style["overflow"] = "auto";
+					setTimeout(function () {
+						viewmore_container.style["display"] = "none";
+					}, 400)
+
 				}
 			}
 		});

@@ -27,6 +27,10 @@
 	box-sizing: inherit;
 }
 
+:root {
+	--animate-duration: 1.5s;
+}
+
 html {
 	font-family: "Hack";
 	font-size: 12pt;
@@ -148,7 +152,7 @@ hr {
 	padding: 5px;
 	color: #444;
 	border: 1px solid #888;
-	background-color: #eee;
+	background-color: #bbb;
 	border-radius: 8px;
 	transition: 0.2s;
 }
@@ -626,7 +630,7 @@ hr {
 	overflow-x: auto;
 	padding-left: 40px;
 	padding-right: 40px;
-	padding-top: 10px;
+	padding-top: 15px;
 	padding-bottom: 20px;
 }
 
@@ -653,7 +657,7 @@ hr {
 
 .project:hover {
 	cursor: pointer;
-	box-shadow: 1px 1px 5px 0.1px #444;
+	box-shadow: 2px 2px 10px 0.1px #777;
 	transition: 0.3s;
 	transform: translate(0, -10px);
 }
@@ -701,7 +705,8 @@ hr {
 	align-items: center;
 	z-index: 10000;
 	margin: auto;
-	transition: 0.3s;
+	transition: 0.2s;
+	--animate-duration: .5s;
 	justify-content: center;
 	backdrop-filter: blur(2px);
 }
