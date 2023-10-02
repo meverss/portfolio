@@ -150,7 +150,7 @@ hr {
 	border: 1px solid #888;
 	background-color: #eee;
 	border-radius: 8px;
-	transition: 0.3s;
+	transition: 0.2s;
 }
 
 .button:hover {
@@ -159,6 +159,11 @@ hr {
 	color: #444;
 	cursor: pointer;
 	transform: scale(1.1);
+}
+
+.button:active {
+	background-color:#e5934e;
+	transform: scale(1);
 }
 
 .text {
@@ -622,6 +627,7 @@ hr {
 	padding-left: 40px;
 	padding-right: 40px;
 	padding-top: 10px;
+	padding-bottom: 20px;
 }
 
 .project {
@@ -766,12 +772,13 @@ hr {
 	height: 80%;
 	min-height: 70%;
 	background-image: url(https://meverss.github.io/portfolio/media/images/background.png);
-	background-color: #fff;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: left;
 	background-attachment: fixed;
-	border: 2px solid #bbb;
+	border: 1px solid #555;
+	background-color: #eee;
+	box-shadow: 4px 4px 10px 2px #222;
 	border-radius: 8px;
 	overflow-y: auto;
 	overflow-x: hidden;
