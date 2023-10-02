@@ -332,7 +332,7 @@ fetch("https://meverss.github.io/portfolio/data/projects.json")
 // COOKIES
 
 document.cookie = 'SameSite=secure'
-cookies_policy.innerHTML = 'We use cookies with the only purpose to analyze our website traffic. If you want to know more about it, you can read our <a href="https://meverss.github.io/portfolio/pages/cookies.html" target="_blank" resizable=0, toolbar=0, status=0, top=200, left=500, width=800, height=600 >cookies policy</a>.';
+cookies_policy.innerHTML = 'We use cookies with the only purpose to analyze our website traffic. If you want to know more about it, you can read our <a href="https://meverss.github.io/portfolio/pages/cookies.html" target="_blank" >cookies policy</a>.';
 
 // Acept cookies //
 cookies_ok.addEventListener('click', e => {
