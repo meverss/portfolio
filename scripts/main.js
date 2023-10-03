@@ -148,6 +148,7 @@ fields.forEach((field) => {
 
 // ---------------------
 
+const frm_contact = document.querySelector('.contact_form');
 const f_form = document.getElementById("contact_form");
 const f_name = document.getElementById("name");
 const f_email = document.getElementById("email");
@@ -189,6 +190,48 @@ f_message.addEventListener("focus", (e) => {
 	if (f_name.value != "" && f_email.value != "") {
 		f_btn.disabled = false;
 	}
+});
+
+// Get data from the form, save a copy in a JSON and send the emmail
+
+
+f_form.addEventListener('submit', e => {
+	e.preventDefault();
+
+	const frmData = new FormData(e.target);
+	const frmDataComplete = Object.fromEntries(frmData.entries());
+	const name = frmData.get('name');
+	const email = frmData.get('email');
+	const subject = frmData.get('subject');
+	const message = frmData.get('message');
+	const contactMessage = { name, email, subject, message };
+
+	if (f_message.value.length > 4) {
+
+
+		console.table(contactMessage);
+
+		frm_contact.submit();
+		let fields = document.querySelectorAll(".frm_text");
+		fields.forEach((field) => {
+			field.value = "";
+		});
+	} else {
+		f_message.classList.add("wrong", "animate__animated", "animate__shakeX");
+		f_message.value = "";
+		f_message.placeholder = "Please, write something!";
+		setTimeout((e) => {
+			f_message.classList.remove(
+				"wrong",
+				"animate__animated",
+				"animate__shakeX"
+			);
+		}, 1000);
+		setTimeout((e) => {
+			f_message.placeholder = "Leave me your message";
+		}, 3500);
+	}
+
 });
 
 // f_form.addEventListener("submit", (e) => {
@@ -348,53 +391,3 @@ cookies_ok.addEventListener('click', e => {
 
 // ====================== TEST
 
-// Get data from the form and convert it to JSON
-
-const frm_contact = document.querySelector('.contact_form');
-
-const procData = (e) => {
-	e.preventDefault();
-
-	const frmData = new FormData(e.target);
-	const frmDataComplete = Object.fromEntries(frmData.entries());
-	const name = frmData.get('name');
-	const email = frmData.get('email');
-	const subject = frmData.get('subject');
-	const message = frmData.get('message');
-	const contactMessage = { name, email, subject, message };
-
-	if (f_message.value.length > 4) {
-
-		console.table(contactMessage); // Check here!!!!!
-
-		f_form.submit();
-		let fields = document.querySelectorAll(".frm_text");
-		fields.forEach((field) => {
-			field.value = "";
-		});
-	} else {
-		f_message.classList.add("wrong", "animate__animated", "animate__shakeX");
-		f_message.value = "";
-		f_message.placeholder = "Please, write something!";
-		setTimeout((e) => {
-			f_message.classList.remove(
-				"wrong",
-				"animate__animated",
-				"animate__shakeX"
-			);
-		}, 1000);
-		setTimeout((e) => {
-			f_message.placeholder = "Leave me your message";
-		}, 3500);
-	}
-
-
-
-}
-
-
-
-
-
-
-contact_form.addEventListener('submit', procData);
