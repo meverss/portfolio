@@ -239,7 +239,9 @@ frm_contact.addEventListener('submit', e => {
 // CONTACT FORM SUBMIT CONFIG
 
 frm_key.value = "6812b923-1859-4cd0-a7b2-7f246e481715";
-frm_url.value = location.origin;
+frm_url.value = location.origin.hash;
+
+console.log(location.origin);
 
 // GET A JSON FILE FROM A URL TO GENERATE PREJECTS
 
