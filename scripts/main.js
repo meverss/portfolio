@@ -206,16 +206,19 @@ f_form.addEventListener('submit', e => {
 	const message = frmData.get('message');
 	const contactMessage = { name, email, subject, message };
 
-	if (f_message.value.length > 4) {
+	if (f_message.value.length >= 4) {
 
 
 		console.table(contactMessage);
 
 		frm_contact.submit();
-		let fields = document.querySelectorAll(".frm_text");
-		fields.forEach((field) => {
-			field.value = "";
-		});
+		setTimeout(() => {
+			let fields = document.querySelectorAll(".frm_text");
+			fields.forEach((field) => {
+				field.value = "";
+			});
+		}, 2000);
+
 	} else {
 		f_message.classList.add("wrong", "animate__animated", "animate__shakeX");
 		f_message.value = "";
