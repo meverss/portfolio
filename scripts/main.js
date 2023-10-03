@@ -191,30 +191,30 @@ f_message.addEventListener("focus", (e) => {
 	}
 });
 
-f_form.addEventListener("submit", (e) => {
-	e.preventDefault();
-	if (f_message.value.length > 4) {
-		f_form.submit();
-		let fields = document.querySelectorAll(".frm_text");
-		fields.forEach((field) => {
-			field.value = "";
-		});
-	} else {
-		f_message.classList.add("wrong", "animate__animated", "animate__shakeX");
-		f_message.value = "";
-		f_message.placeholder = "Please, write something!";
-		setTimeout((e) => {
-			f_message.classList.remove(
-				"wrong",
-				"animate__animated",
-				"animate__shakeX"
-			);
-		}, 1000);
-		setTimeout((e) => {
-			f_message.placeholder = "Leave me your message";
-		}, 3500);
-	}
-});
+// f_form.addEventListener("submit", (e) => {
+// 	e.preventDefault();
+// 	if (f_message.value.length > 4) {
+// 		f_form.submit();
+// 		let fields = document.querySelectorAll(".frm_text");
+// 		fields.forEach((field) => {
+// 			field.value = "";
+// 		});
+// 	} else {
+// 		f_message.classList.add("wrong", "animate__animated", "animate__shakeX");
+// 		f_message.value = "";
+// 		f_message.placeholder = "Please, write something!";
+// 		setTimeout((e) => {
+// 			f_message.classList.remove(
+// 				"wrong",
+// 				"animate__animated",
+// 				"animate__shakeX"
+// 			);
+// 		}, 1000);
+// 		setTimeout((e) => {
+// 			f_message.placeholder = "Leave me your message";
+// 		}, 3500);
+// 	}
+// });
 
 // GET A JSON FILE FROM A URL TO GENERATE PREJECTS
 
@@ -343,3 +343,58 @@ cookies_policy.innerHTML = 'We use cookies with the only purpose to analyze our 
 cookies_ok.addEventListener('click', e => {
 	cookies.classList.add('animate__animated', 'animate__backOutUp');
 })
+
+
+
+// ====================== TEST
+
+// Get data from the form and convert it to JSON
+
+const frm_contact = document.querySelector('.contact_form');
+
+const procData = (e) => {
+	e.preventDefault();
+
+	const frmData = new FormData(e.target);
+	const frmDataComplete = Object.fromEntries(frmData.entries());
+	const name = frmData.get('name');
+	const email = frmData.get('email');
+	const subject = frmData.get('subject');
+	const message = frmData.get('message');
+	const contactMessage = { name, email, subject, message };
+
+	if (f_message.value.length > 4) {
+
+		console.table(contactMessage); // Check here!!!!!
+
+		f_form.submit();
+		let fields = document.querySelectorAll(".frm_text");
+		fields.forEach((field) => {
+			field.value = "";
+		});
+	} else {
+		f_message.classList.add("wrong", "animate__animated", "animate__shakeX");
+		f_message.value = "";
+		f_message.placeholder = "Please, write something!";
+		setTimeout((e) => {
+			f_message.classList.remove(
+				"wrong",
+				"animate__animated",
+				"animate__shakeX"
+			);
+		}, 1000);
+		setTimeout((e) => {
+			f_message.placeholder = "Leave me your message";
+		}, 3500);
+	}
+
+
+
+}
+
+
+
+
+
+
+contact_form.addEventListener('submit', procData);

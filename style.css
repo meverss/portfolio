@@ -141,7 +141,6 @@ hr {
 	border-radius: 8px;
 	padding-bottom: 20px !important;
 	transition: .3s;
-	/* animation-duration: 1s; */
 }
 
 .button {
@@ -1214,33 +1213,4 @@ media screen and (max-width: 945px) {
 		opacity: 1;
 		transform: translate(1rem, 0);
 	}
-}
-
-[data-animation="fade"] {
-	opacity: 0;
-	transform: translateX(30%);
-	transition: 1s ease 0.3s;
-	--opacity: 1;
-	--transform: translate(0);
-}
-
-[data-animation="show"] {
-	opacity: 0;
-	transform: scale(0);
-	transition: 1s ease 0.3s;
-	--opacity: 1;
-	--transform: scale(1);
-}
-
-[data-animation="up"] {
-	opacity: 0;
-	transform: translateY(30%);
-	transition: 0.5s ease-in 0.3s;
-	--opacity: 1;
-	--transform: translateY(0);
-}
-
-.unset {
-	opacity: var(--opacity);
-	transform: var(--transform);
 }
