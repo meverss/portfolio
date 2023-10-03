@@ -207,9 +207,6 @@ frm_contact.addEventListener('submit', e => {
 
 	if (f_message.value.length >= 4) {
 
-
-		console.table(contactMessage);
-
 		frm_contact.submit();
 		setTimeout(() => {
 			let fields = document.querySelectorAll(".frm_text");
@@ -240,8 +237,6 @@ frm_contact.addEventListener('submit', e => {
 
 frm_key.value = "6812b923-1859-4cd0-a7b2-7f246e481715";
 frm_url.value = location.origin + '/portfolio';
-
-console.log(frm_url.value);
 
 // GET A JSON FILE FROM A URL TO GENERATE PREJECTS
 
