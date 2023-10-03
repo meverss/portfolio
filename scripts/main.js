@@ -252,6 +252,7 @@ console.log(frm_url.value);
 //   },
 // });
 
+
 fetch("https://meverss.github.io/portfolio/data/projects.json")
 	.then((data) => data.json())
 	.then((data) => {
