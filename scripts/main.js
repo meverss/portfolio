@@ -149,7 +149,6 @@ fields.forEach((field) => {
 // ---------------------
 
 const frm_contact = document.querySelector('.contact_form');
-const f_form = document.getElementById("contact_form");
 const f_name = document.getElementById("name");
 const f_email = document.getElementById("email");
 const f_message = document.getElementById("message");
@@ -195,7 +194,7 @@ f_message.addEventListener("focus", (e) => {
 // Get data from the form, save a copy in a JSON and send the emmail
 
 
-f_form.addEventListener('submit', e => {
+frm_contact.addEventListener('submit', e => {
 	e.preventDefault();
 
 	const frmData = new FormData(e.target);
