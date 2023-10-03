@@ -212,9 +212,9 @@
 							<h2>Contact</h2>
 						</div>
 						<div class="contact_message" id="contact_message">
-							<!-- <form id="contact_form" class="contact_form" action="https://formsubmit.co/meverss@my.com" method="POST"> -->
-								<form id="contact_form" class="contact_form" action="https://getform.io/f/2f998ba6-dcdd-47f5-b345-f688f29e263a" method="POST">
-								
+							<form id="contact_form" class="contact_form" action="https://api.web3forms.com/submit"
+								method="POST">
+
 								<label class="text" for="name">Name<span class="important">*</span></label>
 								<input class="frm_text" name="name" id="name" autocomplete="off"
 									placeholder="Who is contacting me?" />
@@ -232,12 +232,12 @@
 									placeholder="Leave me your message" required></textarea>
 
 								<input id="btn_send" type="submit" class="button form_btn" value="Send" />
-								<!-- <input type="hidden" name="_next"
-									value="https://meverss.github.io/portfolio/index.html" />
-								<input type="hidden" name="_subject" value="New submission from My Portfolio!" />
-								<input type="hidden" name="_captcha" value="false" /> -->
-								<!-- This requires to enable CAPTCHA -->
-								<!-- <input type="hidden" name="_autoresponse" value="Thanks for contacting me! I will replay as soon as possible."> -->
+
+								<!-- Config -->
+								<input id="frm_key" type="hidden" name="access_key">
+								<input id="frm_url" type="hidden" name="redirect">
+								<!-- <input type="hidden" name="ccemail" value="partner@example.com"> -->
+
 							</form>
 						</div>
 					</div>

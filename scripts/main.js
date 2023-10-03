@@ -236,30 +236,10 @@ frm_contact.addEventListener('submit', e => {
 
 });
 
-// f_form.addEventListener("submit", (e) => {
-// 	e.preventDefault();
-// 	if (f_message.value.length > 4) {
-// 		f_form.submit();
-// 		let fields = document.querySelectorAll(".frm_text");
-// 		fields.forEach((field) => {
-// 			field.value = "";
-// 		});
-// 	} else {
-// 		f_message.classList.add("wrong", "animate__animated", "animate__shakeX");
-// 		f_message.value = "";
-// 		f_message.placeholder = "Please, write something!";
-// 		setTimeout((e) => {
-// 			f_message.classList.remove(
-// 				"wrong",
-// 				"animate__animated",
-// 				"animate__shakeX"
-// 			);
-// 		}, 1000);
-// 		setTimeout((e) => {
-// 			f_message.placeholder = "Leave me your message";
-// 		}, 3500);
-// 	}
-// });
+// CONTACT FORM SUBMIT CONFIG
+
+frm_key.value = "6812b923-1859-4cd0-a7b2-7f246e481715";
+frm_url.value = location.origin;
 
 // GET A JSON FILE FROM A URL TO GENERATE PREJECTS
 
