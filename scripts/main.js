@@ -383,3 +383,7 @@ cookies_ok.addEventListener('click', e => {
 
 // ====================== TEST
 
+
+const headers = new Headers();
+headers.append('Set-Cookie', 'key=value; path=/; domain=http://192.168.241.14:5500; HttpOnly; Secure; SameSite=Strict');
+console.log(headers.get("Accept-Encoding"));
