@@ -105,7 +105,7 @@ my_age.innerHTML = fecha.getFullYear() - 1985;
 
 const social_n = document.querySelectorAll(".social_item");
 const my_website = encodeURIComponent(location.origin + "/portfolio");
-const my_website_title = "https://meverss.github.io/portfolio";
+const my_website_title = "https://myportfolio.kiniun.tech";
 const url_facebook =
 	"http://www.facebook.com/sharer.php?u=" +
 	my_website +
@@ -236,7 +236,7 @@ frm_contact.addEventListener('submit', e => {
 // CONFIG CONTACT FORM SUBMIT
 
 frm_key.value = "6812b923-1859-4cd0-a7b2-7f246e481715";
-frm_url.value = location.origin + '/portfolio';
+frm_url.value = location.origin;
 
 
 
@@ -252,7 +252,7 @@ frm_url.value = location.origin + '/portfolio';
 
 // GET A JSON FILE FROM A URL TO GENERATE PREJECTS
 
-// fetch("https://meverss.github.io/portfolio/data/projects.json", {
+// fetch("https://myportfolio.kiniun.tech/data/projects.json", {
 //   method: "GET",
 //   headers: {
 //     Accept: "application/json",
@@ -260,17 +260,17 @@ frm_url.value = location.origin + '/portfolio';
 // });
 
 
-fetch("https://meverss.github.io/portfolio/data/projects.json")
+fetch("https://myportfolio.kiniun.tech/data/projects.json")
 	.then((data) => data.json())
 	.then((data) => {
-		const my_url = "https://meverss.github.io/portfolio";
+		const my_url = "https://myportfolio.kiniun.tech";
 		data.forEach((project) => {
 			my_projects.innerHTML += `
               <div class="project" id="project${project.index}">
               <div class="thumbnail_container">
                 <img
                   class="thumbnail"
-                  src="https://meverss.github.io/portfolio/media/images/projects/${project.thumbnail}"
+                  src="https://myportfolio.kiniun.tech/media/images/projects/${project.thumbnail}"
                   alt="${project.name}_thumbnail"
                 />
               </div>
@@ -372,7 +372,7 @@ fetch("https://meverss.github.io/portfolio/data/projects.json")
 // COOKIES
 
 document.cookie = 'SameSite=secure'
-cookies_policy.innerHTML = 'We use cookies with the only purpose to analyze our website traffic. If you want to know more about it, you can read our <a href="https://meverss.github.io/portfolio/pages/cookies.html" target="_blank" >cookies policy</a>.';
+cookies_policy.innerHTML = 'We use cookies with the only purpose to analyze our website traffic. If you want to know more about it, you can read our <a href="https://myportfolio.kiniun.tech/pages/cookies.html" target="_blank" >cookies policy</a>.';
 
 // Acept cookies //
 cookies_ok.addEventListener('click', e => {
@@ -385,5 +385,5 @@ cookies_ok.addEventListener('click', e => {
 
 
 const headers = new Headers();
-headers.append('Set-Cookie', 'key=value; path=/; domain=http://192.168.241.14:5500; HttpOnly; Secure; SameSite=Strict');
+headers.append('Set-Cookie', 'key=value; path=/; domain=https://myportfolio.kiniun.tech; HttpOnly; Secure; SameSite=Strict');
 console.log(headers.get("Accept-Encoding"));
