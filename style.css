@@ -910,8 +910,6 @@ hr {
 textarea {
 	resize: none;
 	height: 120px;
-	font-size: 12pt;
-	padding: 8px;
 }
 
 .contact_form label {
@@ -937,7 +935,7 @@ textarea {
 }
 
 .contact_form input,
-CONTACT .contact_form textarea {
+.contact_form textarea {
 	font-family: Hack;
 	font-size: 11pt;
 	padding: 8px;
