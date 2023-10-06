@@ -6,12 +6,14 @@
 
 @font-face {
 	font-family: "Hack";
-	src: url("./fonts/hack.woff") format("woff");
+	src: local('Sans Serif'), url("./fonts/hack.woff") format("woff");
+	font-display: swap;
 }
 
 @font-face {
 	font-family: "Symbols";
-	src: url("./fonts/symbols.woff") format("woff");
+	src: local('Sans Serif'), url("./fonts/symbols.woff") format("woff");
+	font-display: swap;
 }
 
 * {
