@@ -372,3 +372,5 @@ cookies_ok.addEventListener('click', e => {
 	cookies.classList.add('animate__animated', 'animate__backOutUp');
 })
 
+
+// =====================

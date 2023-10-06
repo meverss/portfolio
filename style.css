@@ -910,6 +910,8 @@ hr {
 textarea {
 	resize: none;
 	height: 120px;
+	font-size: 12pt;
+	padding: 8px;
 }
 
 .contact_form label {

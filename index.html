@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html manifest="./cache.manifest" lang="en">
 
 <head>
 	<link rel="preload" href="./fonts/hack.woff" as="font" type="font/woff" crossorigin />
@@ -35,6 +35,7 @@
 
 	<div class="loader_container" id="page_loader">
 		<p class="loader_text">Loading...</p>
+		<p id="msgs2" class="loader_text"></p>
 		<div class="loader"></div>
 	</div>
 
@@ -233,8 +234,8 @@
 								<input id="btn_send" type="submit" class="button form_btn" value="Send" />
 
 								<!-- Config -->
-								<input id="frm_key" type="hidden" name="access_key" >
-								<input id="frm_url" type="hidden" name="redirect" >
+								<input id="frm_key" type="hidden" name="access_key">
+								<input id="frm_url" type="hidden" name="redirect">
 								<input id="subject" type="hidden">
 								<!-- <input type="hidden" name="ccemail" value="partner@example.com"> -->
 
