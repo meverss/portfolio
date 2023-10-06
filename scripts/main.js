@@ -204,9 +204,14 @@ frm_contact.addEventListener('submit', e => {
 	const frmDataComplete = Object.fromEntries(frmData.entries());
 	const name = frmData.get('name');
 	const email = frmData.get('email');
-	const subject = frmData.get('subject');
+	const subj = frmData.get('subj');
 	const message = frmData.get('message');
-	const contactMessage = { name, email, subject, message };
+	const contactMessage = { name, email, subj, message };
+
+	frm_key.value = "6812b923-1859-4cd0-a7b2-7f246e481715";
+	frm_url.value = location.origin;
+
+	subject.innerHTML += `<input id="subject" type="hidden" name="subject" value="New message from ${f_name.value} on My Portfolio" ></input>`;
 
 	if (f_message.value.length >= 4) {
 
@@ -235,11 +240,6 @@ frm_contact.addEventListener('submit', e => {
 	}
 
 });
-
-// CONFIG CONTACT FORM SUBMIT
-
-frm_key.value = "6812b923-1859-4cd0-a7b2-7f246e481715";
-frm_url.value = location.origin;
 
 
 // =================================================
@@ -365,7 +365,6 @@ fetch("https://myportfolio.kiniun.tech/data/projects.json")
 
 // COOKIES
 
-document.cookie = 'SameSite=secure'
 cookies_policy.innerHTML = 'We use cookies with the only purpose to analyze our website traffic. If you want to know more about it, you can read our <a href="https://myportfolio.kiniun.tech/pages/cookies.html" target="_blank" >cookies policy</a>.';
 
 // Acept cookies //
@@ -373,6 +372,3 @@ cookies_ok.addEventListener('click', e => {
 	cookies.classList.add('animate__animated', 'animate__backOutUp');
 })
 
-
-
-// ====================== TEST
