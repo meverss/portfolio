@@ -239,15 +239,6 @@ frm_key.value = "6812b923-1859-4cd0-a7b2-7f246e481715";
 frm_url.value = location.origin;
 
 
-
-
-
-
-
-
-
-
-
 // =================================================
 
 // GET A JSON FILE FROM A URL TO GENERATE PREJECTS
@@ -382,8 +373,3 @@ cookies_ok.addEventListener('click', e => {
 
 
 // ====================== TEST
-
-
-const headers = new Headers();
-headers.append('Set-Cookie', 'key=value; path=/; domain=https://myportfolio.kiniun.tech; HttpOnly; Secure; SameSite=Strict');
-console.log(headers.get("Accept-Encoding"));
