@@ -876,11 +876,15 @@ hr {
 	align-items: center;
 }
 
-.contact_form label,
+.contact_form label {
+	width: 95%;
+	color: #eee;
+}
+
 .contact_form .frm_text,
 .contact_form textarea {
 	width: 95%;
-	color: #ccc;
+	color: #555;
 }
 
 .contact_title,
@@ -929,7 +933,7 @@ textarea {
 }
 
 .contact_form input,
-.contact_form textarea {
+CONTACT .contact_form textarea {
 	font-family: Hack;
 	font-size: 11pt;
 	padding: 8px;
