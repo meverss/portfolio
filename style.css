@@ -58,14 +58,14 @@ body {
 p {
 	width: 100%;
 	text-align: justify;
-	font-size: 12pt;
+	font-size: 14pt;
 	padding: 20px;
 	color: #ccc;
 	line-height: 1.6;
 }
 
 li {
-	font-size: 11.5pt;
+	font-size: 14pt;
 	text-align: left;
 	margin-left: 35px;
 	margin-right: 35px;
@@ -95,6 +95,7 @@ hr {
 	display: flex;
 	align-self: center;
 	width: 90%;
+	margin-bottom: 10px;
 }
 
 .marker {
@@ -687,6 +688,10 @@ hr {
 	margin: auto;
 }
 
+.project_desc li {
+	font-size: 12pt;
+}
+
 .view_more {
 	margin: auto;
 	margin-bottom: 0;
@@ -1131,6 +1136,11 @@ textarea {
 }
 
 @media screen and (max-width: 768px) {
+
+	p, li {
+		font-size: 12pt;
+	}
+
 	.about_box_text {
 		width: 75vw;
 	}
