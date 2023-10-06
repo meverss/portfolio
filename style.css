@@ -6,13 +6,13 @@
 
 @font-face {
 	font-family: "Hack";
-	src: local('Sans Serif'), url("./fonts/hack.woff") format("woff");
+	src: local('sans-serif'), url("./fonts/hack.woff") format("woff");
 	font-display: swap;
 }
 
 @font-face {
 	font-family: "Symbols";
-	src: local('Sans Serif'), url("./fonts/symbols.woff") format("woff");
+	src: local('sans-serif'), url("./fonts/symbols.woff") format("woff");
 	font-display: swap;
 }
 
@@ -95,6 +95,10 @@ hr {
 	display: flex;
 	align-self: center;
 	width: 90%;
+}
+
+.marker {
+	color: #71af18;
 }
 
 /* GENERAL */
@@ -1011,6 +1015,7 @@ textarea {
 #arrow {
 	display: none;
 	transition: 0.3s;
+	color: #bbb;
 }
 
 /* FOOTER */
