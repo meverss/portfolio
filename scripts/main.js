@@ -39,6 +39,9 @@ function scroll_to_section(section) {
 	let element = document.getElementById(section);
 	let position = element.offsetTop;
 	switch (section) {
+		case "s_about":
+			window.scrollTo(0, position - 150);
+			break;
 		case "s_projects":
 			window.scrollTo(0, position - 65);
 			break;
