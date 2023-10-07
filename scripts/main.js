@@ -127,8 +127,6 @@ const url_linkedin =
 social_n.forEach((item) => {
 	item.addEventListener("click", function () {
 		link = "url_" + item.id;
-		w = window.innerWidth  /3;
-		h = window.innerHeight /4;
 		window.open(eval(link), "" ,"width=720, height=480, toolbar=0, status=0, top=300, left=600");
 	});
 });
