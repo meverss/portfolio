@@ -304,7 +304,7 @@ hr {
 	display: flex;
 	color: #ccc;
 	width: auto;
-	height: 40px;
+	height: 38px;
 	justify-content: center;
 	align-items: center;
 	padding: 0;
@@ -1160,7 +1160,7 @@ textarea {
 }
 
 
-media screen and (max-width: 945px) {
+@media screen and (max-width: 945px) {
 
 	.services_box {
 		gap: 35px;
