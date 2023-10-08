@@ -782,7 +782,7 @@ hr {
 	min-width: 80%;
 	height: 80%;
 	min-height: 70%;
-	background-image: url(https://meverss.github.io/portfolio/media/images/background.png);
+	background-image: url(./media/images/background.png);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: left;
@@ -868,7 +868,7 @@ hr {
 	margin-top: 110px;
 	margin-bottom: 50px;
 	border-radius: 8px;
-	background-image: url(https://meverss.github.io/portfolio/media/images/contact_me.png);
+	background-image: url(./media/images/contact_me.png);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -1137,7 +1137,8 @@ textarea {
 
 @media screen and (max-width: 768px) {
 
-	p, li {
+	p,
+	li {
 		font-size: 12pt;
 	}
 
