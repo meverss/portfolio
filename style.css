@@ -526,7 +526,7 @@ hr {
 
 #mypict {
 	width: 200px;
-	border: 1px solid #eee;
+	border: 2px solid #eee;
 	border-radius: 50%;
 	box-shadow: 4px 4px 10px 2px #222;
 	margin: -45px;
