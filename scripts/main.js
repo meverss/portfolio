@@ -365,7 +365,11 @@ fetch("https://myportfolio.kiniun.tech/data/projects.json")
 
 // COOKIES
 
-cookies_policy.innerHTML = 'We use cookies with the only purpose to analyze our website traffic. If you want to know more about it, you can read our <a href="https://myportfolio.kiniun.tech/pages/cookies.html" target="_blank" >cookies policy</a>.';
+function openCookies (){
+	window.open("https://myportfolio.kiniun.tech/pages/cookies.html", "", "width=720, height=480, toolbar=0, status=0, top=300, left=600");
+}
+
+cookies_policy.innerHTML ='We use cookies with the only purpose to analyze our website traffic. If you want to know more about it, you can read our <a href="javascript:openCookies();">cookies policy</a>';
 
 // Acept cookies //
 cookies_ok.addEventListener('click', e => {
