@@ -8,6 +8,7 @@ function show_page() {
 }
 
 // SHOW/HIDE ALTERANTIVE MENU
+const btnOpen = document.getElementById('m_menu_open_btn');
 
 m_menu_open_btn.addEventListener("click", showmenu);
 m_menu_close_btn.addEventListener("click", hidemenu);
@@ -157,6 +158,7 @@ const f_email = document.getElementById("email");
 const f_message = document.getElementById("message");
 const f_btn = document.getElementById("btn_send");
 const valid_email = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
+
 
 f_name.addEventListener("focusout", (e) => {
 	if (f_name.value.length < 2) {
@@ -366,7 +368,7 @@ fetch("https://myportfolio.kiniun.tech/data/projects.json")
 // COOKIES
 
 function openCookies (){
-	window.open("https://myportfolio.kiniun.tech/pages/cookies.html", "", "width=720, height=480, toolbar=0, status=0, top=300, left=600");
+	window.open("./pages/cookies.html", "", "width=720, height=480, toolbar=0, status=0, top=300, left=600");
 }
 
 cookies_policy.innerHTML ='We use cookies with the only purpose to analyze our website traffic. If you want to know more about it, you can read our <a href="javascript:openCookies();">cookies policy</a>';
@@ -378,3 +380,4 @@ cookies_ok.addEventListener('click', e => {
 
 
 // =====================
+
