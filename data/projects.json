@@ -2,7 +2,7 @@
 	{
 		"index": 1,
 		"name": "Project 1",
-		"link": "https://meverss.github.io/portfolio/pages/cookies.html",
+		"link": "https://myportfolio.kiniun.tech/pages/cookies.html",
 		"description": "Here goes a short dscription of PROJECT #1",
 		"thumbnail": "project_1.png",
 		"screenshot": "my_portfolio.png",
@@ -11,7 +11,7 @@
 	{
 		"index": 2,
 		"name": "Project 2",
-		"link": "https://meverss.github.io/portfolio/pages/cookies.html",
+		"link": "https://myportfolio.kiniun.tech/pages/cookies.html",
 		"description": "Here goes a short dscription of PROJECT #2",
 		"thumbnail": "project_3.png",
 		"screenshot": "my_portfolio.png",
@@ -29,7 +29,7 @@
 	{
 		"index": 4,
 		"name": "Project 4",
-		"link": "https://meverss.github.io/portfolio/pages/cookies.html",
+		"link": "https://myportfolio.kiniun.tech/pages/cookies.html",
 		"screenshot": "my_portfolio.png",
 		"description": "Here goes a short dscription of PROJECT #4",
 		"thumbnail": "project_3.png",
