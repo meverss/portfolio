@@ -55,6 +55,34 @@ body {
 	width: 100%;
 }
 
+.msg_box {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+}
+
+.msg_box img {
+	width: 300px;
+	/* filter: invert(41%) sepia(48%) saturate(874%) hue-rotate(343deg) brightness(105%) contrast(93%); */
+}
+
+h1 {
+	text-align: center;
+	font-size: 44pt;
+	color: chocolate;
+}
+
+h2 {
+	text-align: center;
+	color: #BBB;
+	font-weight: normal;
+	font-size: 15Ppt;
+	margin: 0;
+}
+
+
 p {
 	width: 100%;
 	text-align: justify;
@@ -522,6 +550,7 @@ hr {
 	left: 80px;
 	height: 100%;
 	margin-bottom: auto;
+	object-fit: contain;
 }
 
 #mypict {
