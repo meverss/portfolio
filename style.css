@@ -43,7 +43,7 @@ html {
 }
 
 body {
-	background-image: url(./media/images/background.png);
+	background-image: url(./media/images/background.webp);
 	background-color: #000;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -811,7 +811,7 @@ hr {
 	min-width: 80%;
 	height: 80%;
 	min-height: 70%;
-	background-image: url(./media/images/background.png);
+	background-image: url(./media/images/background.webp);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: left;
@@ -897,7 +897,7 @@ hr {
 	margin-top: 110px;
 	margin-bottom: 50px;
 	border-radius: 8px;
-	background-image: url(./media/images/contact_me.png);
+	background-image: url(./media/images/contact_me.webp);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
