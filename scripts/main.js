@@ -8,7 +8,7 @@ function show_page() {
 }
 
 // SHOW/HIDE ALTERANTIVE MENU
-const btnOpen = document.getElementById('m_menu_open_btn');
+const btnOpen = document.getElementById("m_menu_open_btn");
 
 m_menu_open_btn.addEventListener("click", showmenu);
 m_menu_close_btn.addEventListener("click", hidemenu);
@@ -50,7 +50,6 @@ function scroll_to_section(section) {
 			window.scrollTo(0, position - 105);
 			break;
 	}
-
 }
 
 function scroll_to_section_m(section_m) {
@@ -127,10 +126,13 @@ const url_linkedin =
 social_n.forEach((item) => {
 	item.addEventListener("click", function () {
 		link = "url_" + item.id;
-		window.open(eval(link), "", "width=720, height=480, toolbar=0, status=0, top=300, left=600");
+		window.open(
+			eval(link),
+			"",
+			"width=720, height=480, toolbar=0, status=0, top=300, left=600"
+		);
 	});
 });
-
 
 // FORM VALIDATION
 
@@ -151,13 +153,12 @@ fields.forEach((field) => {
 
 // ---------------------
 
-const frm_contact = document.querySelector('.contact_form');
+const frm_contact = document.querySelector(".contact_form");
 const f_name = document.getElementById("name");
 const f_email = document.getElementById("email");
 const f_message = document.getElementById("message");
 const f_btn = document.getElementById("btn_send");
 const valid_email = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
-
 
 f_name.addEventListener("focusout", (e) => {
 	if (f_name.value.length < 2) {
@@ -197,16 +198,15 @@ f_message.addEventListener("focus", (e) => {
 
 // Get data from the form, save a copy in a JSON and send the emmail
 
-
-frm_contact.addEventListener('submit', e => {
+frm_contact.addEventListener("submit", (e) => {
 	e.preventDefault();
 
 	const frmData = new FormData(e.target);
 	const frmDataComplete = Object.fromEntries(frmData.entries());
-	const name = frmData.get('name');
-	const email = frmData.get('email');
-	const subj = frmData.get('subj');
-	const message = frmData.get('message');
+	const name = frmData.get("name");
+	const email = frmData.get("email");
+	const subj = frmData.get("subj");
+	const message = frmData.get("message");
 	const contactMessage = { name, email, subj, message };
 
 	frm_key.value = "6812b923-1859-4cd0-a7b2-7f246e481715";
@@ -215,7 +215,6 @@ frm_contact.addEventListener('submit', e => {
 	subject.innerHTML += `<input id="subject" type="hidden" name="subject" value="New message from ${f_name.value} on My Portfolio" ></input>`;
 
 	if (f_message.value.length >= 4) {
-
 		frm_contact.submit();
 		setTimeout(() => {
 			let fields = document.querySelectorAll(".frm_text");
@@ -223,7 +222,6 @@ frm_contact.addEventListener('submit', e => {
 				field.value = "";
 			});
 		}, 2000);
-
 	} else {
 		f_message.classList.add("wrong", "animate__animated", "animate__shakeX");
 		f_message.value = "";
@@ -239,9 +237,7 @@ frm_contact.addEventListener('submit', e => {
 			f_message.placeholder = "Leave me your message";
 		}, 3500);
 	}
-
 });
-
 
 // =================================================
 
@@ -254,13 +250,13 @@ frm_contact.addEventListener('submit', e => {
 //   },
 // });
 
-
-fetch("https://myportfolio.kiniun.tech/data/projects.json")
-	.then((data) => data.json())
-	.then((data) => {
-		const my_url = "https://myportfolio.kiniun.tech";
-		data.forEach((project) => {
-			my_projects.innerHTML += `
+const getProjects = async () => {
+	resp = await fetch("https://myportfolio.kiniun.tech/data/projects.json")
+		.then((data) => data.json())
+		.then((data) => {
+			const my_url = "https://myportfolio.kiniun.tech";
+			data.forEach((project) => {
+				my_projects.innerHTML += `
               <div class="project" id="project${project.index}">
               <div class="thumbnail_container">
                 <img
@@ -281,102 +277,114 @@ fetch("https://myportfolio.kiniun.tech/data/projects.json")
               </p>
             </div>
             `;
-		});
+			});
 
-		// VIEW MORE INFO
+			// VIEW MORE INFO
 
-		const vmb = document.querySelectorAll(".view_more");
+			const vmb = document.querySelectorAll(".view_more");
 
-		vmb.forEach((btn) => {
-			let id = btn.id.split("view_more")[1];
-			let short_desc =
-				data[data.findIndex((std) => std.index == id)].description;
-			id = btn.id.split("view_more")[1];
-			let p_name = data[data.findIndex((std) => std.index == id)].name;
-			let full_desc = data[data.findIndex((std) => std.index == id)].viewmore;
-			let thumb = data[data.findIndex((std) => std.index == id)].thumbnail;
-			let scrsht = data[data.findIndex((std) => std.index == id)].screenshot;
-			let w_link = data[data.findIndex((std) => std.index == id)].link;
+			vmb.forEach((btn) => {
+				let id = btn.id.split("view_more")[1];
+				let short_desc =
+					data[data.findIndex((std) => std.index == id)].description;
+				id = btn.id.split("view_more")[1];
+				let p_name = data[data.findIndex((std) => std.index == id)].name;
+				let full_desc = data[data.findIndex((std) => std.index == id)].viewmore;
+				let thumb = data[data.findIndex((std) => std.index == id)].thumbnail;
+				let scrsht = data[data.findIndex((std) => std.index == id)].screenshot;
+				let w_link = data[data.findIndex((std) => std.index == id)].link;
 
-			btn.addEventListener("click", (e) => {
-				viewmore_anim.classList.remove("animate__animated", "animate__zoomOut");
-				viewmore_anim.classList.add("animate__animated", "animate__zoomIn");
-				viewmore_container.style["display"] = "flex";
-				viewmore_container.style["opacity"] = "1";
-				document.body.style.overflow = "hidden";
-				viewmore_pict.innerHTML = `
+				btn.addEventListener("click", (e) => {
+					viewmore_anim.classList.remove(
+						"animate__animated",
+						"animate__zoomOut"
+					);
+					viewmore_anim.classList.add("animate__animated", "animate__zoomIn");
+					viewmore_container.style["display"] = "flex";
+					viewmore_container.style["opacity"] = "1";
+					document.body.style.overflow = "hidden";
+					viewmore_pict.innerHTML = `
 		        <img src="${my_url}/media/images/projects/${scrsht}" alt="${p_name}">
         		<a class="button" id="viewmore_page_link" href="${w_link}" target="_blank"> Visit website </a>
         		<span id="arrow" style="font-family: Symbols">  </span>
         		`;
-				viewmore_text.innerHTML = `
+					viewmore_text.innerHTML = `
         		<h3 class="title">${p_name}</h3>
         		<p class='text'><spam>${full_desc}</spam></p>`;
-
+				});
 			});
 
-		});
+			viewmore_close.addEventListener("click", (close) => {
+				document.getElementById("viewmore_box").scrollTop = 0;
+				viewmore_anim.classList.remove("animate__animated", "animate__zoomIn");
+				viewmore_anim.classList.add("animate__animated", "animate__zoomOut");
+				document.body.style["overflow"] = "auto";
+				setTimeout(function () {
+					viewmore_container.style["display"] = "none";
+				}, 400);
+			});
 
-		viewmore_close.addEventListener("click", (close) => {
-			document.getElementById('viewmore_box').scrollTop = 0;
-			viewmore_anim.classList.remove("animate__animated", "animate__zoomIn");
-			viewmore_anim.classList.add("animate__animated", "animate__zoomOut");
-			document.body.style["overflow"] = "auto";
-			setTimeout(function () {
-				viewmore_container.style["display"] = "none";
-			}, 400)
-		});
-
-		window.addEventListener("keydown", function (event) {
-			let k = event.key;
-			let d = getComputedStyle(viewmore_container).display;
-			if (d != "none") {
-				if (k == 27 || k == "Escape" || k == "Esc") {
-					viewmore_anim.classList.remove("animate__animated", "animate__zoomIn");
-					viewmore_anim.classList.add("animate__animated", "animate__zoomOut");
-					document.body.style["overflow"] = "auto";
-					setTimeout(function () {
-						viewmore_container.style["display"] = "none";
-					}, 400)
-
+			window.addEventListener("keydown", function (event) {
+				let k = event.key;
+				let d = getComputedStyle(viewmore_container).display;
+				if (d != "none") {
+					if (k == 27 || k == "Escape" || k == "Esc") {
+						viewmore_anim.classList.remove(
+							"animate__animated",
+							"animate__zoomIn"
+						);
+						viewmore_anim.classList.add(
+							"animate__animated",
+							"animate__zoomOut"
+						);
+						document.body.style["overflow"] = "auto";
+						setTimeout(function () {
+							viewmore_container.style["display"] = "none";
+						}, 400);
+					}
 				}
-			}
-		});
+			});
 
-		viewmore_box.addEventListener("scroll", () => {
-			let dat = viewmore_pict.getBoundingClientRect();
-			if (dat.top <= 135) {
-				arrow.classList.remove("animate__animated", "animate__bounceIn");
-				arrow.classList.add("animate__animated", "animate__bounceOut");
-			} else {
-				arrow.classList.remove("animate__animated", "animate__bounceOut");
-				arrow.classList.add("animate__animated", "animate__bounceIn");
-			}
-		});
+			viewmore_box.addEventListener("scroll", () => {
+				let dat = viewmore_pict.getBoundingClientRect();
+				if (dat.top <= 135) {
+					arrow.classList.remove("animate__animated", "animate__bounceIn");
+					arrow.classList.add("animate__animated", "animate__bounceOut");
+				} else {
+					arrow.classList.remove("animate__animated", "animate__bounceOut");
+					arrow.classList.add("animate__animated", "animate__bounceIn");
+				}
+			});
 
-		window.addEventListener("resize", (a) => {
-			let w = window.innerWidth;
-			if (w > 1000) {
-				m_menu_open_btn.style.display = "none";
-			} else {
-				hidemenu();
-			}
+			window.addEventListener("resize", (a) => {
+				let w = window.innerWidth;
+				if (w > 1000) {
+					m_menu_open_btn.style.display = "none";
+				} else {
+					hidemenu();
+				}
+			});
 		});
-	});
+};
+
+getProjects();
 
 // COOKIES
 
 function openCookies() {
-	window.open("./pages/cookies.html", "", "width=720, height=480, toolbar=0, status=0, top=300, left=600");
+	window.open(
+		"./pages/cookies.html",
+		"",
+		"width=720, height=480, toolbar=0, status=0, top=300, left=600"
+	);
 }
 
-cookies_policy.innerHTML = 'We use cookies with the only purpose to analyze our website traffic. If you want to know more about it, you can read our <a href="javascript:openCookies();">cookies policy</a>';
+cookies_policy.innerHTML =
+	'We use cookies with the only purpose to analyze our website traffic. If you want to know more about it, you can read our <a href="javascript:openCookies();">cookies policy</a>';
 
 // Acept cookies //
-cookies_ok.addEventListener('click', e => {
-	cookies.classList.add('animate__animated', 'animate__backOutUp');
-})
-
+cookies_ok.addEventListener("click", (e) => {
+	cookies.classList.add("animate__animated", "animate__backOutUp");
+});
 
 // =====================
-
