@@ -4,8 +4,8 @@
 		"name": "Project 1",
 		"link": "https://myportfolio.kiniun.tech/pages/cookies.html",
 		"description": "Here goes a short dscription of PROJECT #1",
-		"thumbnail": "project_1.png",
-		"screenshot": "my_portfolio.png",
+		"thumbnail": "project_1.webp",
+		"screenshot": "my_portfolio.webp",
 		"viewmore": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium aut unde mollitia ipsa blanditiis enim doloremque quasi eligendi ullam quidem qui, autem corporis possimus consequatur incidunt in! Sit corporis in eaque vitae temporibus dolore, voluptatem reiciendis adipisci? Voluptates enim iusto unde beatae error praesentium fugit quasi magnam sapiente? Sequi quos consectetur molestias omnis, necessitatibus laboriosam, distinctio, magni temporibus illo ullam accusantium. Assumenda, atque quas?"
 	},
 	{
@@ -13,8 +13,8 @@
 		"name": "Project 2",
 		"link": "https://myportfolio.kiniun.tech/pages/cookies.html",
 		"description": "Here goes a short dscription of PROJECT #2",
-		"thumbnail": "project_3.png",
-		"screenshot": "my_portfolio.png",
+		"thumbnail": "project_3.webp",
+		"screenshot": "my_portfolio.webp",
 		"viewmore": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium aut unde mollitia ipsa blanditiis enim doloremque quasi eligendi ullam quidem qui, autem corporis possimus consequatur incidunt in! Sit corporis in eaque vitae temporibus dolore, voluptatem reiciendis adipisci? Voluptates enim iusto unde beatae error praesentium fugit quasi magnam sapiente? Sequi quos consectetur molestias omnis, necessitatibus laboriosam, distinctio, magni temporibus illo ullam accusantium. Assumenda, atque quas?"
 	},
 	{
@@ -22,17 +22,17 @@
 		"name": "Barracuda",
 		"link": "https://meverss.github.io/barracuda",
 		"description": "Theme for the Fish Shell.",
-		"thumbnail": "barracuda_thumbnail.png",
-		"screenshot": "barracuda.png",
+		"thumbnail": "barracuda_thumbnail.webp",
+		"screenshot": "barracuda.webp",
 		"viewmore": "Barracuda theme makes fish shell even more powerful and user-friendly. It’s equipped with a set of useful functions and key bindings to speed up your workflow. Also, the use of <b>Powerline Nerds</b> makes the visual experience smooth and fancy. This theme is a fork of oh-my-fish/theme-budspencer, which means it keeps most of it’s awesome features."
 	},
 	{
 		"index": 4,
 		"name": "Project 4",
 		"link": "https://myportfolio.kiniun.tech/pages/cookies.html",
-		"screenshot": "my_portfolio.png",
+		"screenshot": "my_portfolio.webp",
 		"description": "Here goes a short dscription of PROJECT #4",
-		"thumbnail": "project_3.png",
+		"thumbnail": "project_3.webp",
 		"viewmore": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium aut unde mollitia ipsa blanditiis enim doloremque quasi eligendi ullam quidem qui, autem corporis possimus consequatur incidunt in! Sit corporis in eaque vitae temporibus dolore, voluptatem reiciendis adipisci? Voluptates enim iusto unde beatae error praesentium fugit quasi magnam sapiente? Sequi quos consectetur molestias omnis, necessitatibus laboriosam, distinctio, magni temporibus illo ullam accusantium. Assumenda, atque quas?"
 	}
 ]
