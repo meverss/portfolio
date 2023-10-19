@@ -108,8 +108,7 @@ my_age.innerHTML = fecha.getFullYear() - 1985;
 // SHARE MY PORTFOLIO
 
 const social_n = document.querySelectorAll(".social_item");
-const my_website = encodeURIComponent(location.origin + "/portfolio");
-const my_website_title = "https://myportfolio.kiniun.tech";
+const my_website = encodeURIComponent(location.href);
 const url_facebook =
 	"http://www.facebook.com/sharer.php?u=" +
 	my_website +
@@ -128,7 +127,7 @@ const url_linkedin =
 social_n.forEach((item) => {
 	item.addEventListener("click", function () {
 		link = "url_" + item.id;
-		window.open(eval(link), "" ,"width=720, height=480, toolbar=0, status=0, top=300, left=600");
+		window.open(eval(link), "", "width=720, height=480, toolbar=0, status=0, top=300, left=600");
 	});
 });
 
@@ -367,11 +366,11 @@ fetch("https://myportfolio.kiniun.tech/data/projects.json")
 
 // COOKIES
 
-function openCookies (){
+function openCookies() {
 	window.open("./pages/cookies.html", "", "width=720, height=480, toolbar=0, status=0, top=300, left=600");
 }
 
-cookies_policy.innerHTML ='We use cookies with the only purpose to analyze our website traffic. If you want to know more about it, you can read our <a href="javascript:openCookies();">cookies policy</a>';
+cookies_policy.innerHTML = 'We use cookies with the only purpose to analyze our website traffic. If you want to know more about it, you can read our <a href="javascript:openCookies();">cookies policy</a>';
 
 // Acept cookies //
 cookies_ok.addEventListener('click', e => {
