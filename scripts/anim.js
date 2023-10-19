@@ -1,8 +1,14 @@
 const notes = document.querySelectorAll(".box");
+const contactForm = document.getElementById('contact_form');
+
+console.log(contactForm)
 
 function triggerAnimation(entries) {
 	entries.forEach((entry) => {
 		if (entry.isIntersecting) {
+			if (entry.target.id == 'contact_box') {
+				contactForm.children.namedItem('name').focus();
+			}
 			entry.target.classList.remove("animate__animated", "animate__fadeOut", "hide");
 			entry.target.classList.add("animate__animated", "animate__fadeIn", "show");
 			// obBoxes.unobserve(entry.target);
